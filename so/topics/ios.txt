@@ -1,0 +1,94 @@
+Great!  Thanks for all of the helpful comments!  I believe I will use the library at drewnoakes.com.
+Which is nice when it's an option.  I'm told my work will join the 21st century in a year or two.  Still, it's always useful to know how to do something manually to benefit from all the features, such as running your own functions with variables from the current point in the code.
+dariom: I would love to, but i'm stuck with .net 2.0
+However, if (x, y) is outside of your triangle, you return false instead.
+just tried it and it worked for me.
+Overloading? Copy of my comment to lycono: My thought on this was that an enum can have mapping details for non platform specific settings, that both should be used not just strings, and that string methods should be deprecated to encourage the adoption of enums
+Got it and it makes sense
+This is the answer I was looking for
+To be exact, UTF-8 code points 0-127 are identical to ASCII.
++1 for look down the docs for BinaryWriter... note there are overloads for arrays -- Write(char[]) and Write(byte[])
+I needed to use an XMLNodeReader in order to properly populate the XDocument, that's all. Now it works like a champ. Thanks again Jon.
+Yes - it was failing on every compile and yes - I did accidentally change my build action on Program.cs to none  :)
+Also note: https:developer.mozilla.orgenUsingtheClipboard
+I agree with Jake. If you are working on a team and you need to meet a deadline then you don't have time to retrain the whole team to learn the new web framework. You will also not have all the knowledge that you learned by mistake and will make those same mistakes with the new web framework.
+Believe me, I was tempted.  Hasn't everyone felt that way about Perl?  At least at first?  :)
+whoops my mistake!
+I never said it does floating-point. I said it has a finite range, which it does. Quoth the doc:  An instance can represent any number that can be expressed as mantissa x 10^exponent where mantissa is a decimal integer up to 38 digits long, and exponent is an integer from  128 through 127. 
+It's true it works for aspx files, but the solution-wide analysis does not include ascx files (user controls)
+I knew someone would say that ;-) I'm not expecting anything like 100 accuracy here. Any improvement over angular lines would be welcome.
+wait, you mean i shouldnt use the <font> tag?
+No. It wouldn't be too hard to implement a blocking version - use PostThreadMessage, and then have the calling thread block on an event that the callee will set when it has processed the message
+silent200: what you need the is jQuery.getJSON(), it will fetch a json from somewhere and do the eval for you. You don't need jquery to handle json, the support is built into javascript.
+Hey, that's not true. De Morgan's law: (!A  !B) == !(A && B)
+Mark Brady: spot on: it's always a trade off.
+This is not a bad idea, but you would have to be careful to refresh your local text copy every time an sproc changed.
+DrJokepu: thanks mate! you've restored some of my confidence in my fellow stackoverflowiens. I'm am still hopeful for an upvote though from somebody who agrees this is useful advice :)
+PHP Session data files are often stored in tmp, so you should be able to find them with Rails, but I don't know how easy they would be to handle...I'm not sure it would be a good idea either.  I think you're right to run in through the database.
+Keep in mind that locking does not behaive this way in SQL Server 2005 and above. The article is quite dated.
+This appears (to my very untrained eye) to be statically linking libshared.so to your executable, rather than using dynamic linking at run-time.  Am I correct?
+public class struct - which is it?
+Well, you are obviously missing something. The example you show has nothing to do with name-passing it's only a question of how parameters are bound inside a method (and it's actually helpful to understand the difference between a parameter and a variable).
+As a substitute for one, which also allows for remote-control out of the box.
+Ahh, beat me to it.
+You mean, you want to use what's in a FileStream as the name of a folder?
+yes I did it (in fact I just did before seeing this answer)... my error was just the insert=false that remains from a copypaste but shouldn't be there
+Any chance of a sample?
+Presenters aren't the View. Views are the views. See http:i3.codeplex.comProjectDownloadFileDownload.aspx?ProjectName=websf&DownloadId=23095
+It seems my other functions are returning None as well, is there any way to make it not return anything visible?
+Well I need to do this programmatically, and I'm not running in a unix environment (unfortunately).
+what do you know about powershell anyway? ;-)
+It doesn't handle nested control - i.e. TPanel, TTabSheet
+As per the comment on my post, I deduce that ordering does not matter, so [1,2] is the same as [2,1].
+edited my answer, might be what you need.
+Tomalak To me, it's very much programming related. Don't you think knowing this kind of user behaviour makes you a better software designerprogrammer, since you can better adapt your software to your end users? Isn't it what SO is all about?
+Even with FF 3.1, worker threads?
+Well, I mentioned in the comment -- throw and die. I would throw my own exception derived from Exception class.
+Yup. The object will be used by various sub-systems of the system so immutable is the way to go. Seems like the reason to use a struct is based on scenario not performance. Correct me if I am wrong. To prevent boxing, I could use a struct and create a method asking for a value type param.
+This is probably a question you should be asking your ISP.  I'd guess that you need to create a whole new database for the new doman name. Often hosted services are given network access to only specific database machines.
+Project is big, but the site must be kept lite.
+Yeah one of those ironic catch 22's where you need the traffic in the first place to get the stats, and it could be those same very problems  that prevent their collection...
+I like this solution.  It reduces repetition of nullity checks which means it's worthwhile if enough null collections are being produced.  In my case, that's probably true.  A shame I'm currently using C 2, but this is something to keep in mind once I update.
+I have read about Asp.Net MVC but its difficult changing my development model altogether and switch to Asp.net MVC.
+It doesn't make a (technical) difference though! os.path.isdir will tell you whether a certain path is a directory (folder)
+Steven, I'm familiar with Chris Date's POV, and concur with it. I'm speaking in terms of the distinction that can legitimately be made between data integrity ambiguity (properly dealt with in the book) and business rules ambiguity (not specific to data elements). And you mix the two at your peril.
+With new code this should be straight forward. I recently had to add several new classes to existing code as well as change the current code. Where possible the code was reviewed as the classes were completed. If the classes were large we reviewed methods as they were added.
+Really, the point of the hash is to make looking up the object faster.  If that hashed object is associated with another object, that's great (and probably the most common situation).  But it isn't necessary: Consider hashset in C++ ( http:www.sgi.comtechstlhashset.html )
+Hey Seb, i tried that and still the same thing, I will give those other answers above a shot. It seems like that should work, the code you posted.
+I also have a comboBox in the datagridView and also want to set it to some value ? How is that done ?
+Super . i check that your site . woow . it's working . thanks
+I'm not who's editing it and why.
+Actually, that's not a two dimensional array, it's an array with dimension 2.
+Great answer with the compiler example output. I it's really hard to decide whether to accept this one or bb's answer which quotes the relevant part of the spec. I wish I could accept both.
+I think you have to add some content to whitespace   try adding a   or something.
+non-Insert mode.  Most editors are just Insert mode, but Vi has many other modes, which interpret the keys differently.  This lets you move around and modify things much faster (for example: instead of just arrow keys to move you get a TON of navigation commands).
+So, the solution was to sleep + yield?
+as far as I can see, mySQL uses 12 hour time, and I don't know how to check whether it is am or pm. I need to use the time to find records, what if there are two times, looking exactly the same, but one am and one pm?
+It is of very little practical use. It will log the filenamelinenumber for offending allocations, but it's only informative if you call malloc directly. When using newdelete, it will unhelpfully pinpoint new.h as the offending code.
+Thanks for your answer. I'm always up for a challenge.  :)
+Sorry - I think they all apply equally to using a return from a constructor when the destructor will be called on a probably improperly constructed object, with horrible results. In both cases the answer is to use self-managing objects as class members.
+Hmm, figures, now it's not reproducible. Another Heisenbug I guess
+Multiple answers is fine by me :) I'm not sure that extension methods are sufficiently obviously extension methods to give the right impression though.
+I find people get riled up even if it's not in violation of the license, though thats not to say they are right to. For example, Transgaming with the Wine source code.
+I wonder if Postgres is too complicated a place for me to start.
+So what's your question ?
+Most code in a program is only executed a limited number of times, and humans are bad at predicting which code (and humans who think they're good at it are also bad at it).  Micro-optimizing code that isn't executed much is completely pointless.  I'd never micro-optimize without knowing there as a performance issue, or without profiling the code.
+sorry, but this would set the text to be equal to the FieldValuePath value. So if you have dummyObject.FieldValuePath==Property1 you'll get TextBlock.Text== Property1
+You shouldn't be directly extending anything - that will only lead to bad things. It will lead to good things if you have a good reason for doing it and write your code properly. Apart from interoperability issues, there's no reason not to extend Element.prototype; for other default objects, a lot of good can be had (see adding formatting methods to Date.prototype, or escaping to RegExp.prototype). It's silly to forego perfectly useful OO practices when they're available and useful.
+Actually, your original code was correct.  time.sleep() takes seconds (milliseconds are indicated by passing a floating point arg, eg 0.001)
+JRL:QUESTION IS VERY MUCH CLEAR.
+that not the spec. Im just saying perhaps the answer is as simple as you need to look somewhere else...
+You can use an enum as your event (so you can switch on them and everything) and just use a basic blocking queue in that case. Your consumer thread will block on queue.take() -- that will block until somebody throws something in the queue with queue.offer() or something similar.
+Per your update it is simple to feed the contents to another interpreter.
+This question is ambiguous.
+Sorry visage I was unable to understand you properly. Can you please explain me once again
+I have 6 denormalization fields, that builded by the same principle and I want to have a more scalable method to support them. I feel 7th same field can appear every moment
+Do you have something so far you are having problems with, or do you want somebody to do all your work?
+Ah, gotcha, sorry.
+That is odd. I get the same results as BFree. Perhaps we need to see more of the code.
+You need more detail. Is this a segfaultaccess violation (implying you accessed memory you shouldn't have)? Is it heap corruption? What behavior occurs on the crash?
+Good info.  And this reminds me that they would sometimes do token pasting using something like `define PASTE(x,y) xy` where the comment would disappear without a trace.
+I agree.  The less information I have on the screen for my brain to process, the better.
+I think I like this solution the best, nice use of generics. I should have thought of this.
+I should also add, in UML 2 there is no such Element as Aggregation or Composition (it was in UML 1.4 though).
+Will close this wiki 2009-05-23; tempted to add a bounty to see if I can get some more responses.

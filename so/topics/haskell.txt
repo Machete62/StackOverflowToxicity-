@@ -1,0 +1,65 @@
+Charles is so damn great it almost hurts!
+Not exactly. OpenID and Information Cards are single credentials, not single sign-on (well, in OpenID's case not unless you tell it to never prompt you)
+cool thanks for the tip dude :)
+perl invented so many regexp extensions that other programs now often use pcre (perl compatible regex) instead of the original regex language.
+But don't forget the spray-painted laptops. Those were cool.
+I'll agree on the distraction... I've solved more than a few issues after getting into a game of Bejeweled, or thinking about a whole different issue.
+Haha, I've upvoted everyone - all good answers.  As for which one is the 'winner'...argh!
+Your answer is probably what ElectronsAhoy really wants; however, based on the phrasing of their question, it's not.
+using a sorted dictionary has no direct correlation to iterating through items in the order they were added (see subject)
+Cool, great info. Thanks! How are subsequent calls handled? Through a token?
+And since Java 5, there is http:java.sun.comj2se1.5.0docsapijavalangProcessBuilder.html to assist in creating processes
+That only works for one item at a time.  He'd have to run those in a cursor if he wants more than one result, which is less than desirable.
+True, and don't forget about retrospectives!
+It may not be correct for File::Find, but it's a correct way for a hand-rolled recursive search function (all recursive functions must have a way to terminate, and this is one acceptable way to do that).
+i dunno if that exists in Java or not, but surely there is something similar.  perhaps object.GetType() ?
+Inheritance is the second strongest relationship in C++ and the strongest relationship in most other languages. It strongly couples your code with that of your ascendant. If you can just use it through interfaces go for it. Prefer composition over inheritance always.
+The [Conditional] attribute is also nice when your performance code is in a method.
+yep vim and makefiles best choice :) number of LOC unlimited :)
+Thanks Joel..  You know I'm gonna download this and check it out.  I was able to do what I needed with a custom validator, but if I had to do even more validation on it, it may not do what I want...
+Jean - Yes-ish - self has to be just the conventional name given to the first parameter of instance methods - and python explicitly passes the current instance of instance methods as the first argument to instance methods. But it does the same job as Java's this
+This solution is probably the most efficient approach if you're willing to use unverifiable code. However as you say, this is not a good idea.
+Why not? I don't see a problem with throwing ArgumentException or ArgumentNullException.
+You could make it less verbose with a static import.
+Better than a +1 !!!!, I posted the code that I came up with. I think I may have learned something too.(darn...jk) Anyway I truly appreciate the help and guidence and I promise to ask the right questions and do my own work.
+Thank you!... dunno why i did that...
+I think you mean cracking, hacking is what you do when you work on your application.
+Incidentally it would be the 28th for both february and march.
+but different in terms of how you can access them -- what do you mean access? Could you show me an example please? :-)
+You probably mean you want to have some sample code for an HTTP client in C++, don't you?
+I haven't heard of that behavior. But then over the years I maintained my metal cutting software in VB6 I seen many strange changes. I wouldn't rule it out. Again the way I solved these type of problems is writing minimal apps so I understand what actually going on
+Assaf - just move it out of the folder into another would do...
+I've edited my answer to be more clear about which assumptions I made, and why. Are you making any progress in your SWX endeavours?
+or just (panMiddle)
+Isn't being cheaper bad for the programmers?
+ssg or at least rethink your regex approach!
+Good thought, but this code is called inside a subcontrol's event handler (so, lifecycle-wise, it happens after PageLoad and before PagePrerender).  So I should have access to Viewstate.
+Your 'result' implies you want a string, did you mean [All,your,base,are,belong,to,us.] ?
+you can't link to an image in your computer. Think about it for a second and it should make sense. Upload it to a hosting provider or an image service and use that.
+configurator: Thanks :)
+That's talking about references rather than pass by reference - they're related but different concepts.
+Mark, 
+What do you mean? The .OfType extension method will only return controls of the type specified. And they'll be typed correctly. What sort of information are you after?
+I've been playing around with this (since apparently there is no tool for .NET that comes even close to what I want). Biggest problem is getting the DisplayCode function to work - a naive ToString on the quotation displays an AST. So I'd need sort of reverse compilation, which is overkill here.
+Good call, wo seeing the rest of the code, it'll be hard to diagnose...
+One thing to note (particularly on windows): be careful to open the file in binary mode, or alternatively use offset=file.tell().  In text mode on windows, the line will be a byte shorter than it's raw length on disk (rn replaced by n)
+You're boss! The problem was with the file itself..and i corrected my code per your instructions too
+I wish is a joke, I have decided now to do as if that thing never happened. And when I will have more time I will keep exploring I am intrigue to know why I am getting that problem. Thx for all
+I don't fully understand why you state that I don't duplicate the data ; to me, there's clearly some duplication occurring here, since I'll get the data in various table and inserting into my final tables instead of relying on joins in a view to get it.
+Many thanks Michael, i will give it a try !!
+Piskvor : I don't get you people; when they ignore it (Open source) they are evil. When they adoptembracewtfit it's also bad. When is it good?
+Then in that case, maybe you need should post a bounty for the original question? Also, you have not really succeeded in explaining why the answer to the original question was wrong.
+Not too shabby but there is a built in function for this in MVC called FileContentResult, usage:
+Great! I knew about oprofile, but never tried to use it that way. Filtering just on the symbols from the library I need gives me the needed data.
+I don't suppose this is the same as http:stackoverflow.comquestions764033how-can-i-pass-a-value-between-controllers-new-create-in-ror ?
+It's a wpf test app.  Indeed, when trying helloWorld kinda stuff in consoleApp, I don't have a problem.
+Some good points Daniel :)
+I had hoped that would be my answer, too, but unfortunately it can't be used in queries.
+I think that light-weight is about performance, let's say for example to load suggested search terms as you type.  I'm a .NET guy and I really appreciate some IDE features similar to what you say (the automatically generated proxy classes) but for a REST ws. Such thing existe?
+The code in that link is not worst-case O(n) and it only builds the first table (I want to build the second).
+powf() is a C99 function that is not in C++.
+The reason the reload(sys) is needed is that python's site module specifically removes it.  This is because client code using setdefaultencoding is like a monkey with a gun.
+Wow, the comment ate my newlines ...
+ah yeah I think you are going in the best direction then. good luck
+OK - that makes two of us.  I've not used Crystal Reports enough to know how to help more - sorry.
+true, but the questions specifies that the question is in C

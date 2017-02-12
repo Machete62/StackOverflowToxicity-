@@ -1,0 +1,914 @@
+For d3.js (or anything that requires GeoJSON), what is the preferred way of procuring a map of the US with Alaska and Hawaii situated below the western half?
+I just finished working on a new geospatial plotting library for Python called [`geoplot`](https://github.com/ResidentMario/geoplot). I would love to hear feedback! The documentation is [here](http://www.residentmar.io/geoplot/index.html).
+So far my only data analysis experience has been fairly simple and in Matlab, but I'm looking to expand my ability as I am preparing to apply for grad school focused on Data Science.Any suggestions on which language I should start learning? Projects I should dabble in? Good online resources I could utilize as I try to teach myself and build my resume? (I was thinking python or R, as I have some python experience already)Thanks!
+Hi all,I do this in my spare time as a hobby. I've picked up R the past week, and plan to expand on it with ggplot2 for starters. I have the R cookbook by Winston Chang, and was wondering if people recommended a better program/book/package to go about my hobby. What do people rely on or prefer?My workflow has typically been excel > photoshop, as I'm very apt in the latter. As you can imagine things get complicated when I went to apply a mathematical basis for my gradients or colouring, which just creates more work considering the back and forth I have to do between the two programs.Thanks!
+Hey guys, I'm trying to run this code in R that was created for me by someone, improved by someone else, and now slightly adjusted by me. After I run it, during the plot render, my iMac seems to nearly collapse trying to render it. It actually took over three hours for the plot to appear (I started it at 9pm, checked it at midnight, and went to bed - so it could have been a lot longer). Anyways, here is the code:****    #I stored the csv in this location    setwd('/wherever you decide to place the file')    require(ggplot2)            league = read.csv('Test.csv')    league$ShotsFacedPerMatch = with(league, SfpM)    #the with() function allows you to reference column names without needing to write the data frame's name down multiple times    league$ShotsFacedPerMatchConceded = with(league, SfpGC)    league$AverageScore = (league$SfpM)/(league$SfpGC)        density_kernel <- function(grid_points, data, variable.name, kernel_sd){      cols = colnames(grid_points)      distances = matrix(0, nrow=nrow(grid_points),ncol=nrow(data))      dev_factors = apply(data[,cols],2,sd)      rot_grid = as.matrix(t(grid_points))      for (i in 1:nrow(data)){        #use R's vector recycling to simplify process        distances[,i] = sqrt(colSums((          (rot_grid - as.numeric(data[i,cols]))/dev_factors                                      )^2))      }          influences = dnorm(distances, sd=kernel_sd)      denominators = rowSums(influences)      #multiply each row by the vector of target variable and then sum the rows      weighted_values = rowSums(sweep(influences, MARGIN=2, data[,variable.name], `*`))      return(weighted_values/(pmax(1e-18,denominators)))    }                    #this creates a grid that can be used to determine the background color, and it will approximate a contour line very well    data_grid = expand.grid(ShotsFacedPerMatch=                         seq(min(league$ShotsFacedPerMatch) - 0.5,                              max(league$ShotsFacedPerMatch) + 0.5,0.025),                       ShotsFacedPerMatchConceded=                         seq(min(league$ShotsFacedPerMatchConceded) - 0.1,                             max(league$ShotsFacedPerMatchConceded) + 0.1,                             0.0002))        ddata_grid = data_grid[rowSums(data_grid <0)==0,]        data_grid$AverageScore = density_kernel(data_grid, league, 'AverageScore',0.67)        data_grid$AverageScoreRange = with(data_grid,                                       cut(AverageScore,                                           seq(-1.2,1.5,0.3)))        ggplot() +       geom_tile(data=data_grid, aes(x=ShotsFacedPerMatch,                                    y=ShotsFacedPerMatchConceded,                                    fill=AverageScoreRange),                       alpha=0.6) + #add this for visible gridlines in background      geom_point(data=league,                 aes(x=ShotsFacedPerMatch,                     y=ShotsFacedPerMatchConceded)) +       geom_text(data=league,               aes(x=ShotsFacedPerMatch,                   y=ShotsFacedPerMatchConceded,                   label=Team),               nudge_y = 0.18, size=3,color='darkred') + #shifts the text label slightly above the points      ggtitle('Premier League Defensive Efficiency') +       labs(subtitle=expression(paste(sigma,'=0.67'))) +      theme(plot.title = element_text(hjust = 0.5))****[Here is the CSV for reference.](https://www.dropbox.com/s/mb4dn8ct6ais0gl/Test.csv?dl=0)Now, I'm really new to R. As in, I've rendered about 3 plots. I feel comfortable around coding, but I haven't had enough time around this language. If anyone could explain to me if anything in the code is tripping up the program, or if perhaps it's just my computer (it's a mid-2011 iMac with 12gb of ram running an ATI Radeon HD 5750 - I know, I know... but the render was ridiculous).Also, if any parts of my code are redundant, I'd love to hear about it (I'm assuming some of the lines below the read.csv are useless).Thanks a lot!
+I thought that said David Ortiz Open Discussion and I was so confused for a second hahaha
+I think it's easiest to procure a GeoJSON that has those states moved into that position already? Not sure.
+I just looked at the gallery, but I was impressed by the outputs. I like your take on Minard and the crash data plot.
+Python will definitely give you more flexibility, as its more deployable than R, and I think there is a larger community supporting it. Also, R is so geared towards statisticians that some of its conventions are weird to programmers.This is an excellent course, taught by the founder of Coursera. The exercises are in Matlab.https://www.coursera.org/learn/machine-learningThis book recently came out, and I've enjoyed it so far. http://www.deeplearningbook.org/
+I took some of the python classes at [Data Quest](https://www.dataquest.io/). Really enjoyed the interactive aspect of it (think codeacademy). They've got a few different subscription types, ranging from free to $49 a month, which give you access to different classes.
+I think more than worrying about a particular language to use or pick up I would focus on working on a small project you find interesting if you want to prepare for grad school. Plenty of awesome data science is done in Matlab so the language will not be holding you back. As for projects I would avoid things like kaggle and instead work on a project where you have to source your own data as a huge amount of real-world data science is just sourcing and cleaning your data. Good luck! 
+I find Kaggle, specifically their new open datasets, to be a great place to start to tinker with projects.
+Hadley (ggplot2 author) also has a book on the package if you want to get a solid foundation: [here](https://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/0387981403)
+It would be nice to know a source I could download that from.
+The fact that there's a global flow from left to right seems to indicate some sort of underlying bias in the algorithm.
+Why haven't you left it until only one remains? This is great but god damn I wanna see who wins (actually, who wins most after lots of full runs...)
+Possibly the most unique thing I have seen on this subreddit.It's not perfect but it's a lot better than I could do it.
+Alright everyone, let's hope this doesn't get buried. So i modified the code to fit your recommendations, i updated the Pokemon so they can traverse past the edge to the other side and modified how the list was sorted to eliminate the bias to the right. I also increased the size of the Pokemon just so that simulations wouldn't take too long (just for now). Here's a gallery of 9 different simulations : http://imgur.com/gallery/e5Xr4For people who wanted the source code, here it is : http://pastebin.com/3qJ3kmY9If you do something cool with the code please PM me the result.
+A grid of 600x600 different simplistic dual typed Pokemon. Each Pokemon fights its weakest neighbor (that isn't the same as itself) to take its place. Original program made using Processing IDE then at each frame a screenshot was taken before being lined up to make a video. More info on imgur post. More simulations: http://imgur.com/gallery/e5Xr4Source Code : http://pastebin.com/3qJ3kmY9
+I'm getting my PhD in a materials science related field and that very much looks like the evolution of grains in a metal.
+Looks similar to a simple grain growth simulation, like [this one](https://youtu.be/HsVnswfHGXM). 
+[removed]
+I'm going to save this post and hope that you put an update in here for when you've improved the program. I'd like to see the results after some of the changes you talked about in here. 
+I have no clue what's going on in here and at this point I feel like an idiot since apparently every other comment thinks it makes perfect sense.
+So hold up, even at the end it's still 1 pixel per pokemon?Basically I'm confused if the losing pixel becomes part of the *instance* of the winning pokemon, or just the same *type* as the winning pokemon.
+Last few stills: ah, so that's why maps of countries look as weird as they do : )
+Who wins?  I'm assuming if you let it keep running 1 type would be left.  Any thoughts as to which type wins out more often?  I read the Ghost comment being strongest due to consistency, however the simulation we're shown does not look like they'll win out.  Thanks! 
+a) This is so cool. So much fun. The kind of thing I wish I'd thought of... and been motivated enough to actually do. Major kudos :)b) There's a moderately serious flaw in interpreting your results: it's not clear how much the initial conditions (or little events along the way) affect the outcome. This would be fixed if you ran this, down to the last 10 Pokemon (or whatever number you want), about 1,000-20,000 times (1,000 is probably fine) and then aggregate those stats; how often does each type of pokemon end up in the final 10, that sort of thing.I don't say you need to do this--it's beautiful as it is--but if you want to generalize, like saying these seem to be the toughest pokemon or these are the most likely to remain after all the fighting, I think you'll need a relatively large number of simulations.Finally, don't let my suggestion distract from how cool this is. It's seriously cool. More importantly (for this sub), it's beautiful.
+This post inspired me to play with this, I love stuff like that.https://github.com/olafurw/poke-fightingIt's in C++ for the generation and Python/PIL for the image rendering.It's heavily simplified and anyone can take this and mess with it as they want, enjoy and please laugh at my skills :PMine does wrap around and a fight is one sided and random (not weakest), you can add that if you want, should be pretty simple.Took about 10 minutes to generate 250 iterations of 800x800, can probably simplify some stuff, I don't think this is threadable but you could probably setup all the attacks into a simd vector and perform all at once and then do 1 check to regenerate the dead.When doing this setup, these types went extinct pretty fast (Grass, Ice, Fighting, Poison, Psychic, Bug, Dragon) and these types survived on no matter what (Normal, Ghost,  Dark, Steel, Fairy), others seemed to either survive or not depending on random events.Here is the Win/Loss ratio (excluding infighting) of the types after 5.463.151 fights (3000 iterations)Win Ratio    Normal 1.00632    Fire 0.991621    Water 0.996223    Electric 0.990465    Grass 0.981728    Ice 0.991893    Fighting 0.98511    Poison 0.968448    Ground 0.998133    Flying 0.997034    Psychic 0.975163    Bug 0.975721    Rock 0.993995    Ghost 1.00346    Dragon 0.995519    Dark 1.00075    Steel 1.00265    Fairy 1.00277
+Question: where is the sourcecode / the app / the .exe? I want this to download and see how it behaves. 
+[Nice! It looks a lot like a simulation that I made a while ago :)](https://www.youtube.com/watch?v=nu0wUceHEpU)
+I feel like I'm looking at abstract art and I'm not refined enough to interpret it 
+Would you rather fight 360000 pixel sized Pokmon or 1 Pokmon sized pixel?
+Can someone explain to me , what is going on ? I can see no pokemons here! :-p
+I would love to see this run on a sort of map with areas not able to be traverseved, like empty oceans. To see how Pokmon nations form and if better geography can benefit weaker Pokmon. Kinda like how the Pokmon on the edges seem to clearly have a bias. Probably increadbly hard to actually do
+Oh this is beautiful, I wanna try something similar for fun, what table did you use as a reference?
+I would love to toy with this. Please let me know if you ever release it publicly!
+I love that in the last frame, Stunfisk is basically tied with the likes of Mega-Gyarados and Greninja for strongest pokmon. Also I like how fire, electric and water did so well in the beginning, seeing as how they're some of the best offensive(fire, electric) and defensive(water) types in the current competitive singles metagame. Is this type of study considered game theory? 
+If it's of any interest to anyone, I've written an [Avisynth](http://avs-plus.net/) filter that, almost as a side effect, is quite handy for coding cellular automata. It's somewhat unfinished though so I haven't properly released it yet.The code for Life in my filter looks something like this:    n 0 == ?: # if this is the first frame...    [c0(0,-32)] # ...then just copy the source frame (but shifted down a bit)    : # else...    [<.y(-1:1,-1)]    [<.y(-1:1;2,0)]    [<.y(-1:1,1)]    + repeat    @X 510 < ?: 0 :        X 765 > ?: 0 :            X 510 == ?: [<.y] :                255             .        .    .    .If anyone wants an explanation or more info, you're welcome to PM me.
+Makes me think of the 'dilemma prison' at the beginning of Hannu Rajaniemi's 'Quantum Thief' novel.
+So I wrote up a similar simulation but I ended up where all the blobs stopped and just started flipping edge pixels back and forth.[Blue1] [Blue2] [Red3]So Blue1 can't attack Blue2, but Red3 can, so Red3 flips Blue2:[Blue1] [Red2] [Red3]Red2 gets attack lowered, and Red3 gets attack increased.And it keeps flipping back and forth because the middle one can't ever beat the side ones, and the 1 and 3 spots keep getting stronger and stronger, so they flip and flip back 2 each frame.
+That would be awesome if you could have a colour histogram with a colour legend evolving over that number of frames.Also I'd be really interested to see if the final 10 types were fairly consistent in several trials.
+[Word cloud out of all the comments.](http://i.imgur.com/7Iz7pK5.png)I hope you like it
+What software are you using for this? Can you tweak the stats of the pixels to simulate other things?
+Interesting. Looks a lot like a [Voronoi Diagram](https://en.wikipedia.org/wiki/Voronoi_diagram). It's a similar generation rule, yours kind works from the bottom-up, but i can see why they end up [looking similar](https://upload.wikimedia.org/wikipedia/commons/8/84/Coloured_Voronoi_3D_slice.svg).
+With fire type being gone, honestly I'd put my money on the steel/bug. Scizor for the win
+Is the source code for this available? I'd love to try to optimize it and see if it's possible to speed things up. 
+This is super cool!Could you have the cells on the left wall interact with the cells on the right wall, and same from top to bottom? It seems you're giving a (dis)advantage to Pokemon on the edges by altering their number of neighbors. 
+How is it possible that at the end two adjacent blotches are electric and water/flying? Surely electric should quickly sweep through that blotch. Unless, is water flying effectively being fed by ground/grass? What an interesting simulation.
+It might also be interesting to weight stats based on type, ex. Electric having high speedhttp://pokemondb.net/pokebase/244110/pokemon-types-ranked-after-average-stats
+why the  The attacker then increases their attack by 1 and the victim lowers their attack by 1  rule? Doesn't this lead to snowballing and whoever gets the first kill has the advantage over his enemy, without a chance of a comeback?
+Well... what pokemon won? That's the important part and you are not telling! :(
+It's a cellular automaton!Very cool.The behavior reminds me of a [forest-fire model](https://en.wikipedia.org/wiki/Forest-fire_model).You should post this to r/cellular_automata OP. One of the all time top posts there is something similar, but with rock-paper-scissors instead of pokemon stats.
+Could there be an inherent advantage to the middle because they have a greater chance of getting the best starting outcome? I'm imaging a situation like having all 4 neighbours being weaker than you, compared to how you only have 3  total neighbours on the side. Also if strategy games have taught me anything, it's that being able to expand in 4 directions is better than being able to expand in only 1-3
+This is so interesting!  I bet thus could turn into a successful mobile game,  bet on the typing you think will win by the end.  
+This would be an awesome visual for map generation on a game with territories like Civilization.  Kind of like a loading screen, but what you're watching is the map itself being generated.
+Now do the same thing, but the battles are decided by a statistical average of how pokemon perform on smogon, the competitive battling site.
+This is really awesome dude! Glad to see that Grass/Ground is on there (first pokemon was torterra). 
+Reminds me a bit of game of life, except on a bigger scale than I'm used to.
+I programed something a few years go that looks super similar, super interesting. A small scale javascript version is here, you have to refresh the page sometimes to get it to run.http://williamwissemann.com/Blob_v0.012/index.htmlI have a much larger scale version 2500x2500 pixels can be found on this page.http://williamwissemann.com/projects.html
+This is essentially the same thing that happens with crystal growth on a flat surface. First there are lotsa seed crystals formed all over the surface, then as differential rates of growth occur on the faces of the seed crystals, some grow faster than others and eventually only the tallest and widest crysal surfaces are seen at the top of the growing film.
+What is this program? and what does it do? also, can I get a link for it?
+the part where the small blobs were getting smaller just because of momentum is a perfect analogy to why having a safety net and an early start matters in life and why it's called priviledge
+If the simulation is run repeatedly, are there any types that stand out as always having a relatively high placing? You mentioned Ghost/Normal, but are there any others? Comparing the stats/types of ideal pokemon to actual pokemon, what pokemon are the best all around?
+Not trying to be a dick - do you have some color blindness? Your descriptions of the colors in the album were ... questionable
+> Each pixel is a Pokemon of random dual or single type and 4 random stats: health, attack, defense, speed. The sum of these stats is equal among all Pokemon.What is the code that does this?
+So this looks very much like the Ising model. Nice application. Could you tell us the fighting equation you used?
+Now i wan't to fidddle around with an genetic algorithm again to make some pixel creatures that fight each other and look what great being i get in the end.I can't wait to see what genetic algorithm have to offer in the next few years. Robots will finally take over and gas all humans.
+It's already completely dependant on variables, you can now start moving further and further away.
+Does this also include the fairy type? Also how are attacks determined? Is it a choice between the typing of the Pokemon against the effectiveness of the other?
+Nice work.If you want some tips here is the stuff I found out while implementing my cellular automaton, which is in principle same thing:1. Use compiled language, C/C++ works best. You will have to use third party graphics library but you will get lot of efficiency compared to JAVA.2. Make sure you only check neighbors you need to check, there is no reason to check neighbors of the same type.3. Simple data structures like arrays are more efficient than lists.4. Compute results for entire field at once, not in series like you seem to do. Otherwise you will get weird results.5. If you use objects to describe individual pokemon consider alternatives, it is very resource intensive when you consider what you need them to do. Try simpler data structures. Especially when all you need from them is basic math.
+Grain growth! Looks a lot like an image from [electron backscatter diffraction](http://www.edax.com/image.asbx?AttributeFileId=ac7b2065-26d2-4f90-930b-61ffa1ee260f)
+with random types with random stats, how does this show which type is dominant?  seems very random
+I'm kinda surprised that Ghost/Dark doesn't consistently make it to the end of your sims, considering there is nothing super effective against that combo.
+It would be interesting to see a variation that re-randomises the position of each pokemon before the next frame. In this way general type effectiveness would play a bigger role than simply dominance over neighbours. 
+This reminds me of a rock paper scissors simulation I came across here: http://alexlamb.com/rock-paper-madness/Fascinating stuff!!
+How would I go about creating a simulation like this? What are the basic steps/ what programs do i use? I know some basic python if that helps.
+this looks a bit like Trees of War.http://themetalbox.com/?page=trees_2
+Occasionally re-meshing the grid will help relax stiffness issues associated with finding the last survivor (i.e. you'll be able to finish the simulation much faster)
+Pokemon fighting for dominance looks a lot like grain boundaries forming.
+If you havent read literature about cellular automata, i would recommend it.
+So, theoretically, Electric/Ground is the best? Since it is the biggest and plop down in the middle with the perimeter all adjacent to another type?
+Looks similar to how some filters in Photoshop work. The program has to decide which colors/pixels win out during blurs and compression and filters. If you could find some white papers on that kind of stuff, you might get new ideas for features. 
+It used to be much worse. It has to do with how the engine handles speed when a victim is absorbed, I have some ideas on how to fix it but nothing concrete. Edit: fixed: http://imgur.com/gallery/e5Xr4
+If the moves are calculated left to right,top to bottom(like a sequential parse of an array,for example) ,the motion will be skewed. I had that problem simulating the flow of water one time.
+>The fact that there's a global flow from left to right seems to indicate some sort of underlying bias in the algorithm.Nah, as people get richer/more powerful they start voting republican.  Moving toward the right is an inherent byproduct of pure capitalism.
+Can you not negate the bias temporarily by somehow flowing it in 4 directions then averaging the result?
+And the facts that points on the same frontier move at totally different speed ?
+Can you explain this a bit more?Sounds really interesting
+But is this OC?! I just want someone to tell me if this is OC. Whew. It says OC. 
+The video makes this look fast but this took nearly an hour to run though and it only gets slower as it moves. Next time I do this I'll let it run overnight. Or be a better programmer. 
+There can be only one! 
+Absolutely. It has a lot of room to improve but the base idea is pretty genius.I'd love to see multiple runs of this and see if a clear pattern comes out with the way the types are setup in pokemon. Realistically we would need hundreds of not thousands of runs to properly see a pattern, but once he finishes cleaning up and optimizing it, he could easily distribute a JAR we can all run and report back the stats we got! Distributing the load.
+Why do they end up in tri-bands? Almost all of the new simulations ended with a narrow top and bottom color with a predominant center stripe. It's an interesting trend. 
+Thanks! The best video is this one, where yellow blew a 3-1 leadhttps://youtu.be/WJud9waNFLs
+I won't claim to understand how this works, but that's interesting that it always ends with horizontal stripes as groups. Could that be because of the connected edges?
+Hey mate thanks for the source code can't you edit it into the higher level comment so more people see it
+Ah, I was trying to replicate what you did from your imgur album, and it looks like I was missing these factors when pkmn die:         m.health += 100;         e.health = m.health;         e.speed = m.speed;Why do you remove and then add e to the micromon arraylist?  I'm not super familiar with java but does that actually do anything?
+I think i see a processing problem. It looks like you are processing each point, then plotting that individual point. Correct me if thats not what the for loop does. It will be probably 100x faster looping if you build a matrix/ image (createImage()) then plot the whole buffer in one command. Writing to screen has a ton of overhead and you want to avoid calling a write too often.
+They are awesome! Could you do one till the very end, or isn't there much change after a while?
+Take its place, as well as keeping it's original place?
+When you say weakest neighbor, are you referring to the neighbor with the lowest health or some other number?
+Couldn't you model the pokemon as nodes and the connections to each adjacent pokemon as edges between them?In this way, you could then avoid all the topographical problems caused by adjacency and just make the graph a complete graph
+What happens when 2 pokemon try to fight the same neighbor? or is that not possible?
+Is this open source?
+If you want, I have a ton of computing power and can run a really large simulation for you. 
+You should write a thesis about how grains grow like pokemon.
+http://imgur.com/N8S6eThGoogle metal EBSD and hit images! It's super gnarly! 
+This is the most interesting comments thread I've read in a long time.
+Oh yeahhh I remember that from MSE 101 =P
+I was looking for a comment like this before I posted something similar. One could say the pokegrains are growing in the heat of battle
+I was going to say the same, except about geology. Fascinating.
+certain pokemon types beat other types, but in grain evolution, would certain grains have an advantage over others?  I would have just thought the driving mechanism was to lower the overall amount of surface of the grain boundaries of the entire solid
+OP said elsewhere that the simulation was inspired based on yeast growing simulations, so no wonder they are similar
+Tell me more
+Cool. It reminded me of the convergence to a solution to the 2D Ising model for ferromagnets. 
+I was thinking something similar to a 2D Ising or Potts model.
+[removed]
+Wow! I actually got the idea from a video about how yeast works so it kinda makes sense that they're similar. 
+This one seems to cut off before an end state is reached too. Is it an asymptotal curve kind of thing?
+Conclusion: Pokemon are not animals, but grains.
+Resembles soap bubbles expanding into each other
+[removed]
+I am shocked I had to scroll down this far to find you. Apparently this has something to do with Pokmon, but I don't see any Pokmon, not a single one.
+>The fool doth think he is wise, but the wise man knows himself to be a fool.-William Shakespeare, [As You Like It, Act V Scene 1](http://www.shakespeare-online.com/plays/asu_5_1.html)
+Each pixel represents attack/defense/speed/health stats, as well as two pokemon types.Each frame each pixel attacks another adjacent pixel, if the defender dies, he takes on the type of the attacker.Then we draw out the types of each pixel as a color.
+Yes it's always 1 pixel per pokemon and they spread with increased health.
+Yes, this confused me too.  As the Pokmon grow, they should absorb their entire neighbor, not just a single pixel from their neighbor.  At the end, it's like the Pokmon are taking bites of their opponents. 
+actually has a lot more to do with geography than anything else
+That's exactly it. It's not that ghost/normal wins every time in the 600x600 but it always seems to appear and stay near the end. So, in theory if this grid was of size: lim n->infinity nxn it would always be ghost/normal. When I get home I'll run it again all the way through.
+To add to your comment, it is probably the case that a 2-d lattice could force certain patterns to arise that wouldn't otherwise in a well-mixed scenario. Some types could maintain their existence simply due to their neighbors not having pure dominance over them. You may get completely different distributions of types in well-mixed and various N-dimensional lattice scenarios which expose blocks to a larger number of types. Even looking at a simple 1-d lattice would interesting in its own right.I think the best bet for analysis would be estimating and plotting the stationary distribution of types (for many runs as you propose).
+WOW! This is amazing! I love how different the patterns are from mine when the variables and game theory are tweaked.
+Nice job dude
+>std::mt19937&>static std::mt19937 gen(locSeed);Can I ask how these two lines (36 and 39) work?  I understand it's part of a RNG, but the syntax seems kind of weird for someone only casually familiar with C++.  Particularly the ampersand usage and then the fact that std:mt19937 then seems to be used as...a type?
+You should sort the list of ratios. Very nice!
+I'll upload it soon but I want to refine it more first. I'll post here and PM you when it's ready.
+I was rooting for the olive green so much.
+Confused me for a second too; fighting to 'expand' as in take up more of the map with 1 pixel sized pokemon of their colour, rather than fighting to 'expand' as in get bigger in size.
+Each pokemon is represented by a color
+Actually, with the current engine that wouldn't be too hard. I'd just make a different type of  Pokemon type that only the same type of pokemon can take over
+Just Google Pokemon type chart and you'll find it
+Also, if anyone knows any games/simulations like this, I would be super interested. Thanks :P
+A bit, it uses the exact same computations as pokemon does for type effectiveness but it doesn't calculate defense or speed the same. It's more of a test of what type combination is best generally not what pokemon build is best.
+OP mentioned above it's Processing.Processing btw is amazing.
+In the longer video, yellow was the biggest before it ended
+In terms of typings [Steel/Normal](http://bulbapedia.bulbagarden.net/wiki/User:Schiffy/Unused_Type_Combinations/Normal#Normal.2FSteel) has the most resistances at 10 along with 2 immunities, not sure how that would pan out in his simulation though. 
+In actual Pokemon meta Steel/Fairy is the best defensive typing. Best type overall is hard to identify, but Steel, Fairy and Ghost are all top tier. 
+[code]int tot = 255;health = randon(tot):tot -= health;attack = random(tot);tot -= attack;defence = random(tot);tot -= defence;speed = tot;[/code]
+There is fairy and yes it chooses which of its two types does more damage 
+> Simple data structures like arrays are more efficient than lists.He's using an ArrayList, not a LinkedList. These are backed by an array. There is no efficiency loss. 
+Thanks for the tips, what graphic library do you recommend??
+Python can code anything. It's just slower than some other languages, in exchange for some simplicities in usage. So python is fine.Otherwise, make some representation in code of a pokemon, use random numbers to fill out the stats, code in the rules for combats similar to the games, store all of them in a matrix so they know who their neighbors are, and loop through over and over.
+Surely pokemon on the edge and corners have an advantage because they have less adjacent enemies. You could solve this by having the edges wrap-around, effectively having the pokemon fight on a sphere instead of a plane. EDIT: As many people have pointed out what I describe would actually be a torus not a sphere, although both would eliminate the problem I mentioned. More interestingly, if you watch the video, the pokemon at the corners get wiped out pretty early. I was basing my idea that the sides and corners would be better on the fact that a green and yellow 'colony' grow on the left hand edge pretty early but I now think that this might be due to the left-to-right bias that others have pointed out. Perhaps being on the edges or corners is actually bad because you get less choice in who you fight?
+This is basically computational fluid dynamics (CFD); except instead of solving Navier-Stokes you're solving some made-up set of equations of Pokemon. A lot of the concepts used in CFD would apply here as some people mentioned. The bias of flow from left to right is most likely inherent to the way you're solving the matrix. You need to formulate your pokemon equations so that you handle space and time derivatives. The flux of a pokemon into its adjacent cells is dictated by a victory. Each pokemon has a mass generation term that lets it flow into neighbors but only if it wins. Kind of like how you have chemical kinetics and source terms.As another person suggested your boundary conditions are likely ill-formed, giving advantages to edge pokemon. So like CFD, you need to take care of your fluid-dynamic equations (pokemon equations), proper mesh and boundary conditions (don't give advantage to edge pokemon), and a proper numerical method (how you're solving the system; implicit vs explicit).I think you may have come up with a really interesting educational tool to teach young students about how CFD works with something they might be familiar with. Good Job!
+Your honesty is refreshing in a time when lying to deny responsibility is in vogue. Good luck fixing it.
+When pokemon check their neighbours for things, do they always check in the same direction first?
+turn by 90
+> It used to be much worse. It has to do with how the engine handles speed when a victim is absorbedhttps://www.youtube.com/watch?v=eCKdg8jQmN8
+The Pokemon are initially created in this way but are then sorted by their random speed.
+I also had that problem when simulating some particles(Powder Toy style). The way I 'solved' it was by going Left->Right a frame, Right->Left the next frame and so on.
+Wouldn't you have to change around the x and y from each data point?It would be much easier to just automate the conjugated median and utilise a serial algorithm.I've never seen the hype with parsing your data this way, especially considering the volume to density ratio, but maybe it could work here. 
+Are pokemon still fighting when all their neighbours are of the same type as them? (e.g. leveling on each others). If not, you could optimize by having a bool grid of pokemon that needs to fight, and each time a tile changes type it updates the bool grid of itself/neighbours. This would also let you take a fast copy of the last frame and only paste in the changed colors. Also, make sure you iterate over the array along the memory read direction in regard to rows/columns being in the outer loop.
+Could you release the source and let the community tinker? Edit:There seems to be alot of interest, is this sort of thing worth its own sub for projects like this?    
+Why the FUCK would you host the largest Pokemon tournament in Earth's history and then stop it at the semi-finals?GET ON IT MORNING FRESH
+If it's getting slower as it moves, I think there are parts of the simulation that store data in memory. So this builds up over time and the computer has fewer and fewer resources. If this is true, you could flush that data to a file periodically. Does a single iteration need data that was collected from all of the iterations before it? Seems it just needs the array from the previous iteration and whatever rules you've built in.
+> and it only gets slower as it movesthat's a bug. it should get quicker the longer it runs because there is less surface area of different types, so there should be less battle simulations being calculated per cycle.it's possible you're running out of memory [so you would deal w/ the array in chunks, not as a whole], or doing many unnecessary simulations -> maybe this is the cause of your right-hand bias. [edit: or are you storing history data in a list of arrays or something, instead of saving to file?]is it possible that a box that has 2 enemy faces [1 colour touching 2 other colours] are trying to enter in to it at the same time? and due to the order of iterating over the array, one of those parties automatically overrides the other?
+You'd think it would get much faster as it progresses, since there are fewer battle lines to process. Or does the program still simulate battles between Pokemon of the same type?
+Not sure how it could get slower, if all regions are homogenizing it should be getting iteratively cheaper.
+Got a question: Is this running on a CPU or a GPU? You may want to take a look at CUDA (Or OpenCL if you have an AMD card).
+do you have the pokemon in the center of masses performing fighting steps or do you have a way for them to figure out they are surrounded by themselves and turn off so they don't use up resources to fight or maybe even search for fights?you could then have the 'edge' of blobs on dying send a signal to reactivate the newly exposed members of their blob. Could maybe store a copy of active unit id's and jump around the general grid based on those.Because really as the number of unique 'blobs' gets smaller your program should run faster due to less and less units having to do calculations.
+If you have a GPU you might want to try offloading some of this into CUDA. I'm sure its can be parallelized. Might help with the length while also being scaleable.
+Is this on github? Can I help you fix you algorithm? (Java programmer for 17 years, C/C++ before that, also can help in python, JavaScript)
+Consider the fact that now that they wrap around; tri-bands will develop any time there are only two bands that do *not* meet *exactly* at the edge of the frame. It's like how there are bands of ocean on either side of a map of the globein order to have no bands, you'd have to divide the map exactly on a beach somewhere.
+It is interesting that the bands are always horizontal. That implies there's probably some underlying code reason.
+since it now wraps like pacman, i think its just two bands. I guess if he continued then the dominant one of the two would take over?
+[deleted]
+I didn't really fully describe the increased health in the post so that's understandableI remove and add the enemy because it needs to change positions in the speed sorted arrayList so that it's iterated at the proper speed. After the intial setup() function the speed variable is kind of useless since speed is determined by position in the array.
+Check the videos, they play till the end
+Yessir
+I think he means he means weak by type. See this chart: [here](https://www.google.com/search?q=pokemon+weakness+chart&espv=2&biw=1280&bih=708&tbm=isch&imgil=BMmGT1-Jo3B_fM%253A%253BU98d68-Tmj4amM%253Bhttps%25253A%25252F%25252Fpokemondb.net%25252Ftype&source=iu&pf=m&fir=BMmGT1-Jo3B_fM%253A%252CU98d68-Tmj4amM%252C_&usg=__xAQoFajA6xBpan52E5cSKnyu8pM%3D&ved=0ahUKEwjE27HcoYnSAhUHVyYKHS9SA2MQyjcIJQ&ei=GqefWMTmH4eumQGvpI2YBg#imgrc=BMmGT1-Jo3B_fM:)
+I'm pretty sure I know a lot about programming, I'm also pretty sure I have no idea what you are sayingWhat topographical problems are caused by adjacency? What do you mean by nodes and edges in terms of implementation in code?
+Time to hit the books and email my advisor!
+that's how you get your paper in Nature.
+Seriously, I've seen map projections, topology, computational fluid dynamics, and now metallurgy all referenced in this thread. We've been nerd-sniped pretty hard here haha
+[removed]
+How about the shift from heterogenous hunter-gatherer societies to a single globalized culture? :)It's all connected, maaan....
+The hexagonal crystallites are favored. You can't get zero grains (a perfect crystal) through a process like this.
+Sort of. I don't what actually went into this specific simulation, but in actual crystal grain growth, there is an energy balance between interfacial every (the boundaries of the grains) and the surface energy of the grains. Both are types of defects/discontinuities in the system, so the grain works to minimize the energy from them. Obviously a single crystal is the lowest energy configuration (disregarding other possible factors), but when the system reaches large grains, the driving force diminishes as the decrease in energy isn't that significant. If you want to actually read about it, the [Wikipedia article](https://en.m.wikipedia.org/wiki/Grain_growth)  is an easy place to start. 
+Make your own subreddit then. 
+So...which Pokmon won? 
+I think the better way to rationalize it is that each pixel is a ditto, and every ditto starts off with random type. As they defeat the 1-pixel dittos around them, who all have randomized stats, the defeated dittos change to the victor's type and more of that type exist. This simulation eventually figures out, given a huge number of random stat pokemon, which types are the most dominant.
+Well it is affected by geography, but that's definitely not the only factor.
+please do and post your findings :)
+Somehow I didn't even think of the 2-D limitation, which seems obvious now that you mention it.
+<3 Thank you for inspiring me. I know very little about Pokemans but I love me some code.
+Sure. I'm creating the std::mt19937 variable statically within the function. Which means that 1 and only 1 instance of that variable exists and it exists within the function. So the initialization only happens on the first function call and all the other times I'm just returning the already initialized variable.In regards to it being used then, the class std::mt19937 overloads the () operator so it can be used like a function to generate the values needed.
+Thanks a bunch..... Can you make it upscalable? I mean, I am seeing it as a new stresstest for my machine. I used to farm dogecoins to see how well the machine handled stress, but I think this could just do it even nerdier. 
+RemindMe! two days i want to see the source code
+Would you mind PMing me, too? I'd love to get my hands on the code.
+Can you also PM me as well?
+Could you maybe pm me when it's ready too? Just started using progressing for my study and I'm curious how this one would look
+PM it to me too! I have a relatively powerful PC & I could help simulate it! I'm assuming (an educated guess) a GPU would be better suited to this and I have a GTX 1080!
+Can you also PM me? I'd like to port your code to Matlab and get some data visualisation of the stats of each Pokemon's rise and fall to complete the visual spread
+May I have the source code as well?
+PM Me too please! 
+So why call them pokemon?
+On it, very well done btw, this looks super cool.
+It reminds me of this game: http://agar.io/
+That simulation is really cool, what language did you use?  Also, please send me a PM when you release the source!
+Are there any combos that don't exist? Would this simulation yield theoretical ideal combinations of typing/stats that don't have a parallel in the actual game?
+Right. That gives the four different properties different distributions. For example, health is be much more likely to receive a value at or close to the maximum than speed is. Was this intentional or would you ideally like them to have identical distributions?
+That algorithm would give each stat a different distribution.  Is that intended?  I guess you would want health to be higher than attack on average.  If you want to be able to more finely tune the distribution of 4 stats, consider generating 4 random numbers and using their ratios to determine what percentage of the 255 total points they each get.  With this you could also choose to make a certain stat higher on average by giving it a larger maximum random value.Code:  (in this example, health will be much higher than the other stats on average)    total = 255    health_ratio = rand() * 2  // random decimal between 0 and 2    attack_ratio  = rand()    defense_ratio = rand()    speed_ratio = rand()    ratio_total = health_ratio + attack_ratio + defense_ratio + speed_ratio    health = health_ratio / ratio_total * total    attack = attack_ratio / ratio_total * total    defense = defense_ratio / ratio_total * total    speed = speed_ratio / ratio_total * totalThere are a lot of interesting ways to vary the distribution of a random allocation of a pool of resources.  I'm interested in what kind of distribution actual Pokemon have in their stats - maybe it would be cool to try to get the same distribution they have.
+Wow, I wouldn't think that dragon would be so strong with it there. I guess it's not as big of a foil as I thought it was.
+Well ArrayList still implements lots of stuff that is not really necessary for this kind of work, for example Serialization and stuff it inherits from List. I will try to look up some analysis but intuition tells me that its still less efficient than simple array.
+[SDL](https://www.libsdl.org/) is good if you are writing in C++, it might be an overkill but it's multi platform and well documented.There are other options like [Cairo](https://www.cairographics.org/) and [GTK+](https://www.gtk.org/),  finally you might try OpenGL, but that's seriously overpowered. It might be interesting learning experience however.Anyway, if you can you should take a look at method calls your program makes, most IDEs have some helpful features when it comes to that, that way you can figure out where are you spending most resources.
+When I said i know some basic python i meant to say some *very* basic python. How do i store the pokemon (in their own classes or just variables, i think) in a matrix? and after I code for all the data points to fight, how would i get it to display on a graph/plane like this? Thank you
+Good idea! I'll have to put that in the next version/postEdit: check comments below for screenshots of fixed version and source code
+I think having the edges wrap would result in a torus, but that is a good suggestion nevertheless.
+That's the right idea but FYI  it's a torus, not a sphere that you get when you map the edges.
+The Pokemon would be fighting on a torus (the surface of a donut) not a sphere. Think pac-man. It still solves the problem though b
+Actually I think it would be a torus, not a sphere
+That would be a torus.
+Exactly how California will conquer the US! Ha ha ha 
+This guy facts.
+If the edges wrapped around they'd be on a torus, not a sphere
+the solution you are describing is called *periodic boundary conditions* of a 2d plane. it forms the surface of a torus, not a sphere.
+That would be a torus, not a sphere.
+I think you mean a torus, not a sphere!
+If they gain experience while fighting/winning would the ones in the middle not have an experience advantage over the ones on the outside though?
+that doesn't explain why pokeon on the right edges being beaten by the pokemon to their left
+Torus, surely?
+Just noting: if you did edge wrapping like you describe they'd actually be fighting on a torus, not a sphere.
+Don't mean to be pedantic, but that would make it a torus. 
+Torus, not sphere. But a solid idea.
+They'd actually be fighting on a torus
+If you have periodic boundary conditions on all 4 sides it's actually a torus, not a sphere.
+>sphereA torus would work better/be easier, since pixels are at the heart of the algorithm.
+Can confirm, am CFD expert.One simple way that some CFD codes handle the bias inherent in their spatial schemes is to alternate the directions of iteration. For example, first iterate i=1,n, j=1,m, then i=n,1, j=1,m, then i=1,n, j=m,1, and finally i=n,1, j=m,1, then back to start. Perhaps even doing all four for each time step, and taking the average result. Or something along those lines.Basically, you want to look for ways that ensure the first pokemon to look in each direction doesn't have any advantage/disadvantage compared to the last.I also like one of the ideas proposed above, which is essentially to randomly select a pokemon to attack in the case that there is a tie for speed.
+I took CFD this summer and it's really cool seeing the parallels between Equations governing momentum in fluids and this algorithm. When you mentioned Navier-Stokes I instantly realized your point. We are numerically solving Pokmon systems : P
+It's funny how you see a CFD problem, because I see a [CA](https://en.wikipedia.org/wiki/Cellular_automaton) problem. And neither of us are wrong or right, it's just that [complex systems](https://en.wikipedia.org/wiki/Complex_systems#/media/File:Complex_systems_organizational_map.jpg) transcend the disciplines we specialize in.
+Yes but they don't attack until they've scanned all 4 directions for which is weakest
+If using the fragment shader on a GPU you can use `    dFdx(position);    dFdy(position);`to take a peek at the surrounding fragments. You can use this to generate conflict, or just to evaluate the colour at that point.If this simulation was made using CPU only, moving to shader code will allow it to process two to three orders of magnitude faster. Also: https://www.reddit.com/r/cellular_automata/
+I thought the same when looking at the simulation. Adding a simple check so that pokemon of the same type don't fight would be an easy solution
+Each pool of colors isn't static. If a strong Pokemon behind the frontline kills another Pokemon in the color pool, then a Pokemon of the same type is created, but its stats are weaker. If it's on the border, that may change the probability of an opponent to defeat it and break through a boundary.
+If there's big interest then yes but I'd want to comment the code better first.
+In the time OP needs to fix up and share his/her code everyone interested and able in tinkering with it should be able to write the whole thing from scratch.
+I second this.
+Why are there never vertical bands? Something in his code must be affecting the fights differently if they are vertical or horizontal.
+Well we could at least confirm its algorithmic without too much trouble actually. Provided two runs that start with identical settings produce the same result, you could do one simulation and save the initial conditions/end result, then initialize a new matrix with the same conditions, but rotate it 90 before running the simulation again. If the new result is not a 90 rotation of the old one then it'd confirm that it's algorithmic in nature
+Basically some pokemon have an advantageous starting position which causes them to grow quicker than others. Instead of facing off against adjacent pokemon, you could just define them as all being adjacent to each other:https://en.wikipedia.org/wiki/Complete_graph
+He's talking about graph theory, which isn't something necessarily most programmers will know about
+Would that happen to be prof Oak? 
+I love it! :D
+[removed]
+or what about concentrations of capital and control of corporations in the global market place..... damn
+Non-Mobile link: https://en.wikipedia.org/wiki/Grain_growth***^HelperBot ^v1.1 ^/r/HelperBot_ ^I ^am ^a ^bot. ^Please ^message ^/u/swim1929 ^with ^any ^feedback ^and/or ^hate. ^Counter: ^30171
+I like this visualisation
+Probably a better way to phrase it is that other factors affect which geography is considered. Usually, a border on a map is either a straight line or lines up with some geographic feature. The other factors are what determines if your border is along this geographic feature, or the next one over.Look at states and counties in the US. Most of the borders aren't the result of armed conflict, which is why most borders are straight lines or follow geographic features. Pennsylvania was originally made up of three straight lines (which are still relatively similar today) with the Delaware River on the east. New York's boundaries pretty much follow rivers, with the exception of the straight lines bordering Pennsylvania. Hell, Vermont *was* created by conflict and was even a sovereign state for a while, but it's borders are still bound by rivers and straight lines.And look at the whole US-Canada border. There are two straight lines, one along the 49th parallel and one along the 45th in NY, and the rest is water-bound.Don't forget all of the states in the middle. They're ALL straight lines, with the exception of a few river borders. Because nobody is going to walk out into the middle of the plains and declare that a squiggly line is their border.If you then turn to Europe, this still holds fairly true, even though most of the borders are the result of historical conflicts. For example, the bulk of France's borders are along mountain ranges and water, with the northeastern part having no geographic features. The non-river part of the border with Germany is a (slightly arbitrary) line between a river border and Luxembourg, and the border with Belgium is mostly a series of squiggly lines that run between geographic features, occasionally following rivers and streams.
+Thank you, I have a bit better understanding now.
+It's already completely dependant on variables, you can even make the pokemon whatever dimensions you like.
+Try some Folding@home :D 
+He attached pokemon stats and types on each pixel.
+That's what I'm wondering, how is it a Pokemon
+Also [Pokapi](http://www.pokeapi.co/) is really cool.
+>Are there any combos that don't exist?Lots of them. Ghost/Normal is one. This simulation has them. 
+I dunno I don't know python, I know various other languages.In java, for example, you'd make a pokemon custom class (type of objects with custom rules and data), then make a matrix of them with Pokemon[][] myPokeMatrix = new Pokemon[x][y] then access cells with myPokeMatrix[7][2] etc.just google Python arrays to learn how in python. How to make pokemon objects is a more fundamental issue that will be harder but very important, look up python objects / classes
+Start with the simple things and work your way up to more complex things.For example, if you're familliar with OOP, make a Pokemon class with some stats.Then make a battle function which takes two Pokemon and determines one winner.Then make a (small) grid of Pokemon and traverse it to find neighbors, and make them battle.Hop over to r/learnpython and ask if you get stuck.
+it could also be because of just iterating over the whole array? if you use an array you are likely doing a linear iteration from left to right, this could give a slight advantage to the pokemon that are at the left because they possibly get to fight first, there is no easy way to fix this, you could iterate over it randomly this would likely fix it, but it will slow down your frames, you could sort of do a binary iteration where first you update the middle then the pokemon at 1 quarter to the beginning and 1 quarter to the end and so on till you go through the entire array/list, this will still have a slight bias but it should be reduced. There is another way, you could introduce terrain and biome modifiers, this would give some types a home field advantage. 
+Hey could you have it run for longer? I could watch this all day until there was a homogenized color 
+Can you put your code on github? I want to mess around with it.
+Is the cellular automata a torus?
+If you wrap the edges in a way that preserves the area of the squares in the grid, it's a torus. You can map the surface of a sphere to a square, it just causes distortion.
+Would flipping one pair of edges make it a Klein bottle? 
+Mathematician here. This is related to the [classification of closed connected 2-manifolds](https://en.wikipedia.org/wiki/Surface_(topology)). The usual argument involves [fundamental polygons](https://en.wikipedia.org/wiki/Fundamental_polygon). The idea is to take (say) a square and decide what happens when you leave the boundary.For a torus, you just wrap around north/south and east/west in the naive way. Why does this give a torus? Imagine taking a square piece of paper and curling it up so the left and right edges meet, and now curl that up so the top and bottom edges meet, forming a doughnut. A Klein bottle arises by introducing a twist--when exiting the top edge on the *left* half, you move to the bottom edge on the *right* half. You can't realize this twist in 3D space without intersecting yourself, which is strongly suggested by modifying the torus/paper construction, but the topology is well-defined nonetheless. It's fun to think about how you can make a sphere in this way. The second link above gives the answer.
+I thought it was a tauros
+No, Pacman is played on a cylinder - there's only a left-right wrap around not top-bottom.
+I'm thinking the *order* in which attacks happen is responsible for the observed flow.Do you have pokemon [edit: of equal speed] fight in a scan line order, or do you pseudorandomly select pairs, ie randomizing the order at each iteration?A fascinating study in emergent behavior! Thanks for doing this.
+It is interesting that it shifts to the right and not down and to the right. If I had to guess, It feels like the list is processes by `x` then `y`. The first pass of the first column, they only get 3 directions to check. up, right, down. 1/3 chance they fight right.`X++`, you move one column to the right. They either already had a fight (to the left) or they get to pick 3 directions. up, right, down. They have a 1/3 chance to fight right. But its actually worse than that. Because their weaker up or down may have already had a battle and that eliminates them as a choice. So that makes their odds greater that they will fight right.I think the issue is that the fights from the previous row eliminates options for the next row and that gives it a right shift bias.This is a great computer science type puzzle.  The idea and rules are so simple, but the implementation has to consider so much more. 
+Just post it on github. People can help comment the code and maybe clean it up as they go. We wont judge you, we've all worked without comments when tinkering with our own projects (and regretted it later anyway)
+My advice - Don't wait.  People are interested now and reddit has the attention span of a goldfish. Post it right now so we can play with it. Also, generally people who know what they're doing don't need comments to explain code unless its comments excusing some weirdo decisions you made. 
+count me in as interested!
+I'd be interested too. This is pretty cool.
+Eh, we don't need comments. 
+The real question is, tabs or spaces?
+Just post it, with or without comments. Comments can always come in a later commit.
+signing up as interested
+What language is it in?You mentioned an arrayList, so, if it's Java, I can help optimize it.
+!RemindMe 1 dayYou only have one day to release it. Or else this bot gets it.
+RemindMe! 2 days Pixel Pokmon battle simulator 
+! Remind me: something something checking sourcecode
+I'd really like to see this actually
+!remind me 2 days
+Big Interest is my second (and third) name.
+I would love to see the source for this! :-)
+Source code would be amazing
+Here for the source.
+I would be interested in it. I assume it uses the CPU to process the data? If so, what CPU do you have?
++1 for interested! I'm really curious to see how you did this.
+Can someone do this please?
+Right. But then you would have to change the way nodes fight. If each node in a complete graph attacks the weakest adjacent node (as in OP's algorithm), they will all end up attacking the same one, eliminating the current weakest node in each step. So it ends up being a really convoluted way of ordering all nodes from weakest to strongest by order of elimination. Pokemonsort?
+Probably Giovanni
+Except the ones on the edge are the only ones doing the fighting ?Would that not mean the Pokmon in the middle are weaker than the outside ones and therefore once the front lines of their type have been pushed back it's guaranteed to be consumed?
+To make it run faster you probably have to multi thread it if it isn't already, or even run it on a GPU.
+Have you tried running it with different shapes? It would be interesting to see what kinds of different tends you would see with something like a hexagon
+I could multi thread your code for you. I know a fair bit of processing 
+Folding @ home is like.... 2001...... I much rather have something actually nerdy going on. I am allways itching for a new benchmark
+this is just assumption sorrybut i think each pixel literally represents a pokemon, their type and base statsSo this blue pixel is squirtle and that red pixel is charmander and when they're next to eachother squirtle would beat charmander so both the pixel would become blue.Edit: Found out theres text in the album, so a TLDR : They're not real pokemons but each pixel represents a dual type pokemon with fake stats (health, attack, defense, speed) , the sum of those stats is equal between all pokemons, in the first frame they are all there, in the second frame , after they chose an adjacent target in order of speed, they attacked and lowered the target's HP based on the attacker's ATK, if the defender reaches 0 HP they become a clone of the attacker, the attacker raising their ATK by 1 and the defender lowering their ATK by 1.
+Thanks a bunch!
+It's easily fixed, just solve each frame atomically before updating the matrix, don't update it serially. 
+You can solve this by putting your results into a different array so you're always reading from one array and writing to another.Then you just flip the arrays each pass, use output for next frame's input and so on.
+Or you could use symmetrical battles rather than an A-attacks-B method. First turn, even numbered columns battle those to their left. Second turn, even numbered rows battle with those above them. Third, even columns attack to the right, fourth, even rows attack below. Then repeat. Then you could run the battles like actual pokemon battles, where two pokemon take turns attacking until one faints, and speed can indicate who attacks first. 
+Could this affect to be balanced out by just incrementing for one iteration and then decrementing for the next? 
+It's also a problem that's solved by large sample sizes. If the pokemon are randomly distributed and generated than this bug would effect a single run, but would even out over many runs.
+Plot it over a sphere...
+Nope. They are topologically different.
+Yes. Flipping 2 would give **RP**^2
+Maybe something related to this? https://en.wikipedia.org/wiki/Torus_knotI dunno man, knot theory is so goddam complicated I'm not even sure if it's relevant.
+https://en.wikipedia.org/wiki/Fundamental_polygon
+Sure, but entities would come out upside down when wrapped.
+Maybe the surface of a Klein bottle, yes
+Thanks for your observant comment! It works in a scan line (or ArrayList if I'm being coding specific), I think the main problem arises when I'm sorting them into this list by speed. I'll have to look over the sorting algorithm.
+I'll judge him
+The weakest node for a water pokemon is something like Fire/Ground which is 4x weak to water, which would be different to a fire pokemon which would be seeking out something like Bug/Grass. You could model the original algorithm as an incomplete graph anyway. I think the problem becomes easier to assess (at least to me) by using graph theory because it makes the adjacency property more explicit. I guess you could argue that the algorithm is just a fancy sorting algorithm.
+I think the pokemon on the outside of a cluster are clones of the inner pokemon.
+I'm 99% sure the code is horribly unoptimized, seeing as it's written in Processing. You can probably speed it up several orders of magnitude without any of what you mentioned.
+I think the issue here is how it could be multi-threaded while still maintaining correctness. The taking turns based on speed could make it much harder to divide tasks easily into threads.Of course correctness can be a tradeoff with speed, but how many errors are you ok with and how much bias would that introduce?
+I know what ya mean. I'm looking for the same thing tbh. Hmm I know it's old too and I've never tried it but have you tried Electric Sheep?
+Like in Conway's game of life? I think that's how I did it when doing my own little experiment. I ran through the array iteratively, but made the changes to a mirroring array. Once I was complete, I copied the new populations to the original array and ran it again. My remaining population patterns mirrored the wiki so I assume I did it correctly... But I could be wrong. 
+I've made something like this before. That doesn't solve it if you decide who fights who based on left and right 
+It is not that trivial. Consider pokemon 1 attacking and killing pokemon 2, but in the same time frame pokemon 2 is attacking and killing pokemon 1. This is also specified by OP as each Pokemon (in order of speed) has chosen the weakest adjacent Pokemon and lowered it's health by an amount dependent on the attacker's attack. So we do have a linear order. 
+Wouldn't this make their speed stat lose its meaning? If I'm reading things correctly, the the way things are done currently a fast pokemon can attack and kill a neighbor before it has time to act that turn.If one wants to keep the speed mechanic (and not replace it with extra rounds for faster pokemons), then a better solution would be to iterate over the pokemon in each speed class in random order each frame.
+Eli5, atomically?
+Seems like it would be pretty well suited to a compute shader too.
+I sure hope you remember to put in a change request and obtain approval before applying any such code changes to the production environment.... has this passed QA????
+It could be but there would still be a bias during each frame
+Behold: http://jcgt.org/published/0005/02/01/And slightly more venerable and famous: https://en.wikipedia.org/wiki/Mercator_projection
+That's the only part that's referred to as the Klein bottle. It doesn't have an interior, and in fact can't have one, being unorientable.
+I'd recommend sorting them first by a unique random id, than sorting by speed, that way you can avoid a situation where people are sorted first just because they're first in the array.
+How are you handling the case where two neighbors tie? Do you always select the one on the right, for instance?
+Do you invalidate the next position if it's a pokemon that was just killed and re-created? I think that your bias is from having pokemon attack in the same frame they have been created, effectively allowing a single powerful pokemon to win a chain of battles in a single frame if your weakest pokemon selection algorithm always returns the first valid result.Newly created pokemon should not be able to attack. Your weakest pokemon algo should randomize it's selection. A simple random would help, but some uniform noise might be faster and better distributed.
+Also, on each frame, do you create a new world or modify the current one? That's another potential bias source.If you're not already doing this, you should, on each frame, create a new world, and put the results from the fights on it, the use this world as the new world.
+I'd judge him so hard
+Man you'd judge [this guy](https://gist.githubusercontent.com/alessonforposterity/832da4fab11e10609dad/raw/258df12378399919ae088ba8731a7571d9c2c947/drgn.txt) so hard.
+And I'll judge you for judging him. You don't know. You don't know. 
+> The weakest node for a water pokemon is something like Fire/Ground which is 4x weak to water, which would be different to a fire pokemon which would be seeking out something like Bug/Grass. Ok, then I was wrong. I know nothing about Pokemon (sorry I'm old) and OP's post didn't mention there are different classes with different weaknesses.
+If each thread simulates a single battle then maintaining correctness shouldn't be an issue. Each threadgroup of battles would just be bottlenecked by whichever individual battle happens to take the longest, probably a struggle battle which you could detect and end early, and even then it should be hundreds of times faster than a simulation on a CPU. To handle cases where multiple Pokemon win against the same neighbor, you could store up to 4 winners per pixel per iteration, then resolve battles among the winners before repeating the process.
+Electric sheep for counting? Never heard of it. 
+Probably would be more efficient to swap the arrays (so in iteration 1 you read from array A and write to B, and in iteration 2 you read from B and write to A).Should not make computational difference though, i am just writing this to satisfy my efficiency-OCD.
+The issue about that is if you have 3 pokemon, A, B and C. A and C both attack B and both win, who gets to take over?
+How does that help though? I mean in terms of what this simulation is supposed to acheive. Pokemon conduct one fight at a time. If you change the method so that they effectively fight all neighbours at the same time you end with something that's not really a simulation of Pokemon anymore.This simulation is showing that Pokemon fights are not commutative. It might be more interesting to see how they spread.
+How so? Given a 3x3, if 4 kills (and takes over) 5, 6 won't now be fighting 4 yet in that frame, he'll still be fighting 5. Similarly, 5 still exists when you get to him, even if he's dead next frame. That means he could, say, kill 8 and move down, thus surviving. I guess the problem comes, what happens if both 2 and 4 kill 5? Conflicts should be stored and solved per-tile after the pass. Conflicts with 3+ fighters can just be evaluated in random order (they should be quite rare). 
+Could you jump back and forth with the iteration? For example, you could start at the middle and move outwards, and on your move outwards, you randomly pick who fights first. So, the first strike would start at the center of the array. Then randomly pick one of the Pokmon that touch that center member. Then you would continue that process until all of the Pokmon near that first Pokmon are in a battle, at which point you can now start moving further and further away.
+You could just make speed a floating point number instead of an integer; that way you are very unlikely to have many speed collisions.
+What's the problem with that? They'd swap places. It would also be very unlikely they'd choose each other (and then both beat each other)  outside of deep endgame. 
+Yeah, the computer would have to scan over the entire matrix before it can decide who moves first though, it would be very taxing on the CPU
+Do everything at once. Instead of directly damaging HP, store how much damage would be dealt and apply it all at the end. Thus, iteration order becomes irrelevant.
+In this case, it would be calculating the battles for each pokemon with the assumption that none of the other battles have taken place yet for that frame.
+Right but if the net effect is zero does it matter? 
+The corners in that first projection are wrapping around, but the edges are not. /u/Jesin00 is correct.The Mercator Projection example only has 2 of 4 edges wrapping around.
+Careful. Imagine if the Mercator projection did wrap around top to bottom. You would be instantly transported from the North pole to the South, or vice versa.
+Or shuffle then sort. Adding a stochastic element would be cool. 
+You'd want to sort by speed then ID. If you sort by ID first, sorting by speed will only come up when two ID's are equal (which kinda defeats the point of random unique ID's).
+You can also solve this by using an unstable sort, such as [quicksort] (https://en.wikipedia.org/wiki/Quicksort). That will introduce the randomness you are suggesting more efficiently
+I'd bet this is the source of the bias. In a tie, the one first in the array will be chosen.
+I'll judge him harder than rock. 
+I've got a raging critique right now
+I kept repeating what the fuck? until I gave up on trying to scroll down.
+I have seen this exact kind of code from classmates in 200-level CS courses. It saddened me, but I understand that not all people develop an intuitive sense of arrays or classes. That, and a decent IDE can make it remarkably easy to be lazy.
+Can someone explain what's going on here? I'm a little confused it just looks like a very long program or something
+Moving the contents of array B to array A would be efficient if you cheated by just moving the A pointer to point at the B array.
+I'm not so sure about that. Depends how large the arrays are and why kind of CPU you have, but doing one array at a time might have better cache performance if the whole array can fit in cache.
+Make them fight each other. Would add computational time but give the most consistent results. 
+could be pseudo/random
+If A is on the left corner, B is in the middle and C is on the right, then just wrap around. A fights B, B fights C, C fights A, A fights C. Winner of most rounds goes forward, otherwise let ties fight each other.
+Iterate through the array in a random sequence, update the array after each individual fight. That is, you could take over a pixel and then lose it in the same tick.
+Yea Idk. I'm not smart enough to come up with an algorithm that could do a simulation of this type. Either you start at one point and go iteratively or you try to simulate all possible outcomes at once? I honestly don't know but would love to find out. 
+Not if those values were stored in binary search tree. Turn order stored in a tree, position stored in a 2d matrix.
+You might have 8 (or 4) attacking the same pixel o n the same turn then... who gets it?
+You can map the surface of a sphere to a squareThere are two examples of spheres <-> squares (and many more exist). My second sentence didn't specify edges.  We're talking about a computer game, and the first link is methods appropriate to a computer game.Edit: For clarity, I am not in any way saying that a torus is topologically the same as a sphere.
+You are starting with (approximately) a sphere. You wind up with a square. It is possible to map a sphere to a square. You can likewise invert the process, so that all of the cells on a square map have neighbors on all sides. It does, however, distort the grid.The behavior you describe would be a torus. Going off the top edge of a sphere mapped onto a square would bring you back to the top edge, headed down.
+I believe /u/Mason11987 is talking about doing two separate sorts, where they are first sorted by ID and then by speed.  This would yield the intended result.You are suggesting the better method of using a composite sort key, where you would compare speed first and then ID if the speeds are the same.  Both of you are technically right, but your solution would be more performant.
+An unstable sort won't give you any randomness. It means that you can't guarantee that equal elements won't be swapped, but typically the algorithm itself will be completely deterministic.
+This was in a very successful commercial game though.
+It's a game made in XNA (that was a success). The programmer has no idea about even the most basic concepts in OO programming, there's no understanding of functions, objects, classes, even arrays. It's an absolute mess, it's kind of like writing a book in Spanish after you've been learning Spanish for several hours. Although it works and the game was a commercial success, so in some aspects good code really is overrated.
+With these huge arrays there's virtually no cost in having a single pointer to the currently active array though right? Just for cleanliness of your code.
+It still wouldn't work (not one that level of making them fight each other, it's a bit more complex than that), lets say Pokemon A is surrounded by B, C, D, E, F, G, H and I. If you were to fight them alphabetically and replace the loser with the winner, repeat until there's only one left, you'd very likely get a final result different than if you fought them the opposite way.Lets imagine they're on a line instead of a grid and bring it down to 3 types, the type for which you're analyzing its neighbors is Grass and it is surrounded by Fire and Water (said neighbors).* If it fights Water first then Grass wins, replaces it and then it must fight Fire and lose, so Fire is the final winner.* If it fights Fire first then Grass loses and is replaced by Fire, then Fire fights Water and Water is the final winner. The order of the fights affects the end result and this only gets more unpredictable as you add more neighbors.For the system to be as fair as possible it needs to do the following:* Loop around, edges on one side react to the edges on the other in both the x and y axis.* Use a buffer, whatever result is obtained when analyzing each pixel must go into a buffer array with the same size and coordinates, when all pixels have been analyzed and the buffer array is filled with the results, swap the visible array with the buffer array (the buffer array becomes the current array that will be analyzed next).* For each pixel analyzed, make that pixel fight all of its neighbors and count the wins/losses, do the same for each neighbor (each neighbor from that pixel must fight all of the other neighbors and keep the win/loss ratio), account for repeating fights (if neighbor A already fought neighbor E then E doesn't need to fight A again). At the end of this process he'll have a total of 9 pixels (Pokemon) with their own amount of wins and losses, the process must be repeated among the survivors until there's only one left. If there's a tie, then just select randomly from one of the remaining ones. The winner then replaces the current pixel being analyzed (by being sent to the same coordinates in the result buffer, otherwise it would affect the next pixel being analyzed in real-time and cause that left to right shift)
+Hmm... I can't prove it, but this may also introduce biases.
+Now that's a great question! I'd guess that in those sorts of cases you're basically going to rank everyone's attack, and the highest ranked attacker gets the pixel. It'd be up to the programmer to then either have the losers attempt an attack against a different pixel or just have them lose their turn.
+Toruses are appropriate to games though:https://en.wikipedia.org/wiki/Cylinder_chess#Horizontal_Cylinder_chess_and_Toroidal_chess
+True, and agreed.
+Well it depends how the pivot element is chosen. But more practically, the actual array being sorted here will change with each iteration (pokemon die off at each step). Depending on the implementation of quicksort - or any unstable sort for that matter - this should introduce the desired behavior.
+Code can be terribly ugly and extremely poorly designed and still entirely functional. As programmers we can certainly make our code more readable, more efficient, and more maintainable, but if it isn't broken we can't make it any more not broken. And as a gamer, I think I'd prefer to play something that has innovative ideas and sloppy code rather than something executed well but bringing nothing new to the table.
+great for that guy. Looking forward to the sequel in about 10 years, assuming he doesn't dump the current codebase /s
+I used this picture in the article [Wireheading Done Right: Stay Positive Without Going Insane](https://qualiacomputing.com/2016/08/20/wireheading_done_right/). The original paper about predicting future emotions based on previous ones and experience sampling text can be found in here: http://web.stanford.edu/~cgpotts/papers/conditioned-sentiment-expression.pdfThe data came from the Experience Project (a social network mostly based around talking about shared experiences). We had over a million mood updates, each containing a chosen emotion selected with a drop-down menu from 175 different possible emotions (UX designers may have comments about the usability of such a feature, but for us the granularity of emotion was very useful). For each pair of emotions A and B we looked at the probability of experiencing emotion B a number x of days after experiencing emotion A and then got a weighted average of these transition probabilities (favoring small x's over longer time intervals). These compressed transition probabilities (CTPs for short) were used as the weights for the graph you see. Then we used a graph clustering algorithm we came up with that goes well with the math for how the CTPs are computed such that the resulting clusters are meaningful. Basically, the colors you see represent emotion attractors. Once we did this we could then study more specific emotions: some are gateways (they take you from one specific cluster to another specific cluster, like hopeful or relieved) and some are hubs (they are common destinations and source for most emotions regardless of the cluster, like tired, sleep or happy).
+The one that I noticed that was sad to see was the transition between depressed and doomed.
+tired -> depressed -> blah -> bored -> horny -> excited -> happy -> tiredThat's pretty much your 20's in a nutshell.
+To confirm, is the color of the edge the color of the prior node? So if calm --- happy, if the line matches calm, it means calm leads to happy, not happy leads to calm?
+Yes, let me clarify: The color of the edges are based on the source node. So if you see a Green and a Blue emotion such that there is a thick blue edge between them but only a thin green edge between them, then that means that it is more likely to go from the blue to the green than otherwise. (Note: Most of these relationships are in fact not symmetrical). 
+There were 78,946,585 comments on Reddit in January. 1,196,640 mentioned Trump. This chart was made in R using ggplot2. The data used in this analysis can be found [here](https://docs.google.com/spreadsheets/d/1Fy1Vmnwib2OIYEz_29kKXXj4OM5iLQ6v-x75LJY6wc0), which was originally submitted to /r/datasets. 
+And that's only a small part of it, isn't it?How many more comments have something to do with Trump or recent politics without mentioning his name?I would really like to know... Either way as a non-american I'm so sick of trumpeteering.
+When you say comments mentioning Trump, was that specific to the word Trump?  
+I wonder what percentage of these were comments that shoehorned Trump Trump Trump!! into threads and topics that had nothing to do with politics
+I was arguing with a person yesterday so I went on snoopsnoo and ran his profile. 4 years, 27,000 words, 4300 unique words and by far the #1 was Trump. No other word was even close. Subconsciously OP knew it because the last month they switched to almost exclusively calling Trump pejoratives like Cheeto so they can still talk about him without using his actual name. At this point people who hate Trump talk about him more than anyone. I wonder if he creeps his way into their dreams? 
+Mildly off Topic. Do you have any tips on material for learning R?  I'm currently working through R Data Mining Projects a video series.
+How does one get raw data from Reddit like this?  Always have been curious...
+I would like to see the number of comments mentioning Trump a day before and after he announced he would be running for POTUS.
+Props for learning R.
+How strongly do the peaks correlate with when he makes a tweet?  My hunch is that there's some relation...  that and executive orders announcements.
+What if someone used the word trump?Like if they said rock trumps scissors.Would those be counted as well?
+That's a good point, I'm sure every president has different frequencies of being called by their first name, last name, or being called the President or Mr. president
+Pejoratives nicely done 
+Commenting because I would like to know also. I'm guessing Data mining techniques but I could be incorrect on that
+Simple.  Wash your hair with toothpaste.  Pinch the air in front of your face like you just grabbed a zipper to an alternate dimension.  Open said zipper by waving your hand around and then make shit up. -WBBrigading /r/datasets works too. -DT
+For people who have learned one or more other programming languages, it's a little bit weird (like you can replace = with ->) and limited in its abilities, but pretty easy to work with. 
+I was thinking more along the lines of Orange Hitler, Cheeto Benito, Donnie, etc.  I don't think he'd be able to account for all the interesting names I've seen, but I'm curious about the parameters that were used for establishing a mention. 
+98% of the data we work with is through SPSS. I've learned a few syntax languages for other programs, but other wise we use menus.
+I've seen people switch to those pejoratives because they knew they're taking about Trump too often but want to continue but with slightly different syntax. 
+I don't think lines of code is very well thought out comparison. The amount of lines code takes up depends on the language it is written in. One task could take 10 lines of code in one language and 100 in another. Still looks cool as a comparison though.
+I have a question about this and when I see articles about racial prejudice in prisons ... if people are doing the crimes and a higher percentage of that are <insert race> ... how is that prejudice and/or racial bias?  Being honest too... I feel sometimes as though criminals are moving into some sort of Bell curve system where more white people need to be arrested and more black people are getting free.
+Or stereotypes aren't just made up and they have some basis in reality?
+Look at the source, the Washington Post, the Pravda of North America, the CNN of the print news industry. My old HS suspended more blacks than whites. My old Junior HS suspended more blacks than whites. Why? Because blacks were committing more crimes at school and we didn't need no fucked up algorithm or data chart to tell us this, we saw it every day, with our our fucking eyes. Same thing in adult-life. Its' on our local evening news, it's in the security camera footage, it's in the newspapers, front page, every fucking day. Quit trying to tell us the Criminal Justice System is racist, we know better. We're living it, dumbass. Blacks commit more crimes per capita, period. 
+Racial prejudice usually is in the context of enforcement. E.g., cannabis-use is roughly the same between white and black Americans, but the latter are more likely to be charged and convicted for cannabis possession.
+The argument usually goes along with who is prosecuted and how they are sentenced. There are many crimes that have a similar prevalence across demographics, but those perceived to be in lower socioeconomic circumstances tend to be more harshly judged, first in terms of whether they'll actually be charged, and then in terms of a final sentence. There's a lot of well, you look like a nice kid, no point ruining your life in gaol for people who come from well off backgrounds. 
+Racial bias can also exist in the laws themselves, like when different types of cocaine are different levels of crime. The different types don't really have much difference pharmacologically, except that minorities use one type while whites use another type.
+It will certainly be interesting to see what research gets dug up. I suspect big data will put a lot of prejudice to rest, but understand that there exist variables that correlate to ancestry.What concerns me is that in the case of big data presenting us with a model that <race_name> is correlated to <trait> then our justice system is capable of creating a positive feedback loop which will itself become one of the causations for the correlation.Imagine if our justice system were to increase prosecution of people of Connecticut for loitering. Would the people become outraged at this prejudice and be inclined to do more crimes? What about if police start shooting people from the Caribbean area because of <trait>?tl;dr people who downvoted this comment shouldn't be concerned with what we find, but instead of what we do with the findings.
+Well, username checks out.
+Made using D3.js, d3-geo's CLI tools and ogr2ogr.**Source:** Statistics Canada, 2016 Census of Population* [Population and Dwelling Count Highlight Tables, 2016 Census](http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/hlt-fst/pd-pl/comprehensive.cfm)* [Boundary files](http://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2016-eng.cfm)
+Scraped the stack overflow job site using beautiful soup. Cleaned up the data a bit, made a pandas data frame and used matplotlib for visualization. This really is very basic, just started using python hardly a month ago. 
+[removed]
+Thought I was in r/programming at first.
+And I don't understand why people would put AWS as one of their skill 
+Also, probably MS Office.
+I'm fine with using this in international politics.Also suck it finland.Edit: I forgot this isn't r/europe and my Dutch flair doesn't show up here.Still, finland can suck it.
+Dit is een goede dag voor Nederland, en daarom ook voor de rest van de wereld.
+I'm surprised to see that /r/France has almost as many subscribers as /r/Sweden. /r/France is so dead. They couldn't produce a fuktig mejmej if their life depended on it 
+A friend once told me 'If you ain't Dutch, you ain't much'He wasn't Dutch either.
+Wanted to ask why you didn't include Moldova but then realized we're not in yet :/
+Okay, I'll be the idiot - could someone please ELI5 me what  an MEP is, and what this means? 
+Germany is highly underrepresented in this graphic, because /r/de is not germanys geodefault subreddit. Whenever a new reddit account is created, a subscription is added to the accounts default subscriptions based on the users geolocation. While for Sweden that's /r/sweden and for Ireland that's /r/ireland, for germany it's /r/de_IAmA and not /r/de.  /r/de_IAmA sees a lot less traffic than /r/de, but is with almost five times as many subscribers a lot more representative for the amount of german people browsing reddit.The same thing might apply for more of the underrepresented countries.
+Tools used: Illustrator and Photoshop.I wanted to know how a hypothetical European Parliament would look like if seats were to be shared among the countries based on the population of local subreddits. Hence the idea for a European Parliament of Reddit. I took all the information I needed from 3 places: 1. wiki page on the [European Parliament](https://en.wikipedia.org/wiki/European_Parliament) for its current composition (share of MEPs per state); 2. [this article](https://plus.maths.org/content/formula-europe) which explains the method used to calculate the distribution of MEPs; and 3. all the national/local subreddits where I checked the number of subscribers (the reddit population).Then I did the calculations and made the 2 illustrations, the distribution of reddit seats to the left and to the right a map which contrasts the number of hypothetical reddit seats with the number of actual seats in the Parliament.The map is also helpful in showing which national subreddits are overpopulated and which ones are not. There are a few things we can observe. First off, it's obvious that Latin Europe is extremely underrepresented, apart from Romania of course, which almost has the right amount of subscribers. Now here's the dilemma: all of Celtic, Nordic, Baltic and Germanic countries *apart from Germany itself* are slightly or highly overrepresented. Why is Germany an outlier in this case? I don't know. I even used /r/de (50k subscr.) instead of /r/Germany (38k subscr.), even though /r/de is supposed to be a subreddit for all German-speaking people (i.e. for Swiss and Austrians too). Hungary and the surrounding Slavic countries also have underpopulated subs, with the exception of an enthusiastic Croatia. And finally, Greece and Cyprus are doing alright, with a proportional no. of subscribers.I only used the 28 EU countries to make this map because I wanted to see the differences between this and the real Parliament. I think I'll make another version soon with all European countries included. That will look somewhat different, I'm sure.
+Seems to correlate with proficiency in English by country (I don't have the data, it just seems to fit my experiences with people from a bunch of these countries).
+Germans translate and dub everything, as a result there arent to many people visiting mostly english websites. Also its very hard to find a theatre that shows movies in english. We suck.
+Level of English in Spain is shamefulsource: Am Spanish, I don't speak English (I only pretend I do)
+When you see the the UK had the 3rd highest amount of MEPs and decided to leave because they never listened to us.
+Has any data regarding nationality of all reddit users ever been released? I recall some kind of survey a few years ago suggested it was something like 45% American, 15% Indian, so on and so forth but I don't think it was an official thing.
+[Actual distribution](http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2009/6/1/1243853597076/European-election-graphic-001.jpg)EU is basically central Europe.
+[Word cloud out of all the comments.](http://i.imgur.com/ccuk1QJ.png)I hope you like it
+One way of improving this (for me, anyway) would be to change the colours for the over/underrepresentation section. I'm colour blind and can't really tell the difference between slightly over and highly under. Other than that, nice work!
+Why did you use /r/de instead of /r/Germany?The latter is much more populous, no?
+Seeing my country (Spain) basically at the bottom of the list makes me extremely sad. Vaya pu*a *ierda.
+It would be neat to get those subreddits to hold mock elections and actually form a parliament.
+What about Switzerland? Can we at least be in the Parliament of Reddit?
+So, are we going to talk about that one Swedish guy who needs his little extra seat in front of everybody?
+I'm a bot, *bleep*, *bloop*. Someone has linked to this thread from another place on reddit:- [/r/de] [European Parliament of Reddit: distribution of MEPs per country based on the population of each national subreddit \[OC\]  \/r\/dataisbeautiful](https://np.reddit.com/r/de/comments/5t80s1/european_parliament_of_reddit_distribution_of/)- [/r/hungary] [European Parliament of Reddit: distribution of MEPs per country based on the population of each national subreddit](https://np.reddit.com/r/hungary/comments/5t9xdu/european_parliament_of_reddit_distribution_of/)[](#footer)*^(If you follow any of the above links, please respect the rules of reddit and don't vote in the other threads.) ^\([Info](/r/TotesMessenger) ^/ ^[Contact](/message/compose?to=/r/TotesMessenger))*[](#bot)
+Maybe the subreddits should get together and hold elections from each of the subreddits for moderators, and the moderators can then make decisions that apply to all of the subreddits in some way
+Would it be possible for you to do a version including the unique users of countries that have a few large national subs, such as /r/germany and /r/de./r/unitedkingdom and /r/ukpolitics are pretty self segregated and have basically become /r/leftwingpolitics and /r/rightwingpolitics so would probably make us seem more overrepresented than proportional I think.
+Okay, so now you know how the European Electoral college map will look like on election night when you finally decide to become a federation.Okay, so we're still have results coming in from a few *cantons* in the Aquitaine region but if trends continue as in the early results it looks like the socialists will add France to their win column this year...
+haha Germany [/r/de](https://www.reddit.com/r/de) gets brown - what a nice trick you played :-D
+How does this work with respect to individual portions of the UK's sub-reddit such as /r/Scotland, /r/Wales, /r/NorthernIreland?
+Reddit needs to create its own national and global system to save the planet, eliminate war and help everyone deal with medical issues and famine. I think this is the only community in the world that gives me hope for such things.
+France is too busy having sex, drinking wine, and eating croissants to give a shit about Reddit. B**stards. 
+Really? /r/de feels so populated though... Is Germany just a super high population country?
+UK is one of the few countries that was fairly represented with respect to their population in EU and they left.  Sweet irony. 
+This is bullshit. Why does Sweden get that one seat way up all the way up in the orchestra pit? Scooch in.
+This is really really cool.  Would love to see one for the US House of Representatives too
+Why isn't Norway part of the EU?Because they jealously guard their whale blubber.
+/r/de ist wirklich so klein? Eine richtige berraschung  meine Meinung nach! Ich hab' gedacht, dass viele Deutsche Reddit benutzen, aber auf jeden Fall bin ich nicht sehr oft auf /r/de so vielleicht gibt es einen Grund dafr.
+Did you know Ulster is Bigger than Northern Ireland.. This is why one of the two Chuckle brothers always said; Ulster says No ... Ian, you Troll. Yeah,   Another Vote is Happening in Northern Ireland.  Because The Old Commander Is retiring. So Big scoop of Power and control is up for grabs.  I think i should vote this time, Because..... 'merica. 
+Although I bet half of /r/ireland subscribers are Americans with great-great-great-great-great Irish grandparents.
+EU is dead. First the UK, then it will be the French and Italians. After that it's basically Germany supporting failing economies.
+Why is germany only represented by its german language reddit and not r/germany? But Italy is in english?
+So all the big parties are underrepresentated and all the small ones are overrepresentated. Makes sense, considering subscribers are also foreigners and there is no reason why foreigners would be more interested in big countries over small countries.
+Can't decide what's more surprising here:WTF, Germany?!  Nur 29, wo sind die Deutscher?France?  Surprised that many French people could be bothered to halt their vacations to check into reddit.  I guess they've nothing to do since they don't have to check work email from home.
+Why does every country get to be spelled out but mine? Why you hate my country internet? 
+There's a lot of Finns on Reddit. We just don't like communicating with each other.
+Suomi = FinlandEDIT: Spelled suomi wrong. Don't wanna get nifen.
+[deleted]
+The Dutch are just like Denmark. Slightly retarded Germans.Greetings from an inbred islander.
+UK needs more seats otherwise we're leaving. 
+What do the Dutch have against Finland? Other than the fact it doesn't exist.
+R/finlandconspiracy
+Ah, blow it on your boat, Dutchie!
+hier moet op gedronken worden, het is immers vrijdag.
+As a dumb English-native-language speaking American who never studied Dutch, it never ceases to amaze me when I can look at a sentence like this one and kind of pretty much understand it without needing Google translate.  The only thing I didn't get is, daarom ook, which to me kind of sounds like, darn luck.
+I still find it outrageous that The Netherlands gets to put a The in their name. What is this, The Gambia?!
+Dies ist ein guter Tag fr Niederlande, und darum auch fr den Rest der Welt?Stimmt das? Ich glaub ich hab zum ersten mal in meinem Leben einen hollndischen Satz komplett verstanden. 
+We zijn ergens goed in! Yay!
+Opwillems voor iedereen!
+Nederland o Nederland jij bent mijn kampioen
+Das ist ein guter Tag fr Niederland, und darum auch fr den rest der Welt.good that i am already drunk.
+Dag buurman! 
+Hey can I have some stroolwafels?
+Sverige, Nederlnderna & Storbritannien bildar koalition!
+As a native English speaker without a lick of Dutch past stroopwaffle, I can't believe I understood that. 
+Wait I can read this! You're quoting South Park in Dutch!This is a great day for The Netherlands, and therefore the world.
+reads like a lower austrian guy is having a stroke
+> [en daarom ook...] (https://s-media-cache-ak0.pinimg.com/originals/85/be/79/85be7901c1b3ca357cce5195d68f0a36.jpg)Sorry Nederlands, but it had to be done.
+Kind of amazing that I actually understand (most of) what you are saying.(As a Swede that studied German for 4 years, and never been to the Netherlands (except for transferring flights).)
+VANAF VANDAAG: NEDERLAND EERST!
+The may-may-war between them and r/de has left them beaten and demoralised I'm afraid.
+we don't need to, we're living memes
+No need to do it. You can stay indoor as much as you want. We french inhabitants would rather eat some tasty cheese with a cup of good red wine at the terrasse while the sun rays heat our skin.
+Here is my theory: /r/Sweden has become a place where people go to willingly to discuss things and have fun shitposts, the way we go to reddit. It has its own pull factor for swedes. /r/France and /de/ on the other hand are defaults for people who register on this site ( this is a relatively new feature) and come from those countries. These subreddits have no pullfactor of their own and people don't come to reddit just to go to /France or /de 
+Who needs mm when we can be pricks about what other countries call Ratatouille ?
+No but we can produce corrupt politician instead. Actually, most of the activity recently on /r/France is to trash on corrupt politicians.
+Well, neither could r/UK and it's in second place..
+[Because France is no longer France](https://www.youtube.com/watch?v=r-v-N435dNI&t=267s)
+99% lurkers I guess 
+Well,  he's right
+I used to work at the US headquarters of a large Dutch company. This was the mantra that drove most employment/promotion decisions. Im not Dutch either. 
+Don't worry friend, we'll be in one day.
+Moldova is still the best anyway
+It's alright, Australia didn't make it in either. I guess being in the Eurovision song contest doesn't count. 
+Yet?? E posibil pentru Moldova sa deveni membru Uniunea Europeana? 
+You can still participate in the Eurosong contest! That's almost half of the reasons to be in the EU.
+Member of the European Parliament.The European Parliament has 751 seats, they are distributed in proportion to the population of each country (with some additional rules). I redistributed the MEPs in proportion to the population of local subreddits (i.e. subscribers).
+A MEP is a short MEEP. When you want to go fast (meep meep), but not *too* fast (mep mep).
+I was looking around frantically trying to figure out WTF a MEP was. thanks.
+Also, the real European Parliament isn't based on countries, the members run for parties. Every European gets a vote and votes based on their party preference rather than their nationality
+Also, r/de includes Germany, Austria and Switzerland.
+I didn't even know there's such a thing as a geodefault subreddit
+And what about /r/germany ?
+/u/wildeastmofo this is the truth. Perhaps you can change it? 
+Am german. Didn't even know r/de existed. 
+I don't know about the others but /r/de is not a geo-default. That could explain a low number.
+/r/de is not a geo-default, use /r/de_iama instead which is and has 250k subscribers
+/r/czech is basically just a advisory subreddit for turists. Not something I would like to subscribe to as a czech.
+>  Why is Germany an outlier in this case?I lived in Berlin for 2 years and was surprised that very few of my friends there had heard of Reddit or cared much about the concept. 
+> Why is Germany an outlier in this case? I don't know. I even used /r/de (50k subscr.) instead of /r/Germany (38k subscr.), even though /r/de is supposed to be a subreddit for all German-speaking people (i.e. for Swiss and Austrians too). Using de instead of Germany definitely was the right choice since Germany, I'd argue, is mostly used for German-related stuff with non-germans. Now admittedly de is also used for the remainder of DACH, but germans, as with the real populations, have such a signficant weight there that it should still roughly fit.
+> Why is Germany an outlier in this case? I don't know.Good Question. Is it possible that the german market is large enough to have more national alternatives where the german people are?
+Super cool seeing all this data together, could you try doing something like this for all the 50 states as well? That'd be cool to see
+I know as a fact German people try to avoid seeming nationalistic. Many of them probably don't want to go to something specifically for Germany
+What if I have a subreddit in a multireddit but not subscribed? Does it count as subscribed?
+Any trick to how you got the specific number of dots align into a semi-circle?
+Not obvious why is there a difference?..
+The UK definitely fits that trend.
+Germany also has a huge English proficiency and the highest population but a relatively low subscriber number. My theory is that Germans are just not that into /de
+I think that's the reason. In Germany, all movies are translated into German because there are quite a lot of native speakers (Germany, Austria, Switzerland), but as far as I know, that is not the case for smaller countries like Netherlands, Sweden etc.Movies might be translated with a huge delay or not at all. Movies running in TV are often English + subtitles. This should result in a higher English proficiency (compared to Germany) and maybe in a more positive attitude regarding English websites.Question for Dutch (and Swedish) people: Is this still the case? I'm not often in the Netherlands.Edit: After looking at the map again, it seems like Austria is destroying my hypothesis. Damn you, Austria!
+Exactly my thought too.
+As a spaniard, seems right.
+That's what I was thinking too.Here's some data that seems to back you up:http://www.davidpbrown.co.uk/help/top-100-languages-by-population.htmlLook at how high Spanish, German, and French are on that list.Reddit is mostly an English speaking website.  I'm assuming that a lot of these countries whose languages are not as internationally spoken (under French on the list) are more often bi-lingual and a lot of the times, English is the chosen 2nd language. Edit:  https://en.m.wikipedia.org/wiki/English_language_in_Europe
+I assumed it was because in the southern countries they're out getting laid and shit while in the north everyone's freezing and it's fucking dark so they sit inside on Reddit and shitpost.
+Actually the german reddit population is just split between r/Germany and r/de. I don't think that the language plays a role in that.
+Normal German internet users (non-technical users) also tend to be online in a German-speaking internet bubble from what I have anecdotally seen. Few regularly visit even English sites.
+Then why is Austria overrepresented? We also dub everything.
+I've just had this conversation today with a friend. We really need to get rid of dubbing. I remember how massively my English improved once I began watching my favourite TV shows in English because I quickly got a sense of what sounds right and what sounds wrong. That's much more helpful than studying grammar rules only in theory. (Not to mention the fact that we Germans wouldn't sound so horrible speaking English if we would listen to native speakers more often to pick up the proper melody of English sentences)
+Well there are a lot of Germans on reddit, r/de just isn't a default sub.http://www.alexa.com/siteinfo/reddit.com
+Gat ar yu seying? Espein inglis is guanderful!
+It's not as bad as the language skills of English speaking countries in Europe, especially Ireland. We have to import linguists from Europe for language based jobs. 
+I agree with you but I'd also add that people in Spain have many more options in their own language compared to Nordic people.
+I don't know if it's because it's terrible, or it is because the national subreddits are not that interesting if you have much bigger, alive and traditional national forums outside reddit. I don't think I have ever browsed /r/spain, and my English is not really lacking...It's kind the same with the other big population countries with a strong language behind. If anything, I was surprised to see France in blue light, until someone commented that even if it's a lot of suscribers, the subreddit is almost dead.
+I'd rather say Meneame holds the largest reddit-like community in Spanish. 
+Why are Spaniards so lousy at speaking English? Is it not a mandatory class in schools? Spaniards I meet in the north speak it decent, even the somewhat older people. But when I go to Madrid or the south it's very hard to get by with my shitty Spanish.
+Sadly true... I luckily had a great language education, and can speak English almost bilingually. However, there's a serious need to make it one of the key classes.
+All spanish people I know ate decent at english, but then again, they are all from the same british school.
+The majority of the UK have only ever wanted it for the free trade deal, not needing to pay visa fees and having a slightly shorter queue time in airports, other EU countries want to use it as a foundation for a United States of Europe type thing with a unified currency, schengen zone, unified military, etc. which the British public have never showed any interest in being a part of.
+Brexit logic: vote ukip into MEP seats, complain when you aren't represented in EU policy making.What the fuck do you expect to happen when you put people in MEP seats who have literally no interest in actually doing the fucking job!
+i think having the 3rd largest number of representatives and feeling completely unrepresented  is pretty fair tbh.  (not stating fact just feeling) 
+Both of those things can be true, although to be fair we probably feel less well represented because a lot of them don't even want to be in the EU
+I mean, there are some ways to look up what # of people are connecting from what countries but that doesn't factor in whether it's an actual national or someone on vacation or a student studying abroad that still identifies with another nation etc.Alexa.com requires a paid subscription for more indepth data but at least it gives the top 5 countries for free, which currently for Reddit happens to be1. US - 46.1% - (7th most visited site in country)2. UK - 7.9% - (14th most visited site in country)3. Canada - 5.9% - (7th most visited site in country)4. China 4.0% - (142th most visited site in country)5. Germany 3.0% - (28th most visited site in country)as the source of all Reddit traffic.
+That would be interesting!
+It is based off of population. Also I'm not sure if you know where [central Europe](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Central_Europe_%28Brockhaus%29.PNG/800px-Central_Europe_%28Brockhaus%29.PNG) is. 
+Why does Ireland have only 12?
+This isn't even actual as the cap has been set to 96 and this is 2009
+Always putting the comment section into perspective, thanks!
+Thanks for letting me know, I'll remember to change the colors in version 2.0
+/r/de has 51k, /r/Germany only 38k.
+Dale las gracias a Mename 
+You mean like /r/mhoc, /r/iksdagen, etc?
+No, that would make the memewars impossible!
+That would be dope! I'll start! >Form an alliance and destroy /r/denmark Sincerely /r/sweden
+I'll make another version with all the countries in Europe, Switzerland included.
+They are lurkers on Reddit and in the EU.
+That's a good point, I didn't know /r/unitedkingdom and /r/ukpolitics were so divided. I'll see what I can do.
+They're not quite *that* divided; they certainly aren't as extreme as the American political subreddits.
+Germany is either 16th or 17th most populous country in the world - quite close to Congo, both being 82 million and a bit. That's 16 - 17 million people more than in France or the United Kingdom, and 22 million more than in Italy.
+Oil and fish. They don't want European regulation and penalties on that. Plus, like Sweden was for many years, they just weren't interested. Sweden still  is not interested in the euro currency. Sometimes I feel like the Nordics are more interested in the Nordic union.
+wenn man r/germany dazunimmt sieht die Sache vlt etwas anders aus...
+Just like in Finland.
+A lot of [Finns](https://np.reddit.com/r/finlandConspiracy/comments/2y0oog/the_finland_conspiracy_and_all_you_need_to_know/).
+Mora-puukko aimed right at your chest as of this moment
+So /r/Finland acts as a first line of defence for /r/Suomi?
+/r/Suomi is the one represented there, not /r/Finland btw
+That blind American woman with a hatred of Finns sounds kinda surreal. Sorry to ask, but is there anyway I can find out more about this kind of thing? I find this brand of internet weirdness strangely fascinating. 
+We're calling your bluff.
+Hier moet elke dag op gedronken worden! 
+En vergeet [de bitterballen](http://weareworldaholics.com/wp-content/uploads/2015/10/bitterballen-va-dobb.jpg) niet!
+Knowing German helps here... I would guess it means darum auch = hence also
+It's for a similar reason that if you know Spanish, French, or Italian, you can read the others and have a rough idea of what's being said. Dutch, English, and German have similar language roots, though IRC English broke away from the parent language a lot earlier than Dutch and German started to split.
+As someone from the south of Sweden: Same thing here! Though I think it might be easier for me that for someone from further north. Dutch often sounds like a mixture of English and Danish, with a little bit of German thrown in for good measure.
+Well they just call it Nederland. Really we should call it Netherland instead.
+I think The Netherlands refers to the Kingdom of the Netherlands, of which Netherlands is a constituent country. Other countries in the Kingdom are some Caribbean islands.
+Its because the name comes from the collective name for all the low laying lands, or the nether lands. 
+Same with the United States...
+We just call them the orange guys
+Das stimmt.
+That is correct! GEFELICITEERD
+Niederlande wird immer noch gro geschrieben du Kartoffel
+Permission for stroopwafels granted. Eetsmakelijk.
+As is tradition.
+/r/de has a decent maimai game though, especially with the back wind from /r/the_Schulz
+a *cup* of wine ? What are we ?Swedish ?! Show a bit of respect and use a glass !
+[Oh right, these sun rays you mean?](http://www.citycams.tv/en/france/paris-eiffel-tower/)
+/r/de is no geo-default.
+At least for r/france I can say this isn't accurate. It's a pretty active subreddit and many people there spend most of their reddit time on r/france. However it's just not big on the meme scene, which in my view is an excellent thing. 
+*VOC mentalliteit neemt toe*
+(;;)And we won't*Source*: British resident
+we'd love to have you!
+Not if the Russians have anything to say about it 
+You can take our seat... (UK).
+It is a pretty country, will be great to have you.
+*laughs in Russian*
+Cu ajutorul lui Dumnezeu i a lui Dodon totul e posibil
+Ah, now I understand - thank you!!
+Thank you. In the engineering world, it's Mechanical Electrical Plumbing plans. I was very confused about the representation of MEP plans in Europe. 
+Why that number, specifically? 
+/r/germany is pretty much a subreddit *about* Germany, mostly in English and the content is mostly just dialogue between locals and other people who are interested in Germany.
+Just another 'normal' non-geodefault sub like /r/de.
+Yes, I've read the message above, other users have also mentioned /r/de_iama and the reason /r/Germany and /r/de have so few subscribers. However, another Austrian user mentioned [here](https://np.reddit.com/r/europe/comments/5t6rde/european_parliament_of_reddit_distribution_of/ddl1jzi/) that people from all German-speaking countries are automatically subscribed to that subreddit, not only Germans. I'll see what I can do about Germany and the other suggestions, I'll certainly change some things when I'll make the second version of this map.
+Also, Neuland.
+Also a bunch of other nationalities are split between subreddits, I reckon. I know /r/Swarje is an offshoot of /r/Sweden.
+It's the largest Czech subreddit that I found. Is there a larger one around?
+Same with /r/germany, with a higher emphasis on immigration and language learning.
+reddit is pretty unknown in germany. for what ever reason most germans tend to use facebook
+That's not my experience. My friends all have reddit accounts and they range from 25 years old - mid 50s.
+Thanks, yep I think I'll do one for US states too.
+Many Germans may not like /r/de because its very political at times while many haven't heard of /r/Germany for example. English is tought in school in Germany too, so many (younger) Germans don't mind English subreddits and don't search for German subreddits.
+lol that's ridiculous. As if anybody would be so afraid of their national identity they'd avoid a damn *subreddit*.Somehow I feel like it's more likely that Reddit as a whole is simply not very well-known here and that most people are fine using the specialised English-language subreddits for their interests. Plus the fact that /r/de  is pretty politicised and that it's not a geo-default.
+I also personally find many Germans on the internet highly obnoxious, so I try to stay away from that as much as possible. except of course r/Kreiswichs 
+Unless you hit the subscribe button, I don't think it counts.
+I just used this [svg](https://commons.wikimedia.org/wiki/File:Seats_in_the_European_Parliament_\(June_2015\).svg) file.
+Dude check messages inbox
+Well you've got English people speaking english. Then you've got Scottish people trying to speak English. Then you've got the Welsh...doing what they do.
+Are Germans good at English? The Swedish stereotypes of the Germans is that they refuse to learn any other language than their own. We have he same stereotype about Italy and France.
+Yeah I agree as a German, r/de is just not worth subscribing to. 
+r/de is like krautchan, you really just don't want to be there. r/germany on the other is a lot more serious/useful and riddle with 'how I study in germany' questions.
+(I'm Dutch) and the only thing that's dubbed is cartoons for children and movies aimed at children. Movies is usually a choice whether you wanna go subs or dubs. And for cartoons and other TV shows for children it's usually only dubbed during day time. I know that it's basically the same in all of Scandinavia. But it's funny to note that they tend to translate movie titles even when it's not dubbed. In the Netherlands we only translate movie titles if they're dubbed. 
+Before DVDs it was impossible to get anything not (badly) dubbed in France.
+Still the case. In the Netherlands we *prefer* subtitles over dubbing. On Netflix I'll just disable them altogether. Well, if the source material is English, that is. If I try to understand Danish I feel like I'm having a stroke. 
+Neither of those are default, the german AMA subreddit is tho
+learend i bit german when i was little just to find sites that had rare eurotechno. Can confirm you live in a cool German internet bubble. 
+> We also dub everything.*You* do ? I thought you just watched our dubs - never seen a blu ray with austrian german as language option.
+Really? You guys speak 'german' there, don't you, at least as good as the bavarians do.
+I had no need for english proficiency in my life without internet It was absolutely useless.
+To be fair, a lot of it has to do with taxes. A lot of Swedish call centers are based in Ireland with Swedes manning them for tax purposes.
+https://en.wikipedia.org/wiki/English_language_in_Europe
+Public schooling is bad + Spanish is a complete language (anything you can think of that is written in English is in Spanish too, since its so big) - someone that lives in Norway is much more likely to learn English because of this (+ education is better)
+The language class in school is a sham
+What an unbiased sample
+Yep, can you even imagine the stink US citizens would kick up if their country entered into that kind of agreement.
+Except that's not true. if Britain had no interest why did you sign up to the monetary union and only leave when there were issues with currency speculation?You're retroactively applying today's attitudes to 30 years ago.
+I think Sweden may follow the UK's lead if the EU continues to push for a unified military. It's the same reason Sweden refuses to join NATO.  
+Unified military? That's not going to happen, what are you talking about? The EU has a defence cooperation agreement where all nations are expected to help an attacked nation in the way they can, which may be either diplomatically, economically or militarily, it's very open to interpretation. But there is not at all any push for a unified military, because most if not all governments of the EU would not want or accept one. Cooperational defense treaties? Sure. Putting your nations army under the EU instead of the country? No way, not happening.
+Well only about 30% of people voted in the European elections for a few reasons1) The parliament doesn't have enough power - it isn't able to propose budgetary or monetary legislation, only the unelected European commission can.2) There isn't enough information on what it actually does - This makes the EU Parliament feel pointless. Nobody knows what it does, what laws it's passing or blocking etc. Why would you vote on something you have no idea about?3) A lack of coverage - This ties into point 2 but the Parliament is barely ever covered so people don't take an interest in it.
+Appropriately, China scores 142th
+Yes and yes.
+So Germany is both western Europe and central Europe?
+Because relative to other EU countries it has a small population
+Because they only have a population of 4.5 million, give or take.
+...Because MEPs are distributed based on national population, not number of redditors?
+It was pretty consistent with my 2014 map, and *much* more informative. MEPs distribution is pretty rigid.
+Though /r/de is about every German speaking country, Switzerland and Austria included
+That's surprising, thanks!
+A que?
+\>_>I'm watching you, Swede.
+Ja, aber /r/germany ist meistens auf Englisch wohingegen die andere Subs sind total auf die Muttersprache. Ich egal -.- 
+The distance between individuals provided by the internet is still too close for the Finns.
+I read that in a Finnish accent. 
+Because Finland doesn't exist. r/finlandconspiracy
+as an American, can I move to Finland? I hear its dark cold and you have really fast internet.  I know Americans suck but ill mind my business also I hear you have alot of Metal bands which is awsome  
+I thought you guys bonded over heavy metal music
+Hey guys, i think your keyboards are broken. Your german looks a little weird. 
+Ik haal alvast wat stoelen erbij voor het kringetje!
+Speaking German and English makes me think that whenever I'm drunk enough, I probably speak Dutch.
+You're pretty much right. Although in this context, I would translate it to 'and so' but it basically has the same meaning. 
+Yep can confirm I was actually quite surprised when I visited Italy. I found that French+Latin=Italian. I managed to get by in Italy with no actual instructions on the language just slammed French and Latin together and added an Italian accent. I mean I probably sounded idiotic and I did get things wrong but it was surprising how well it worked. Thanks Catholic school for teaching me a useless language.
+You can also just read portugese if you know the basics of spanish. A classmate of mine had one year of spanish and he can get the gist of portugese political articles.
+Same goes for the slavic languages. Knowing Czech allows you to sort of parse written Polish, Croatian, Slovak etc. A bit more complicated with the languages that use Cyrillic. To a point it also helps with understanding spoken. Just as spoken Dutch and spoken German can be kinda parsed. 
+The language split between german and old english happened during the Norman conquests if memory serves me right.
+How about the nether region?
+It's far more involved than that: https://www.youtube.com/watch?v=eE_IUPInEuc
+I thought The Netherlands was the name for the area north of Belgium and west of Germany, and it is made up of several different constituent states, Holland being the largest by far? All I know is, it's rightful Austrian clay.
+Neem een bitterbal
+It is tradition.
+The French learned from their mistakes and instead of retreating to the Maginot line, they are about to launch the memes from /r/the_Macron. 
+No thanks, I'll just drink from the box. Anyone got a big straw?
+Please let me teach you one little thing about France.That thing that you linked, that's not France. That's Paris.
+Mes yeux! I can't see from all the sun!
+It was sunnyish in Bordeaux today. 
+And is roughly as active as /r/sweden even though it only has 1/3rd of its subs.
+Maybe some day again
+That's just like saying we'd love more debt
+It will be like no one has even gone
+Well, they first have to do something about the crime and corruption and the occupation of Transnistria.
+I'm sure that's why the EU & NATO are offering a hand... I swear they just love to piss off the Russian government.
+And knowing is half the battle!
+I don't know, but that's the number that all the countries agreed to in the Lisbon Treaty. There were a few temporary modifications when Croatia became a member in 2013, but it's back to 751 now. It will be interesting to see the changes that will happen after UK leaves, because they will leave 73 seats empty (almost 10% of the total).
+/r/SWARJE is the Swedish circlejerk subreddit. The Swedish usebase isn't so much split between these two, /r/SWARJE is more a meme-sibling of /r/sweden 
+Finland has /r/finland and /r/suomi.
+Well, no. I just point out it's not a good measurement.
+Croatia is somewhat boosted due to tourists, but overall it still is pretty active with Weekly city AMA, Culture Exchanges and different daily discussions.
+I am getman and don't get that either. On reddit you at least get to chose your bubble, on facebook people don't even know they are in one.
+I don't think speaking English is a major reason for germany's underrepresentation. Most Dutch people speak English and we are very over represented.
+As a german i can fell you that I did not even knew that there is something like /r/germany and I just dont care.If there are important news in which germany is involved, its on the startpage of reddit.Anyway, reddit is not popular in germany - unfortunately a lot never heard about reddit and use different sites.
+I don't like /r/de because the translations of reddit speak are so horrible. I prefer /r/germany and would like to see more content there.     
+ > lol that's ridiculous. As if anybody would be so afraid of their national identity they'd avoid a damn subreddit.I don't think it's being afraid, I think it's not having much interest in Germany-specific content.I have simply never thought about looking for German content on Reddit or any other social media page. And I don't see why I would: I can (or could until recently) meet German people and hear German news everyday; while Reddit provides me the opportunity to get out of the German hub and to connect with other cultures.Also, I do think it is somewhat connected to mentality. I'm currently living in Brussels, where there are loads of different nationalities; most of them form some kind of circle and open country-specific bars and restaurants etc. While the Germans seem rather indifferent towards meeting other Germans.
+Oh Gott ist das furchtbar 
+I love how using Google Translate to that (just to confirm my suspicion) has -> EN translate to Circlewich whereas -> NL translates to cirkel jerk.
+You gotta be sarcastic, right?
+> Well you've got English people speaking english.I've been to London. If that was English, they didn't teach me right in school.
+Harassing sheep? 
+Wait - the stereotypes about the French not willing to learn anything else but French is true and even supported by their government but the stereotype about German English is not that we are not willing to learn or speak it but rather that we have atrocious pronunciation. Look up westerwave English when one of our former foreign relations ministers English was just hilariously bad. German English knowledge is good though. Admittedly not nearly as good as Nordic English but we are getting there, especially with the rise of Netflix and the internet for everyone. 
+Ok, this comes a bit as a surprise to me. As a German, I always thought we were pretty open about learning other languages. Not necessarily good, because everything is translated here, so we are not exposed much to other languages. But not afraid either to make an ass of ourselves by proudly and horribly mispronouncing the sentences we studiously forced into our heads before, in order to not appear culturally ignorant when abroad. Languages are an important part of the curriculum here. This makes me a bit sad that we are seen like this. 
+I think Germans are fairly good on the whole! I thought this was the stereotype mainly reserved for us English tbh
+It is somewhat true about france, at least as far as I can tell from the people on the student exchange programm at my school, they spoke virtually no german and didn't understand that much english despite having been tought both for at least two years. I have to sy here that I had little to do with the exchange and have only tryed to speak with two of them before giving up, but that was the general consensus of the people in the exchange programm aswell.
+> We have he same stereotype about Italy and France.hey, we (Germans) have that stereotype too!    And I have to say, our English skills vary a **lot** between educational backgrounds and age groups. And even the ones whose English is pretty good often still have a thick accent.
+But this is where you get the feuchtesten maimais 
+Yeah because as a German it's only worth subscribing to /r/the_schulz
+Which has 250k subs
+Of some films there are also Austrian dubs with famous Austrians, especially children's films.
+It would be political (and, knowing this country, possibly literal) suicide to do that here. 
+we didn't accept monetary union, we voted against the euro
+I disagree. Swedish support for joining NATO is now bigger than for not joining. The Crimean annexation caused that. I doubt that within the next 100 years we'll see any sort of unified military. EU governments do not want a unified military, hence there won't be one. It's quite simple.
+There was a push for it in germany, though I don't remember by whom.
+> unelected European commissionIf you use the same logic on countries then every PM in Europe is also unelected. Why is that a problem for one but not for the other?
+Probably because everyone uses an international VPN to access Reddit.Also, where's India on that list?
+One hundred and forty secondth? 
+No, just central, though the pre-unification FRG was conciderd part of western europe.
+Fun fact: population wise, Ireland has still not recovered from the potato famine.
+Yes but compared to Denmark...
+/r/Germany has been more populous for the longest time, but in the last 2 years, /r/de has grown rapidly for some reason. /de was awful back then.
+The spanish bad copy of Reddit.[Mename](https://www.meneame.net/)
+I would have too, but I've never heard one. I wasn't sure Finns spoke
+That's just a Belgium ruse to make people stop looking into their own existence. EDIT: And do't even get me started on Australia.https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&uact=8&ved=0ahUKEwiAnLev6IbSAhVC9GMKHUL7AWUQFggpMAM&url=http%3A%2F%2Fwww.debate.org%2Fopinions%2Fdoes-australia-exist&usg=AFQjCNE6foHX5zvj-GgRMeT5MjmlbWEWMQ&sig2=ontEoDcWmcZRbqSkkHycNA&bvm=bv.146786187,d.cGc 
+Come. I will equip you with a knife, vodka and a fiber internet.
+Wat zyde gy tot my, gy kleine duyvelspecht? Ik beveel ge er kennis van te neemen dat ik met lof ende goedkeuring een kaapersbrief heb gehad van Willem van Oranje ende betrokken ben geweest by talryke geheyme offensieven tegen Alva en de zyne, en zelfstandig meer dan drie honderden Spanjolen heb omgelegd. Ik ben gehard by den Katergeuzen en ben den beste schutter onder den Nederlandsche vlag. Ge bent niet meer dan myn zoveelste doelwit. Ik zal u uyt myne gewest verwyderen met een nauwkeurigheid die de wereld nog nimmer aangechouwen had. Let op myn verdomde woorden! Gy denkt dat ge deze leuhgenpraat aan my kan verkoopen per postduyf? Gy had tweemaal moeten denken, cattengehspuys! In dezen tyd dat ik deze missive opstel, stuur ik opdracht naar myn geheymen samenstel van verspieders ende vloerduyven, verspreid door den Republiek der Zeven Verenigde Nederlanden en wordt dezen postduyf gevolgd, dus ge kunt zich maar beter voorbereiden op den storm, rabaut. Den storm die het bedroevenden klyne ding dat gy uw leven noemt weg zal vaagen. Gy bent dood, kind. Ik kan overal, ten alle tyden zyn ende ik kan ge op zeven honderden wyzen doden, ende dat is slechts met myne bloten handen. Niet alleen zyt ik veelomvattend geoefend in den ongewapenden krygskunst, maar alsmede heb ik het voltallige arsenaal der watergeuzen ter myner beschikking ende ik zal dat benutten om uwer lamlendigen achtereinde van het vastenland te vagen, gy klynen schobbejak. Als gy had geweten wat voor eene goddelooze vergelding uw 'geestige' missive teweeg zou brengen, had ge misschien op uwen tong gebeten. Maar dat kon ge niet. Gy deed het niet ende nu zult ge de tol betalen, gy verdomde smeerkanis. Ik zal furie over u schyten en gy zult er in verzuypen. Ge zyt dood, hoerenzeune.
+WASS SAGST DU
+That's pretty much the definition of Dutch right there. 
+Speaking Dutch and English I feel the same about German. 
+So true.
+It definitely helps me from the other end of this spectrum. It feels my German is perfect when I've drunk enough!
+I know a little bit of German and English, and so everytime I roll around Amsterdam drunk as hell during a night out I would ask hast du Feuer? in a shit American accent when I was looking for a lighter. It worked every time. It may have been the non-verbal que of me waving a pack of cigarettes around, but I like to think I was speaking Dutch. 
+Italian is by far the most straight forward of the Latin languages (fluent E, PT, & decent FR). English is a bastard language. I speak NL  and okay DE, and English is by far the most annoying qua rules and extra words with the same meaning, which people can't explain why it is wrong other than, it doesn't sound right. That's what you get when you mash up two language roots, Latin and Germanic (and some Celtic). Dutch should be the world language. It is simple, straight forward. Endless word creation using existing words (so with basic vocab you can progress quickly). Barely any accents or umlauts. Alfabet is basic. Only thing, it just doesn't sound very nice. Other than Flemish. Which we all know is just another word for original Dutch. 
+Hey it's not useless. If you were a pureblood or a mudblood you could use it to cast spells!
+Technical/intellectual texts in a foreign are actually easier to understand than casual conversation, if you are highly educated in a related language.
+Zonder te kijken, gok ik: cgpgrey.
+The Burgundian succession was illegal! Also, 1453 was an inside job!
+It is tradition.
+Uhh do y'all not slap the bag?
+Surely Parisians would say there is nothing in France except Paris?
+Sweden got a lot less active when the nazi mods banned all political discussion. 
+Don't know where, don't know when.
+Those warmhearted people are worth the debt!
+And also more people to work out that debt.. and also more wealth and trade.. and...
+Oh I'm sure. But Russia tends to throw a hissy fit every time we invite another ex soviet republic in. I wonder what they'll do this time? The classic ol' spark a rebellion. Or perhaps they'll just poison the water. Or they'll just cut off their gas supply. 
+To be fair, /r/sweden is full of fucking mememememes
+Yeah, but germany is still the source of 3% of reddit traffic, so either the people that use it are extremely active, or they are all not on /r/germany or /r/de. That by the way makes it the 5th largest contributer worldwide and the second of the countrys above.
+The translations are supposed to be horrible, they are implicidly making fun of reddit speech while trying to seem serious to outsiders.
+I get that it's supposed to make fun of reddit. But holy hell I can't read there it hurts, it really hurts.     I feel like I am 10 years too old for that edgy stuff. 
+Having been to Germany, Italy and France.Germans know English, don't want to use it.Italians don't know English, but don't care that you don't know Italian.French hate English and hate you for knowing it.This is not meant to be an accurate statement.
+>  Look up westerwave EnglishI did. This is so bad, I cannot believe anyone would nominate him for the position of European Commissioner. Obviously he wouldn't get through the selection proced.... [OMG](http://www.business-review.eu/wp-content/uploads/2016/11/Gunther.jpg).
+I feel like the stereotype (from a Dutch perspective) is a bit more than younger Germans are fine with English, however older generation are less proficient in comparison to people in e.g. Sweden at the same age.
+I've spent a fair bit in Germany and English is definitely widely spoken. I don't know what the Swedes are on about. I've never been to Sweden, so maybe every Swede can quote Shakespeare, but most Germans can have an English conversation.
+As another Swede, I have never heard of this stereotype. I have experienced some not-very-old-people in Germany who can't or doesn't want to speak English, and that's pretty unlikely to happen in Sweden, but on the whole I don't think that Germany is worse in that respect than most other European countries.France has a massive reputation of being horrible at English, but that's pretty much it. In Germany, Spain, Italy, Poland and The Netherlands most people seem to do their best when it's required.
+Ah, now I feel bad. I haven't actually met any German that was bad at English. The limited exposure I have had of young Germans you are about as good as young swedes. I think this is an old stereotype that have just survived. 
+Yeah, I thought so, too. I thought us Americans got the Worst Language Learners award until I learned that Europeans gave that award to the English.Jokes on them, more often than not they learn our talk. Because it is awesome.
+Haha exactly why I don't subscribe. 
+> famous Austriansonly 2 come to my mind!
+The reason you didn't join the euro was because when you joined the ERM which was set up to lead into the euro there was major currency speculation that negativity impacted the UK so you dropped out of ERM and decided to opt out of the euro altogether. It had nothing to do with what the British public wanted.
+Reddit was not blocked in January.
+You're playing fast and loose with your definition of 'fun' there.
+Denmark has more population. And countries with smaller population are actually overrepresented. France for example has >880k inhabitants per congressmen while Malta has 70k. In this case Denmark has 430k inhabitants per seat and Ireland has 417k. So, when people say that the EU is a dictatorship where the big powers are the ones that take decisions because they control most of the parliament, they're wrong.
+Who have a population of 5.7 million.
+It still is
+tio que puto cancer jajaja... en 3 minutos ya he visto un par de reposts de reddit... Est hasta la seccin preguntame... 
+they dont speak much, but they sure crush a lot...https://www.youtube.com/channel/UCcMDMoNu66_1Hwi5-MeiQgw
+They speak like they do in the memes. 
+yay :D
+Marine copy pasta in olde dutch?
+I have absolutely no ability to read that, but I knew exactly what it was within seven or so words. Memes are truly the great unifier.
+Beste kopie-pasta die ik ooit heb aanschouwen
+> Ik zal furie over u schyten en gy zult er in verzuypen.I will shit my fury all over you and you will drown in itDamm dude.
+Wat de neuk deed jij juist neukend zeggen over me, jij kleine teef? Ik zal hebben je weten ik slaagde top van mijn klas in de Marine Zeehonden, en ik heb geweest betrokken in numerieke geheime invallen op Al-Quaeda, en ik heb over 300 bevestigde moorden. Ik ben getraind in gorilla-oorlogsvoering en ik ben de topschutter in de gehele VS-se bewapende krachten. Je bent niets tot me maar juist eenander doel. Ik zal wegvagen je de neuk uit met precisie de gelijken van welk heeft nooit geweest gezien op deze Aarde, teken mijn neukende woorden. Je denkt je kunt krijgen weg met zeggen die shit tot me over het internet? Denk nogmaals, neuker. Terwijl we spreken ik ben contacterende mijn geheime netwerk van spionnen over de VSA en jouw IP is zijnde getraceerd recht nu dus je beter bereidt voor voor de storm, made. De storm die veegt uit het zielige kleine ding jij noemt jouw leven. Je bent neukend dood, kind. Ik kan zijn eenderwaar, eendertijd, en ik kan moorden jou op over zevenhonderd wegen, en dat is juist met mijn blote handen. Niet alleen ben ik extensief getraind in ongewapend gevecht, maar ik heb toegang tot het gehele arsenaal van het Verenigde-Staten-Marinierskorps en ik zal gebruiken het tot zijn volledige reikwijdte om vegen jouw miserabele reet weg het gezicht van het continent, jij kleine schijt. Als alleen je kon hebben weten wat onheilige wraak jouw kleine 'slimme' commentaar was over te brengen beneden over je, misschien je zou hebben gehouden je neukende tong. Maar je kon niet, je deed niet, en nu je bent betalende de prijs, jij godverdomde idioot. Ik zal schijten woede geheel over je en je zal verdrinken in het. Je bent neukend dood, kinddo.
+Absoluut prachtig.  Ik ben trots op je.  Het is een poosje geweest toen ik zoo 'n goede gehoord had
+> meer dan drie honderden Spanjolen heb omgelegdTranen in mijn ogen :,)
+Prachtig kopijdeegwaar, het is misschien niet van Vlaemschen oorsprong maar desalniettemin heeft het me aangezet spontaan mijn goedendag te polijsten.
+Just superb. Where's *het goud* when we need it?
+I haven't laughed at this copypasta in a while. This is good. 
+lmao you just made my day :D
+Throw in a little imperialism and you get Afrikaans!
+Sounds like we should get drunk together then.
+Byzantium had it coming! The only true Rome is the Pope's Rome! 
+No, only for milk.
+What separates humans from animals ? The Priphrique. 
+Freaking r/de at it again
+But we'll MEET AGAIN . SOME ^SUNNY ^^DAYYYYYYY
+They may sponsor Transnistria to invade the rest of Moldova. That would be fun.
+I get that, but why would you do that to yourself?
+Germans are just embarrassed to use it since they don't know it perfectly. 
+Ahhh Oettinger. 
+There is a reason we have an entire school for people to learn languages to later translate them for our Representatives.
+Swede here, on vacations to Lbeck and Hamburg, and lots of people young and old barely understood us.
+Inga problem :-)
+I'd give that award to the french, as in britain you basicly have several spoken lenguages in one country, I remember a hillarious teamspeak chat with a welsh, a scott, a guy from northern england and some noob from bristol. Everybody was shouting at the noob and I would have sworn they weren't from the same lenguage family.
+Off the top of my head: Arnold Schwarzenegger, Christoph Waltz, Ludwig van Beethoven, Wolfgang Amadeus Mozart, Sigmund Freud, Nikki Lauda, Felix Baumgartner and the dude I know you were thinking of. 
+True, but I know of a few people that just permanently stay connected to a VPN.
+I'd be interested to learn the level of VPN use in China, I think they're taking steps to ban them, but I'd imagine they'd be pretty popular.
+He is probably British...
+I don't really mind, I think small countries should have a boosted voice compared to huge countries like Germany and France, it's a little bit more fair.
+Wow the same shit happens in America. California is very under-represented while states like the Dakotas are over-represented.
+17/12 > 5.7/4.51.41 vs 1.26
+Yes! Many thanks to /u/koektrom for Dutchifying such a beautiful meme.
+Plus it's set in the 17th century. 
+> Willem van Oranje Yes, because this guy is in Civ 4 Beyond the Sword and is a mean son of a bitch. Nuked my cities and captured my capital once. 
+In the future, we'll all just speak in memes.
+I enjoy how I can sometimes guess/read what other languages say based on relation to english.Best copy-pasta that I have ever seen?
+Vergeet je schild niet,  vriend. 
+Put'em in an Aiplane an you got Jive. 
+How about at the next World Cup. If the Oranje manage to qualify this time. 
+We totally should
+HERESYTIME TO SHOW THOSE LATIN HERETICS WHO'S BOSS
+The animals, as usual, are *inside* the enclosure.Paris is like a zoo, complete with tourists coming there to see the wild parisians being assholes in their natural habitat.
+Most locals don't have vpn. Some do, but only a few, mostly in tech industry. Outside the bigger cities there should be even less. The goverment can easily block vpn, and on some days they do, vpn just stops working when there is something sensitive going on, or a conference for politicians in Beijing. No problem to get VPN up and running, and most of the time it's fine. 
+1/4 of Britain have rights to an Irish passport through parent/grandparent, apparently.
+Ah, yes. The New Jersey plan v. the Virginia plan.
+There's some good reasons behind it, but it has consequences in either direction.
+Denmark have 13 MEPs, not 17?
+Denmark has 13 according to the pic.
+You're welcome. It was fun to make.
+in Civ 5 he is more cool i think, wants to trade every time
+Where were you when the meme wars began?
+That is correct. However the reason you could guess it so easily here is because a common joke between the dutch online is to translate English sentences into Dutch as literally as possible, to the point of absurdity. The reverse is also occasionally done with Dutch proverbs.Hereby the monkey is out of the sleeve, this is the truth like a cow.Edit: [This](https://np.reddit.com/r/dataisbeautiful/comments/5t6v18/comment/ddkxv4z) for instance is a completely literal translation of the Marine copypasta)
+> Best copy-pasta that I have ever seen?Helemaal correct!
+HAH.  Regards from Belgium. 
+Consequences like Donald Trump...
+Erm... the chart seems to have changed and now has numbers in brackets too. Hmmm.
+yeah eh gets Polders and doesn't afraid of anything
+Damnit, I got got by the next-level Dutch memes.
+Since the graphic is a bit confusing, from my reading the darker red it gets, the more expensive homes are compared to the median income of the area they're in. In most of California a house is more than 5 years' salary, whereas in much of the south and plains states (the light blue areas) the average home costs less than a year's salary. 
+To create this data visualization I gathered data from the American Community Survey. I used the 2011-2015 ACS 5 years estimates from Table B25064, B25077, and B25071 on American FactFinder. I then manipulated the data in excel and used Tableau to visualize the data.
+What's the deal with Houston?  Is it the lack of zoning that keeps homes cheap relative to income?
+Man, wages in the Midwest are higher than one would think, or homes are far cheaper than elsewhere.
+I wonder how the market works in Nantucket. House median value of 903k and median income is only around 80k. The majority of houses there have got to be vacation homes for the wealthy who have primary residences elsewhere, but my question is, who runs the island? How can the working and service class afford to live and work there? Commuting on the ferry can't be that reasonable either.
+Any idea why the mountainous areas are so high?  Wouldn't expect the Ozarks, Smokies, Tx Hill Country, etc to be so high
+My guess would be sprawl.  Whenever home values get too high they just add another loop.
+Homes are cheap. You can get a 3BR2B for roughly $100K. The downside is you probably won't make more than $30K a year if you don't work in an auto factory, and your food options and night life are limited to corn and cornfields.
+Mountain view? 
+This is mostly the answer. Also, property taxes are expensive in Texas. You can't afford to just buy and sit on a property. That property needs to be generating rental income. So you don't get many people just buying a property and watching it appreciate while it's not being used. This means the rental market is always relatively cheap and that has a drag on property values. 
+Made using Mapbox GL and Statistics Canada, 2016 data
+Well, that's really an oddly regular pattern there.  Sadly i don't know anything about that topic.  Would you care to explain this in layman's terms?Is the X-shape of the overall data caused by the data sample or is there a physical reason for this?  Cause it starts to seem like it's even a fractal pattern.
+Some very odd blurring on those images that I can't seem to get around? Perhaps I should blame Firefox.
+Some really surprising (to me) stuff in there...American blacks were more literate than the Irish of the same era? I did not know that.
+This is so amazing.  I'd never thought about people making professional graphs so far back in time.  I'm super glad the LoC preserved these papers!
+Same on Chrome for me. It's weird.
+Ditto. on nightly, if that helps
+You'll need to disable any adblockers, if you have them. qz.com apparently think they're too cool just to load images the old-fashioned way _
+They're placeholder images to make site loading feel smoother. The script responsible for loading the real images seems to be broken though...
+Data: https://data.world/briangriffey/trump-tweetsMethod: Multi-dimensional scaling using pythons sklearn package. I made the visualization itself with mpld3, a python library that outputs D3.
+I made this map using Mapbox GL, using the new Statistics Canada 2016 Census data (data source link is on the map).Its based on these:https://www.mapbox.com/bites/00273/https://bl.ocks.org/hrecht
+I'm sure there's a direct correlation with condo development. Nice work 
+* Blue line is how many times a certain subreddit appears.* Red line is amount of subscribers of that subreddit (x10000)* Sample size is 44459 times of visiting /r/randnsfw  * Only 844 unique subreddits appeared.* Subreddit with the most subscriber (which appeared in this list) is r/nsfw, it appeared 62 times.* r/GroupOfNudeGirls appeared 100 times, which is the most.I was new to representing data and stuff, so sorry for the bad graph. (And my bad english too).TL:DR = reddit's random algorithm is weird.
+For interactive see:https://benyuel.github.io/breweries.htmlData mined from OSM, Google, Brewers Association, etc.Visualizations mainly using D3.
+I can't stand the term IPA, originally standing for India Pale Ale - an ale marketed by the British Empire for sale and consumption in its India colony. I automatically think BOA (British Opression Ale), marketed by American hipsters of all people.  I like it and drink the stuff ocasionally , but I always stop and  think for a moment that it's a bone headed name for an Amercan made brew. I can't help it. 
+I don't see how anyone could look at those pricing charts and not come to the conclusion that these companies are colluding in price gouging. Seriously. This needs to change. My insulin costs are $900/month and only growing. This really isn't fair. 
+I've been on humalog/novolog for a while. When I was first diagnosed it was $10/month on my parents insurance, which wasn't great. Now, even with really good insurance it's $100/month. I can get a discount card that brings it to $25/month, but that's only good for two years.That $25/vial humulin R at walmart is starting to look pretty good. It's only a little slower than humalog.
+I have never been more grateful to have the NHS.... As a diabetic, this is terrifying. Sure the companies have to make money somehow in order to continue... but people not dying shouldn't be run as a business to make money. It should be a basic right to 'not die', it shouldn't depend on how much you can afford :( 
+Only in the US. I'm sure insulin prices elsewhere in the world are not rising 
+Thanks god my insulin is covered until i turn 18 then im totally fucked
+If Americans haven't figured it out by now how much their healthcare is screwing them over, and not demanding a change, May as well let things get worse. The true tipping point is going to happen sooner or later.
+It's hard to believe that companies find it acceptable to make something people need to live so expensive. Awful.
+>One reason Janine LePere is paying so much for insulin is that the LePere family has a high-deductible health plan. Thanks, Obamacare!
+How else will natural selection take place if people who have bodily malfunctions survive? You have to crank to price up to start killing people with out directly killing them.Now, sit there and ponder the possibility.
+wait, you actually pay $900 a month for insulin? i have a friend with diabetes, but luckily I'm from the UK so he pays nothing. i'd dread to think what he would do otherwise.
+What the hell insulin are you buying??  I buy lantis and humalog every month out of pocket....not sure on the cost (my wife normally picks it up) but it isn't 900.00
+If you use Lantus and/or Humalog go on the website and it helps. I went on there and spend 10 for Lantus and 20 for Humalog instead of the 300 they want which helps a lot each month.
+Novolog and Tresiba costs $1800 a mo for me. Luckily I got my insurance to cover it so now its just about $60 a mo. I might switch to a pump soon though and I hear you can get like a vial of humalog from Canada for $40 if I do become unemployed and lose my health insurance.
+life isnt fair
+>I don't see how anyone could look at those pricing charts and not come to the conclusion that these companies are colluding in price gouging.Probably spending more money in research which is why the prices go up to fund that.Not fair for you, but might be beneficial for people with diabetes in the long run.
+> It's only a little slower than humalog.Stupid question, how much does that matter if you are good about lifestyle management or does that not matter as much for T1D (I assume)?
+This is why I believe it's important to have government intervention in healthcare. They don't want to have to pay for our illnesses long term. For private companies things like T1 diabetes are a free ticket. If we don't pay for insulin we die, it's a classic case of inelastic demand.With governments having a role at least there's some power behind bargaining and research towards lowering those costs (cures/better treatments).
+>It should be a basic right to 'not die', it shouldn't depend on how much you can afford :(  I don't think that the American system is correct for a second so don't think I'm arguing for that. But it's more complicated than that. Some drugs are ridiculously expensive because of how they're made. My mom was on a cancer medication that required proteins to be extracted from live mice. Thousands of mice per treatment. A course of treatments cost hundreds of thousands of dollars. At a certain point it's just not viable to say everyone has a right to treatments like that.Something needs to be done with drug companies to make sure that prices are actually reasonable. In another comment I posted the public financial data for one of the drug companies that makes insulin in the article. For a given year, they made $21 billion, spent almost $7 billion on MARKETING, only $4.3 billion on r&d, but made $4.3 billion in profit. Part of the reason these drug companies can get away with this, is most patients don't pay the actual cost (and if you do, sucks for you). There are tens of millions of people in the US who pay a $10, $40 co-pay for their insulin only for their insurance to pick up the other $860. So drug companies keep raising the price because insurance is like a license to print money. Insurance companies don't mind because they just pass the cost on indirectly through premiums - often paid by the person's employer. If If the government simply paid for the the medication without some sort of price controls, things wouldn't be any different.So, it's very complicated.
+Those were around long before Obamacare. 
+Lol as a non American, it boggles my mind how Americans can be so against socialized medicine. Obama tried to give it to you but you said: No! We want to pay $1000/month when we get sick!.Every other western country already has socialized medicine. I don't understand the American thought process.   
+Yep. Humalog is $300/vial and I go through 3/month.
+3 vials of humalog every month. They are $300/vial here in the US. 
+> Probably spending more money in research which is why the prices go up to fund that.Sure, they have some r&d expenses, but the money to pay for stuff like this has to come from somewhere (Humalog is made by Eli Lilly):> Eli Lilly pleaded guilty to actively promoting Zyprexa for off-label uses, particularly for the treatment of dementia in the elderly. The $1.415 billion penalty included an $800 million civil settlement and a $515 million criminal fine. The U.S. Justice Department said the criminal fine of $515 million was the largest ever in a health care case, and the largest criminal fine for an individual corporation ever imposed in a U.S. criminal prosecution of any kind.Besides that, you can actually go to their stock reports and see the breakdown. The year that judgment was awarded (2009), check out these numbers (source: https://investor.lilly.com/releasedetail.cfm?releaseid=441003) * $21.83 billion in gross revenue * $6.8 billion in marketing* $4.3 billion on research and development * $4.3 billion in profitSo no. You're profoundly and completely wrong.  
+It's not really that the prices are going up...which shouldn't happen either...moreso It's that these two companies almost entirely raise prices repetitively in unison and by the exact same amount. 
+What kind research? The substance is known for 100 fucking years! Making it pink? They may however spend some money on new forms of delivery to make it even more expensive... Why the fuck not?
+Depends on the person. At a minimum it's a bit more of a hassle and requires more planning - dose 30 minutes before eating instead of 5, that kind of thing. Pretty much cuts off impromptu snacks, and can create some trouble, say at restaurants when you don't know when you'll get your food. On top of that, for folks like me, who see carb intake show up in blood sugars very very quickly, the faster insulins result in better overall managment simply by lagging behind demand to a lesser degree. Even with fast insulins I spike really high after a meal, with Humulin R the spike lasts a little longer. This could be managed by sticking to an even lower carb diet and/or exercising after eating, but I do like having a little more flexibility.
+But they have exploded because of Obama.> And these plans are rapidly becoming more common. In 2006, only 4% of people who worked were enrolled in a high-deductible health plan. A decade later, that's up to 25%. And the amount that people are paying for deductibles is rising as well. A Kaiser Family Foundation survey found that deductibles had gone up 63% in the past five years, 10 times the rate of inflation.
+Because the government funded health care programs in the US are even worse. My insurance (military) told me to take my kid to the ER for a cough. Literally. Slower, more expensive and more likely to get her really sick than the urgent care with competent doctors half a mile away, probably to punish her for trying to get health care on the weekend when the base clinic is closed. At least our private health plans have to compete for business; there's no effective oversight and and no consequences to anyone in the government for poor health care. 
+Free ride more please. - America
+what the living fuck. im so sorry. 
+>So no. You're profoundly and completely wrong.I only answered the question:>I don't see how anyone could look at those pricing charts and not come to the conclusion that these companies are colluding in price gouging.And what I said are absolutely reasons why someone could think the price of a product rising does not have something to do with companies just price gouging.Maybe this specific company isn't doing so, that doesn't make what I said untrue.
+Yes they go up to fund more research. You might wanna read my comment again.Again, still sucks i get it.
+Research on a cure, or making a more cost effective version of the drug(which would lower expenses and therefore allow them to lower their prices), among others.
+Thanks for taking the time to explain. 
+They have exploded because of HSAs. They're a much better plan for younger, relatively more healthy people. The increase in deductibles roughly matched the increase in health care costs overall. There are a lot of problems with the ACA, but one of the better things is that it actually forces people to deal with how dysfunctional and unaffordable our healthcare system has become. The uproar is a result of people actually being faced with the dumpster fire.
+You are acting as though you don't understand the context of your commenting on an article talking in specifics about a company, and a medicine. 
+Did you read the article and see the charts I'm talking about?
+Hey guys let's raise the price 1000% so...that we can maybe reduce the price a tiny bit in the distant future.-you
+Nope, the site wouldn't let me in, but I imagined it was the same situation as the whole Martin Schkrelli outrage.
+Thanks for keeping this discussion civil and not resorting to strawmanning.
+No it's a different situation in that two separate companies producing a similar product are colluding in pricing and not competing in pricing...which is illegal. 
+What I took from this:You don't drink much coffee and alcohol, and don't eat much pizza.
+Graphs were done in OpenOffice Calc.  I recorded the data at the same time every day, remembering the previous day's intake.  For something like alcoholic beverages, I sometimes tallied the number on a sheet of paper while I was drinking.
+Yeah, you're not wrong!  This was definitely the least robust data out of everything I tracked this year.
+Data Source: random number generatorTool: MATLAB
+Is this how your phone or smartwatches can measure distance without gps?Cool graphs btw, would love to get some more context.
+please, how your data source is a random number genarator? it doesn't make sense..
+I'm fascinated by these.  They are artistic, and playful.  In many cases, the information isn't the easiest to read, but this shows thoughtful experimentation, by a man who was busy with other important matters.  The travelling exhibit would have been eye catching.I think it is safe to say, as the text does, that Du Bois had a mighty fine eye for graphic design, but I wonder if he did these with his own hand, or whether he supervised a student with skill in drafting.
+Wow these are amazing. Yes the infographics are sometimes not presented well by 2017 standards, but what an awesome way to represent data! Really emphasizes the beautiful part of this subreddit. Great find! 
+What the hell am I looking at? These are possibly the worst infographics I have ever seen.
+I believe it's stated on the other posting about these that his students at Clarke Atlanta did them. 

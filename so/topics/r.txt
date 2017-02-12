@@ -1,0 +1,12 @@
+Do you remember which arguments you used?
+Not guilty! Someone else has just downvoted my question!
+Who is downvoting all the answers to this question? Pretty childish.
+thanks for u support actually my problem is since i use split i have to assign it to a string [] but i have no idea how to declare a dynamic tring array
+1. the full path is DropboxMaseduPhy,Che.pdf
+Good! I suspected this partitioning was like using a clustered index. This leads me to the question: is there any value to partitioning the table myself over using a clustered index? I think that the performance hit would be minimal on inserts if I only need to add a bit of code to choose the correc
+oh that's what he meant!!
+I very much recommend this tool. I use it daily and it is just so much faster and less cluttered than the original help, it is amazing.
+The specific issue was mentioned in the question, but it is besides the main point of interest. :)
+This code solved my problem without any modification. Thanks!
+Wasn't the question which is more pythonic?
+Duplicate: http:stackoverflow.comquestions725043dynamic-enum-in-c

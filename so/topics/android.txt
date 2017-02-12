@@ -1,0 +1,84 @@
+perl -pe'1while+st x(8-(pos)8)e' Parentheses are required.
+My examples were a lucky guess, then.  Your description is pretty vague on what you have and what your problem actually is.  Are you out of memory?  Or is this premature optimization?
+hence not entirely reliable
+Recent versions of Opera support the CSS3 drop shadow spec too.
+And don't tell me there isn't one bit of difference between null and space, because that's exactly how much difference there is.  :-) -- Larry Wall
+what do you mean by custom? Most are vanilla bitmaps. If I have a sprite sheet in .jpg or .png format, how can you encode meta-data into it without employing steganography or something?
+So? The idea is exactly avoid doing that kind of ugly expression in the first place.
+You might find this interesting regarding your second point: http:daringfireball.net200811googlemobileusesprivateiphoneapis
+I don't really understand your question. Would you like a tool where you can draw e.g. box-and-pointer diagrams (http:www.xcf.berkeley.edu~jmacdenvdrawnode2.html)?
+Curses!  You know how the second time you have to write a poste-mailwhatever, it's never as good as the first time?  goes off to edit
+It's IPython - http:ipython.scipy.orgmoin
+This kinda works. However there seems to be a discrepancy in the total widths. I have to remove 2 pixels from the first text box on row 2 and the first 2 on the 3rd row in order to line everything up... This seems wrong
+StringTokenizer splits around characters, not strings - the string delim is a list of characters, any one of which will split. It's good for the very simple cases like an unambiguous comma separated list.
+Is there a specific reason why you're copying the whole development environment instead of managing the code using revision control? Do you need the data in the databases to be synced between work and home?
+I'm not sure why this was downvoted.  It is a yes or no question.
++1, even if the PO said it was another issue. You make it clear how clear it could be written. (Pun very much intended.)
+u were right about the getElements its getElementByID and i had getElementsById  .. good catch thanx
+What is the variable data from which you are trying to switch that would require a static function?
+I think you hit the nail on the head:  Flash is ubiquitous... it makes some sense to take advantage of that.
+What if there is a decimal?
+I have to say that, even though this is the trick I used in past a lot, Math.Round looks a lot cleaner.
+The usual . operator fails as well. can you expand on this one? It DOES work if you type the whole namespace
+The (IStorable) cast also aids readability by explicitly stating that doc is NOT an IStorable object, but rather something that can be cast as an IStorable. Although superfluous, it adds that piece of information for anyone who may be reading the code later.
+They probably also decided on it because they wanted to make it as painful as possible to use it in order to discourage its use.
+Ah. My tech guy brilliantly turned on magic quotes, which kept multiplying the slashes. if i use the mysqlrealescapestring() before isnerting stuff into the DB, there wont be any slashes stored in there, correct?
+I'm surprised, as well.
+I can put an  var element= ('mytextarea');  in if that'd help :-)
+examples please... :)
+If another developer tasked with maintaining your code screws it up, I don't see how you could possibly sit there and blame the original author for doing something which is perfectly legal and not WTFy
+Two comments: 1if the function has been deleted in the 4f4k2a commit for the a.py, shouldn't you checkout a.py from the previous commit ? (the one before 4f4k2a, as in 4f4k2a^ ?) 2 Would that not erase completly the current version of a.py ? What if I want to keep subsequent changes ?
+The only issue I ran into using TransferSpreadsheet is I didn't want the sorting and grouping structure to be exported into the Excel document. But using Office Links allowed the final product to be exported without this happening. This command also works very nicely.
+my fault,  I didn't notice the async=false part, I thought you were passing the url to the logger.ff to do a redirect.  totally read your post wrong
+can you elaborate as what u mean by raising the event when menu item is clicked? Do you mean i must fully write the menu, and for each menu item raise the event click?
+ok, i will try it. Do yo know what namespace ClientScript is in and what is the MyPage and showjquery parameters.
+Hi Eli, thank you very much for your time. Were you able to retrieve apeservice.wsdl?
+That's <http:stackoverflow.comquestions586033how-can-i-sort-du-h-output-by-size>
+Oscar : what makes you think the problem is security related?
+I don't want the controller to have to be aware of the steps in the task. Controller won't be aware of the steps. It will be aware of some abstract Task. Or did I understand you in a wrong way?
+While it may not be helpful to anyone now, it could be helpful in the future. I'm always thankful for finding hintsanswers on couple year old blog posts that help solve a problem.
+Well there are a lot of people that don't like them. They are great when it comes to tweaking a query for performance, but a nightmare for maintenance, like one of my projects has 400+ sprocs.... Thank goodness for schema compare in VSTS.
+Right, but I set its text property after I make it visible again. The USERCONTROL's Text property should persist. I understand the Textbox's Text property INSIDE the UserControl should NOT persist, but the UserControl's should. In my opinion, at least :) Right?
+Wow, I have to say that was pretty ingenious. Much props.
+Yeah, you're totally right on with this response.  I guess, since its another dev using this app, I'm less concerned about users messing things up, and more concerned about having to ask someone else to change the app each time I have a different business rule.  
+I know what you are saying.  It is frustrating to have to fight to control an aspect of your development that probably should moderated by .net as opposed to being compulsory.
+http:subversion.tigris.orgsvn1.2releasenotes.html The repository is now using the xdelta differencing algorithm (instead of vdelta)
+Settings is not an area I really use, mostly is just some code generation wrapper around .config to make accessing values by name a little easier. But blocks some of the options of System.Configuration (e.g. getting a Configuration instance from an arbitrary file, making per-user config updatable).
+FWIW, I was unable to make this work this way.  Extensive work with Microsoft MSDN Support finally got it working by also replacing the two generated interops.  I still don't understand why.  And I'd be interested in finding a reference explsaining exactly how the C++->interop->COM interface works.
+Sorry, I think I confused the PayPal acronyms NVP is already implemented its WPS (Websites Payment Standard?) that is not and there is a patch to enable WPS.
+im not interested in the cheapest mac hardward solution; i just want the best solution
+Had the same problem in Sql Management Studio, no solution other than yours.
+I was hoping for something more host-specific, i.e. something in the application that's hosting the service.
+Charlie :b, you have a point.
+No, don't use os.popen(), it's been obsoleted by subprocess.
+How does this scale to thousands of files effectively? Using the PHP script the author could use a database backend...
+I voted up, because I have been asked for estimates where I knew absoutely nothing about the problem domain. In that case your estimate ranges from 1 day to infinity. The asker is sensible and asking Knowing the technology, how long would it take you? and How long would it take a complete beginner to do it. They need a number to bring back to management, answers from SO will lend some estimate to their guess makeing it an Educated Guess
+Also, the error says line 18 and position 55, but in the error list it is on line 1 position 1. Strange.
+Yes, I've heard that before, so my hope is that validation will work out for the best by default. I think I'm going to try and go with the LocalFileFormatTarget serialization to start with. I just need to figure out the best way to get at the the data I need. If I serialize a DOMNode, will that get all of its sub-elements, attributes, and data as well or do I need to go down further in the tree at each? Thanks again.
+Yep, I agree, some form of simple TCO must be there. Edited accordingly.
+How about simply setting it to texthtml and serving up a pleasant-looking error page? Then you can just link to the file and let the browser either download it, or handle the error. It might be appropriate to include a  try again  reload link if it's the kind of error that might go away on a second attempt.
+Yeah, I got fed up of the different ways dates and times are signalled across different DB-API layers, different versions of MySQLdb and Python, and even different available libraries (ie. mxDateTime). Now I just use integers and Unix time. Unless you need to do queries based on day-of-week or something, this is generally much easier.
+Yes! I can write at the file system directly from a shell. Moreover. An empty file is generated.
+I agree, but I was thinking quick fix.  Not quite sure why it is coming back like that.  It has always done so for me on a post back, thought it was a feature.
+Samuel: What should that format be? Never heard about a specific format.
+I made a mistake in this, but I don't feel like editing it. Making the base class a friend doesn't work there needs to be an extern declaration of the internals of the mock so that they can be used in the new bodies of the base class functions. Then in your main.cpp, or whatever is running the test suite, you have the instance of the internal objects.
+I really like this suggestion as it's what resembles my current implementation and provides an option to the user.
+Jon: I agree. I'm not expecting someone debug my case. I was just asking a simple question, which is whether it is known with absolute assurance that GC.SuppressFinalize is guaranteed or not. If someone says yes then ideally they can also provide a reference with some authority. Whether that sheds light on my issue or not remains my problem. :) The thing is that, docs say it's a request, not guarantee.
+And Python - that's one of the languages Google provides directly.
+jrandomhacker: You're right, I edited it (and thanks for translating it. When reading it now, I wasn't sure what I meant, but reference does make sense in that context ;))
+That is very much programming into a language. Actually it uses reflection, but with a simple class (Delegator) the reflection-stuff is hidden and the interface presented is much better than the anonymous classes. Great find.
+this is how i learnt programming too. Its the best answer imo. +1 to accept this one
+Ok, I wasn't so serious. :)
+I had a look at iWebkit after your post. It does look like it is a bit friendlier than iUI. Only downside is iUI scrolls each page nicely where as iWebkit drops down the address bar for each page. Also with iUI any javascript is downloaded once and thats it. Looks like webkit will load that for each page which depending on your data plan could end up exspensive. In saying that you could reduce the javascript to only what is required for that page. Swings and round abouts.
+Nevermind...must have been Snippet Compiler getting confused...very slick, David.
+I included the header directly in the cpp where I was having the troble, exaclty the same errors.
+How you treat the categories or tags is really something that a user don't care about :) If you manage categories as tags, it does tell exactly nothing about the internal implementations. But of course, choose the solution that best fits your needs.
+http:en.wikipedia.orgwikiWeAretheWorld  This recording involved at least 38 artists (some of which count as groups themselves).
+you didn't explain in your initial post..
+Try the same code with Turbo C ++ 3.x on a DOS embedded platform.
+No, in the first case you divide by (81024) and in the second you divide by (81000).  They're different numbers.  Generally in computer science, people use 1024, except drive manufacturers who use 1000.
+No, they might be redirecting to a plain file. But if it's like most download scripts, they're pushing the content-disposition. By all means check.
+Mark- I'd go for structured and cookbook.  Structured for the general unit test theory and the cookbook for recipes that are specific for your company
+Please have a look above. Thanks for the help
+Same answer to a previous question I asked yesterday, still quite useful and helpful. But when I store the userID in the DB it returns an error saying that what I am returning isn't an object. FB Connect generates an object, not sure how I replicate this.
+You can add the actual key to the exception message if you do the TryGetValuethrow, which is something the default KeyNotFoundException fails to do (unless I'm missing something).

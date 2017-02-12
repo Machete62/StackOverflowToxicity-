@@ -1,0 +1,1243 @@
+That's not full text searching, it's searching the logs and filenames.
+HTML is in fact not a subset of XML, but rather a descendant of SGML which has significantly more lenient syntax than XML. However your suggestion is still a good one, if he is working with XHTML (which is XML) then an XML diff tool is key. BeyondCompare has a plugin for XML compares also.
+Yes, I know which post you're talking about Justin. Reading it reminded me how most of the things I've learned have come from trying and learning from my own mistakes. I really can't emphasize enought the importance of learning by doing!
+I hate to bash CVS, but DON'T switch to CVS.  No!  On the other hand, it IS better than SourceSafe.  If you're going through the pain, do what Chris suggests.
+Anders - Proving proofs in the case of algorithm development.
+No, ASPX is registered with VS as its associated app. Thanks anyway.
+This works in theory, but I still use my original code in production just to avoid having to use an eval.
+I agree. Even if it is not exactly relevant here, they are valid and could be useful for others. Voting up..
+That is my feeling about the state of things now-a-days, but it always seems like an argument you are not going to with with a DBA for some reason or another.
+Also this: A pointer has its own memory address and size on the stack.  Pointers need not be allocated on the stack (and most of them are generally not.)
+if you cast the newed array to a pointer to array of 800 ints (int[800] buff;  ??) you can avoid the [xw+y] kludge
+When I run the original code it works up to the over flow point and then prints for every count.
+A catch-all e-mail address? Wouldn't that be a total spam magnet?
+Well, my application has a configureation phase in which different services are hooked up to different ports.  I want to ensure that in the configuration phase, that I can verify that a service is configured to listen on a port that tomcat is accepting connections on.
+I believe the question is valid, since it is the OP's program running into the error.  But more details would be helpful: what operation is producing the error?  Is it sporadic or repeatable?
+There is a trial version of TFS, I imagine that was their aim for that rather than giving away a slightly cut down version.
+You misunderstood the analogy. It is not a literal spreadsheet, but rather you are lining up classes on the rows and columns, and seeing which is more likely to change in the future: rows (phone, register, calculator) or columns (phone number, account number, SSN).
+Because this question will eventually be indexed by google for those keywords.  It would be nice to have a more complete answer near the top.
+Is this actionscript 2 or 3?
+Thanks Nat.  The external data is large (external search results) so it's not possible to keep it as a new list. We're a SharePoint plugin so I can't guarantee that the BDC will be available at all installations.  I guess I'm kind of out of luck with your suggestions but I appreciate the answer!
+you mean commutative where you say associative?
+note that you can also kill individual locks from within Process Explorer -- have you tried that?
+Code segments are reusable as long as the DLL loads at its preferred base address. Traditionally you should ensure that you set non-conflicting base addresses for all DLLs that would load into your processes, but that doesn't work with ASLR.
+Done, I have put a snippet of my code
+Exactly my word.
+Valid point. I'm just sad. ;)
+Can I get a mxmlc SWC file somewhere or do I have to compile it myself? I am able to compile actionscript fine using the mxmlc ant tag but the same script doesn't work for mxml files. I've trying to use the java jar file in my target but with no success. Thanks!
+He doesn't want an identity column but a column with incrementing value within one row.
+yes, they are both set to width:4em, min-width:4em.  The images are each set to max-width:1em; to size them.
+it's a void it's not returning anything. and a cast can fix that.
+This is a really good question.  I'm with Andrew though, it would probably help to have a bit more context.
+I'm reading this book and I just can say that it is astonishing. The ideas keep so actual that scares me about why a huge amount of managers keep doing wrong things (considering its ages).
+That is how i solved it. Which I could accept both answers, but Jeffrey was first. The best I can do is an upvote :)
+Its a fairly decent preliminary criteria, but depending on howwhere you intend to use it, continued support is critical. There might be show stopping bugs in there which NEED to be fixed.
+Is it just me or the evaluation order for operands has nothing to do with what you see? test++ is post increment, so test is incremented after being passed, as Mike Thompson says below.
+I would at least try it and see if that sovles your problem.  Living with intellisense is like playing with the devil sometimes :-).  If your problem goes away, at least you've identified it.  There are good alternatives available (such as Visual Assist).
+Oh, and change the title of the post to better reflect the subject; Is this a good practice is not really descriptive. How about Exceptions: Nested trycatch blocks?
+Hmm, interesting... though piping echo output may work as well...? IE sudo gem install ibmdb  echo 1
+While this does output OLD:Brownie a closure has still been formed and therefore the serialization still fails.
+It is worth nothing that a virtual method call on an object with multiple base classes has a slightly higher cost again than a virtual method call on an object with a single inheritance hierarchy.
+I agree -- that's why I said, so if you like that
+Not macports, which requires Xcode, since it compiles every package. See http:www.macports.orginstall.php .
+why? What is the reason
+I may have to look into this idea further.  I don't know if I have been allotted the time needed to create this kind of solution, but the idea is appealing... and definitely one I hadn't thought of before!
+Not easily. Basically the app's gui is for configuring the background processing. You configure it and it then runs forever. Splitting it into a service and a control program is ideal, but it is this huge thing with the processing intertwined with the UI code...
+Yes, change it to First, teach them how to use... or it sounds awful to a native English speaker.
+this has nothing to do with networking or file structures. Indeed the header of a BMP structure IS tightly packed with elements falling on non-natural boundaries that are alien to the compiler.
+monkeypatching is modifying a module or other piece of code without changing the source of that code. See http:en.wikipedia.orgwikiMonkeypatch
+Terse, but accurate - made me chuckle :).
+Personally, I have far better luck with order lemon applications and instruction orange utilities.  Command lime programs are way more trouble than they're worth.
+It seems it will have to boil down to that..! Thanks
+Unfortunately the sequence is like this:
+I am not arguing for a specific scenario - the stuff I'm currently working on actually just needs to send along a string, and I can't make myself create a StringEventArgs.  The string contains an identifier, but even IdentifierEventArgs, or IdEventArgs, holding a string, seems overkill to me.
+I take your point on if (!foo) foo = ... vs foo = (foo  ...), but what's the rationale for ending all lines with semicolons?
+or you have optimizations turned on in your compile settings <- also this isn't the case?
+It should still work. LINQ providers only care about the part of a Select query where the mapped members are referenced.
+Thanks, I actually think it's not. I should just query again.
+If you're not calling this routine a few million times in a tight loop then you have no reason to care about it's performance at all, and might as well use the naive-but-readable approach since the performance loss will be negligible. And FWIW, the 8bit LUT gets cache-hot within 10-20 calls.
+Your right, I was thinking of a list for some reason.
+Hopefully one more comment about providing slow code make you see the comments and read them.
+Let's say I'm somewhere where I have no access to a computer and want to rememberrecalculate the password. Doing md5 in my head is a little too much...
+I already have a browser automation framework (WebAii) but it doesn't capture outgoing HTTP traffic.
+From a finalizer it's clearly unsafe do do anything except releasing unmanaged resources.  But not only is it safe to call a virtual method from IDisposable.Dispose, it's actively encouraged - the standard pattern is to call the virtual method protected virtual Dispose(bool disposing)!
+How was it reduced this much?  <li class=blah> and <td class=blah> seem to be about the same to me...maybe I'm not picturing your scenario very well.
+I hate to sound obnoxious, but this sounds like a homework assignment.
+This also looks good.  See org.apache.commons.codec.binary.Hex.decodeHex()
+You might want to re-phrase this question to be more specific and not result in a yesno answer.
+Added link to the caper jones book.  Sorry, I didn't read it on the web, just from the book.
+Other solutions seem equally smelly to me, this seems pretty reasonable. Especially if properly abstracted.
+Ah. Well, the snippet from your original question isn't the way to go. If your users are going to write code, you could write an interactive toplevel, limiting the features that you implement, give each user a UNIX account which you admin, or most simply: have them run code on their own machines.
+Well, I am from Argentina which is a spanish speaking country, so I'm pretty covered there with the first part.Let me give more details in an answer below.
+I tried the your suggestion about using `strlen`, but I get a `int(0)` when I `vardump` it's return. I'm going to request a roll back of a change that occurred on the server sometime ago in an effort to get eliminate this from the equation.
+Could you elaborate as to what that's doing and why? Why can't I do the suggested method in the question?
+Can there be duplicate values? e.g.  1, 5, 5, 7, 11 
+In that case, urllib2 exceptions are very well documented: http:docs.python.orglibmodule-urllib2.html
+Gizmo, I think you should either delete or edit your comment. Anyone reading the question understands that Elie is looking for a way to prevent easy de-compilation. You're splitting hairs and it REALLY isn't an answer. Or you could update your comment to include the correct phrase. Pls b helpful!
+Dependency Injection and Inversion of Control
+I will check it out. Cheers
+im not sure how he would use the viewstate in this problem.
+Same result with the class.
+Me too. I gave you a vote. :)
+heh - i've been doing it for 30 years, and i upvoted your answer in agreement.
+I disagree with the last statement. The problem with not-designed-for-inheritance classes is the destructor is not virtual => the derived destructor might not be called. So, any variable allocated in the derived class won't be freed => you should not add any variable.
+Yes.  I've just added an example.
+Mike F: It means only writing the optimisation code once. Of course, it means running the optimisation code every time the code runs... arguably the best solution for this kind of thing would be a language-neutral IL optimisation phase at compile-time but after the language oompiler had run.
+http:getfirebug.comfirebugfirebugx.js
+On the bottlenecks, you are completely right. It's one of my gripes with XMPP, but I have authored a binary XML solution (it'ls like EXI, but really concentrates on speed and not size) that can be started (like STARTTLS) by the client at any point.
+This may be one option. Doing the graphic myself and then encapsulating into a widget. But I am wondering if some simulation graphic toolkits already exist.
+...but it returns a map with List values, not just single Strings...
+I agree with your comment about company web sites not having anything other than a straight mailto: link, but those links should always go to role addresses like sales or info or what not. Those addresses will be less valuable to spammers anyway. Things are different for personal pages.
+I'd hate to be without my intellisense :)
+It's getting lots of upvotes to distinguish it from the bitwise operator morons, without having to spend our karma voting them down.
+Thanks for clear explanation of the Elo system.
+If you want to do it accurately, and want to do it yourself, but don't understand the math involved, there's not too much anyone can do for you. First you need to understand what you are trying to model before you can attempt to model it.
+Well as I said, I would love to turn on treat all warnings as error, but that's not possible. So, ill have to settle for something in between.
+Physics and calculus made for one of my most educational few years in school.  They complement each other so well..  Embrace it--Treat Physics like programming (problem solving) instead of memorizing formulas and you might find it less dreadful.
+that should be Brillant
+granted... but I don't want someone who hasn't used a real IDE much in the last few years (which could be common among those reading this particular question) thinking I'm talking about vs6-style intelliesnse.
+I'm getting a syntax error with this now. I've never seen  used like that... is that supposed to dereference a pointer like C? Could you please test this before posting?
+Ant gives the command to build everything, but that's because javac is smart enough not to.  Sure XML is ugly, but I don't have to look at it if I don't want to.  I have the option of letting my IDE handle it, or I can customize it if I choose.
+seeing as you worked on DLINQ (it would have been called that then right?) I guess this is fairly authoritative. Is there any reference you can point me to?
+I agree -- I've seen it time and again over the last 20 years.
+Yes you can.  And good second answer as well.
+`subprocess` and `multiprocessing` (suggested by RJBrady) could be better alternatives to `os` and `threading`.
+That's not as aesthetic, though: A.B, A.C...
+Not really.  The interpreter would clean up whatever it could, and halt any additional consumption; beyond that, it might log the occurrence.
+Very true; changed to reflect that.
+Tested, and working.
+Hadn't realized it was supported on MSVC
+Lambdas as delegates, yes. But lambdas as Expressions rely on the Expression class(es) from .NET 3.5.
+toArray() does not use reflection. At least as long as you do not count casting to reflection, anyway ;-).
+This is the difference between switch and ifelseif in my mind. Switch is for checking various states of a single variable, whereas ifelseif can be used to check any number of things that connected, but not necessarily a single, or the same variable.
+I think this option is not applicable for StringTemplate. Stringtemplate is not a JavaScript library. The noConflict() is used when another JavaScript library is used and that library uses the 
+Yeah, got it.
+I'm voting this up.  I am amazed at all the other answers saying 3 and 4!  The correct answer is: the minimum necessary, which can sometimes be quite a few.
+what is the time for lim=1000000 ? It can't be both `<1s' and '5s'.
+Embedded object as in flash or shockwave?
+Also, I've found that listening to music with a fast beattempo and few lyrics sets the pace for my thinking and speeds things up. Up-tempo housetrance music works for me. I know other people who listen to speed metal, etc
+that looks like a great plugin. Thanks for the link.
+Then pick up a book or a tutorial and don't do it haphazardly.
+Can you provide an example of something that is failing?  As you mention, they are designed to be compatible with VBA.
+Here in Brazil the G has a J sound. Everybody here says Jigabytes. To sound correct it had to be written Guigabytes :)
+monoxide: Yes, they're easier in proportion to the number of bits. 16 bytes of SHA1 is at least as secure as an MD5. If it were otherwise, the hashes would not be secure.
+Quick note (but not a contradiction) - if you use the System.Decimal type in .NET, be aware that that's still a floating point type. It's a floating decimal point, but still a floating point. Oh, and also beware of System.Double.Epsilon, as it's not what you might expect it to be :)
+Samwise, can you provide a description of what the database does as well as the particular function and structure of this table? 11k records might be nothing or it might produce a huge performance bottleneck depending on circumstances.
+That is true. I will edit my answer to more accurately reflect the use of BigDecimal.
+You probably want to use d d d d or x x x x in that format string.
+Yep, it appears to be doing fine with the division here.
+Fancy isn't what I am going for, but the tips on layout will be helpful. Thanks!
+He asked for the length in characters, not bytes, so the size of the character matters: `sizeof(TCHAR)` could be 1 or 2 depending on whether `UNICODE` is `define`ed somewhere.
+I like C++, but that's probably because I program games where almost everything is insanely math heavy (physics, collison, weighted mesh deformation - stuff like that.)
+I don't know why the calls didn't work, but the IB checkbox did. That's an answer, thanks!
+This is a script, so there's no roundtripping.  Optimizer is not smart about UNION, does not recognize table was used else-where in the query.  Yes, I'm doing the Optimizer's job.
+Not sure I quite get your point. As a quick hack I return an Object from restore(..) and do an instanceof check at a higher level, no generics involved (as they don't help anyways). Still, this is ugly.
+Nice! One to download and play with methinks.
+sixlettervariables: Where did I claim that Concat touched h? All I said was that the docs are wrong: the final value of b is a reference to the string hello, contrary to the docs.
+BEN: SmartSVN is java; I like it for providing a constant interface across the multiple platforms I work with.
+Just commenting that the question does ask What do you use, and why?...  Glib's parser does look pretty nice, though, so thanks for the answer.
+I'd like to strongly recommend at least thinking about going with Textile as a solution.  For a lot of cases anything complex enough you NEED a WYSIWYG editor is complex enough a WYSIWYG editor won't work well.
+I think the complement more accurately describes ( 0 - n ) though.
+I always find it hard to filter the algorithm-specific part from the implementation-specific part when presented with a lot of source code. That's why I asked for a solution that was not language-specific in the first place. But it does the job, so thanks for your time!
+But that would take a year from now to be effective ;)
+For some reason I was thinking HTML entities wouldn't display within the textarea (dumb).  Converting the HTML entities to the characters, then all of them back seems to have do it :)
+While I don't care for censorship, I do think it appropriate to use caution regarding language.  My feeling is, on a site like SO, the language I would post should be held to the same level as that I would use when talking with my boss or his boss.
+Good explanation Dima.
+I'm not sure the first part is relevant.  I'm not talking about buttons here, just random movie clips (canvases) in the SWF.
+re.sub(r(w)([A-Z]), r1 2, SorryIThinkYouMissedASpot)
+Simon: 9 groups, that is 9 unique sets of pairs.
+I don't think Sub::Uplevel helps at all I'm afraid - caller isn't a namespace.
+I use Regionerate, and its very customizable and works pretty good.  I think the OP is looking for something that doesn't exist, however.
+yeah ... he got me fooled
+I know about System.Web.UI.Pair. Wanted generic class though.
+This is unrelated, but doesn't Sun recommend using Calendar cal = Calendar.getInstance(); ?
+It may be an issue with my search-fu, but it appears that there is no way to search by primary language tag and just get C projects. When I search for C I get all the C languages.
+Ah. I see. Thanks.
+True. This way just accomplishes both things at once and doesn't poison the well for other jQuery Ajax requests that I might make on the same page.
+Sorry - these are for 3D and surface series.
+I see your point, alexandrul. I took the original poster to be asking for a form feed, whereas he just says, feed.
+I've seen other blog posts that say they're not going to be deprecated, just the ASP style short tags.
+I got the same result as last time (incompatible data types).
+Unfortunately your code will wrap every child element (<span> in this case) separately.
+That's what I'm trying to avoid actually. I have enough on my plate and I'd rather focus on the data and not the infrastructure... That said, do you have any recommendations? The other day I was thinking about RIFE or Grails. Or perhaps something like Naked Objects or JMatter?
+It should be the OpenOffice Calc app, if you want to launch that. MSOXMLED.EXE really is the MS Office XML editor that comes with InfoPath
+Vlion: Asking for code on a programming Q&A site is moochy?
+It'll be interesting to see if you do get an answer, because I suspect it's just not possible (at least without thread support, which Safari isn't going to give you).
+No it's not. I had no issues with exceptions safe code so I never had a chance to practice it. This one above is ofc just snipper, normally you use STL containers. Please post your snippet, I'd like to take a look at it.
+Did you know that `...` is also a valid operator?
+<stdint.h> is in C99, not older C standards, for what it's worth. Furthermore, an implementation must provides uint64t and int64t if and only if it provides the corresponding 64 bit integer type. A C99 implementation is not required to provide one, but it is extremely likely to.
+I would return as an IList, since the fact that it is a ReadOnlyCollection is generally not important to the end-user of the class.
+The problem with this is if any other sites use name to achieve the same objective then you're back to square one.
+Which binding are you using?
+Maybe you should ask how to improve the performance of some javascript :)
+Also a very good answer, I accepted DJ's and upvoted yours.
+My thoughts as well. While annoying, it's not a security risk.
+here! take a look at this... 
+can i be the first one to say: why on god's good earth would you want to convert TO vbscript???
+That seems to work perfectly well. Out of curiosity, what are you using to run the javascript on all these engines? Got everything set-up or some kind of tool?
+Your expression also matches 00. It isn't explicitly denied, but i'm not sure if that is the intent.
+Yeah, it's complicated. I think you can make julienned fries with it. It looks like the key to integrating with collections is the IteratorToGeneratorAdapter class.
+Scott:  You're right, I just didn't get my thoughts out in a well-formulated manner.
+I'd like to add a note of thanks about this ... I know that working set isn't a valid representation, but that number tends to scare administrators. This tip just took one of my apps in development from an average 80 - 120 meg working set down to 20 - 40. +1
+Do you have any recommendations for the database layout? Should it go in to the database, we are pondering having either a single table with applicationId, moduleId, key, and value as fields or explicit defined tables (IE: configmoduleA, configmoduleB, etc)?
+Good point. I must admit, I'm still coming to grips with all the LINQ calls myself.
+Anders I'm not sure what you mean. Unless you need to do more than to simply call the polymorph with the default value you prefer, Optional parameters do the same thing. If you do need to do more than that, Then yes, of course overloaded functions are the way to go.
+Thanks Jon, I had tried to figure it out from your fantastic site in the past, without success (and probably without enough effort).
+(rhetorical) how can you beat Xcode as the answer to JohnMcG's question? you can't!  Xcode is FREE (to mac owners), and while it simplifies and streamlines what gcc and gdb are doing for you, it is built on gnu, so you can easily drop down a level to straight gcc and gdb at any time!
+What would you suggest?  Change the design of the software to facilitate the implementation of a diagnostic tool?
+FileZilla doesn't support XCRC
+It is perfectly OK to catch a specific exception like this.
+Apparently, you haven't visited Youtube recently:
+Alright, in MooTools it's reversed so I'm used to that model.
+OK, I'm seeing a pattern here. I'm going to sleep now (23:30 here) and come back tomorrow to see if I can accept some answer.
+That's a really sweet idea. If he doesn't go for it (or even if he does), maybe I will.
+Hi, thanks... Yes, I need something that passes parameters transparently from the jsp code to a servlet. I will try to use STRUTS, thanks.
+That sounds about the easiest way - thanks for the tip. :)
+Good link. This is essentially the approach I am using, although I could eliminate some waste by packaging some of the code into a class instead of what I am doing on a per use basis. Is there no way to do this by having it inspect and manipulate the actual data array?
+every time the program is closed all the data(File links) created by the user is lost,  You should solve THAT problem, quit messing with XML.  What do you mean the data created by the user is lost?  That's what's important.
+So no fixing race conditions or deadlocks then?
+Yes, automate as much as possible.  Deciding what sort of build this should be is a human decision.  If possible, avoid having different types of builds.
+I don't have access to the database so can't execute this command within the context of the database. Any other ideas?
+fantastic stuff - works!!! 
+I assume where you know that you need to do this in your managed classes, you're implementing IDisposable and disposing of your objects and their resources properly.
+Nah. Pointers as to why MDX is being deprecated in favor of XNA?
+I think you probably want to go with the other suggestions if you don't want a keypress handler.  Try position:absolute; left:-9999px; to pull your content out of the page. Or use absolute position, change opacity to zero and z-index to -1.
+-- amd most browsers accept 'blank' as window-name to open a new browser-window (not all !-)
+My basic point is that you can implement something that looks, to a programmer, like threading without OS support.  All the work can be done in the user process; of course this includes the possibility of changing the runtime.
+It does, but not if the struct contains only POD (which is called a trivial constructor usually).
+Also, I was poking around in HKLM so that's probably why I needed elevation.
+agreed; this approach doesn't leave behind any cruft in the global namespace as it encapsulates everything inside an anonymous closure.  jQuery's functional style tends towards that pattern.  Crockford's OOP pattern in BaileyP's answer is useful when you need a reference to your code block later.
+This is better then mine, I vote for yours.
+Do you need to search through the history of the repo? Or just the head?
+Really nice - I had seen the cycles of 2^(D-2), but didn't take things further.
+crypt is a one-way hashing function
+Kiwi, in response to your EDIT, I agree with Matthias Benkard's comments about the danger of slipping into an imperative style. If you want to be challenged, Haskell is a very good choice.
+include mysql.h
+An image of the bug for those that don't have IE6 would be nice.
+Ather--this strikes me as a broad and open-ended question.  For example, how many college SE programs have you looked at?  Are you sure that most of them have no offerings in Software Testing?  It seems to me that you're making some possibly unjustified generalizations.  Downvoted.
+Yes that is correct
+lol, sometimes it feels like an refactoring infinite loop.
+I love stsdev.  It doesn't do some of the things that VSeWSS does, but it is much easier to figure out what's going on, and you can modify the stsdev source if you need to.  Much more transparent.  Two thumbs up.
+I believe that everything is relative to the main PHP file's path.  So if you have nested includes or requires in different directories, things get hairy.
+We've also found Confluence to be an excellent tool -- highly customizable, but just works right out of the box.
+Remember, grandma doesn't have an email address.
+wait, What, exactly, is possible in SQL Server? Autonomous Txns? Committing in triggers?
+Scott - Thanks for your feedback.  I added some comments to the code which will clarify things.  I also added some information about connecting over SSL.  I hadn't thought of this earlier.
+I'd start here: http:openid.netdevelopers
+correct im asking after the filename not the content, i have never had trouble with that, even though it has chinese characters in it. as it is all base64
+See related question: http:stackoverflow.comquestions269523how-do-i-use-a-wpf-treeview-hierarchicaldatatemplate-with-linq-to-entities273535
+Thanks for clearing that up!
+Thank you. Even codegear's own site has links to a wrong (former) address.
+The problem is that this (as far as I can tell) only works for credit cards. This is a german site and other kinds of accounts are often linked to the paypal accounts. Interesting possibility, though.
+Need to add the platform to the question (and preferably to the title as well) to get a good answer.
+Helpful but still doesn't solve the problem of not requiring a postback.
+Or if your platform doesn't support templates, just make a char-specific class.
+and That's why you had asked for a library that does it, I understand.  I just wanted to point out that it shouldn't really be a whole lot of extra work to write in your own functionality.
+Yes, I have; thanks for the suggestion.  The Incremental Copy utility is like source control, but allows me the freedom of just copying changed files between folders without the need for the folders to be under source control.
+I've temporarily removed the upvote so this question will still show up the unanswered list.  I promise I'll put it back later.
+I may end up going similar route with two controls if all else fails.
+2-1 would equal 1 not zero.
+I doubt my own limited javascript ability will be better than the SO crowd. Besides who knows what strange browser lurks out there? And you can see in the answer that GChrome does have a bug which will not be apparent in my simple example case.
+devious, I love it!
+Yes, PRETTYFUNCTION is gcc specific.
+i think the right way to use tuples to implement linked lists is the accepted answer here. your way uses immutable array-like-objects
+Tom, how about define WARN(r,s) do  if (WARNENAB) r = WARN2(s) else r = 0;  while (false) if WARN2 would normally return 0 if warnings are disabled?
+String.replaceAll actually uses regular expressions. So the call to it in the for loop is not equivalent to the code supplied by the original poster. See the Javadoc.
+Hm, and how does it react to name when name is not defined?
+This is also not readable. One would expect a method named TryParseInt32 returns bool.
+To get iTunes to work on XP64 you can try this: http:yukichigai.googlepages.comiphonex64
+Does this work in windows too?
+'executeUpdate' should just be 'execute' (and it's an insert anyway, not an update :-) BTW Adam, quote() is also a good answer, there are times when it is preferable to placeholders. But yes, never use user-supplied data directly in your queries, or suffer the wrath of Bobby Tables.
+Interface can not inherits from class.
+I am not sure that your question is clear (at least not for me).
+I just love getting 11+ upvotes to one question after I've already maxed out my rep for the day o0
+You sir, have made a very strong argument. I love the analogy. Also, this is what the military calls it when they go in to extract their troops.
+So in effect, it just provides you with a C++ binding to their ActiveX control. Also, it's meant to produce the code on the hardware side for a variety of microcontrollers. That seems a bit overkill to me.
+OJ: with 2.0, only if you use LINQBridge... Any is provided by .NET 3.5; you could use the Exists syntax with C 3.0 lambdas, however
+Table.Select(t => new Structs.NameValuePair(t.field1, t.field2)).ToList()
+Right, but I asked for the life of me I can't find the documentation on the indexsquare-bracket operator -- I meant when you look up a library class in MSDN, where do they tell you about the operator?  That's why I made that last ETA about what it throws -- the docs are wrong.
+Yes, updates to indicate it will be used by remote locations
+doesn't work in Safari
+Just to add it makes for very simple code compared to the function chosen answer.
+No, I have read-only digest objects (which only contain important information) for things like lookups and massive collections and convert these to fully hydrated objects on demand.
+You have the correct answer. This is the best implementation because it is the simplest, it's built into the language and you're not burning your base class to implement a trivial feature.
+Sho' 'nuff!
+Very good suggestion. It's easy enough to actually implement and would probably work pretty good.
+These are marks of a good SQL developer, but I don't think they're sufficient to distinguish a great developer.
+I am gonna look a little thick, and probably a little stubborn too, but if the primary reason is performance (that is ok right), can't a secondary benefit still be that it is a littler simpler?  When those joins and views are taking up too many cycles?
+By the way Philho,
+why not just use the regular TCPIP networking? if you had to use an Activesynce connected model, I think you could build something more elegant 'talking' via RAPI than writing to files (or use the TCPIP network setup between desktop and PocketPC to talk).
+Paper prototyping is more or less what I've been doing for this project so far. Now I'd like a way to do this on a computer without writing code. Theres no risk of the mockup being a finished product since the only people who will ever see the mockup are the people creating the mockups.
+...yep! caspol must accept both formats of the url, but for some reason the only one to work through vbs is the network share form. I've had some issues with this form of url in conjunction with caspol before at a customer site though.
+i need not only be able to differentiate between them. i need to know which is the one that I just triggered into life....
+Ok. So could you explain me what this code do??? As you can see I don't know how this works and I'd like to.
+no coryan. dynamiccast would be worse. since readers would think GetVar could return MyVarBase, which would be wrong
+Oh, and is it more conventional to use printf(...) in place of fprintf(stdout, ...)?
+Almost works, removes <b> as well as <b><b>, but leaves <b> <b> (with a space in the middle). Good enough for me. Thanks !
+Does the image have transparency? Or, more to the point does the hairline need to be polygonal or is it a rectangle?
+You could always use strtoint(copy(inttostr(num), 1, length(inttostr(num) - 3) + '000')). No apologies for the delphi syntax. More seriously, he could quite seriously need to optimize this, just don't do it without profiling first.
+Just curious: does the preview-height-to-print-height ratio stay exactly at 1.029336 if you try font sizes other than 24?
+Not heard of it but I will certainly check it out, thanks
+Shmeh, 'twas just an offer.  Scorn it if you will.
+I'm using Google Code so I don't think I can do it this way, but thanks.
+I think that the serialize(), when applied to a wrapped set from a form, returns a properly encoded string.
+Updated to reflect that...
+Thanks Time. I'm trying to use this, however, C keeps telling me all the backslashes are unrecognized escape sequences. Throwing an  in there doesn't help either. Do you know what's going on?
+James: I'm aware of the ICollection short path, but it doesn't seem to work, I tested the code as well. I wonder if this is a bug?
+Cheers, it was --debug I needed
+I need to read existing XML files - so XML is a hard requirement
+That's not true. Symbols with an initial underscore followed by a capital letter are reserved for the implementation. Underscore followed by lowercase is fine, in C++ at least. I haven't checked the C standard, but it reserves all kinds of stuff, including function names starting with s or w IIRC.
+So, then can i add Interface functionality to a class in another project?
+Aha--so it's just that 4.2.4 is too old to make it warn like it should, and 4.3.2 works (I'm making a couple assumptions here, but I think it's safe to say because I'm using Ubuntu and I saw some notes on the issue that make it seem reasonable to think that this is just something fixed in 4.3+.
+Is this similiar to what castle dynamic proxy does?
+<b>Question:<b> How do you do your reorganization?<br>
+How did you get leading or trailing spaces in the field?  Do your users type that kind of thing?  Or are you talking about making a cleaning pass on data you've loaded some other way?  Please clarify your question.
+Thanks this led me to the correct answer. +1
+troelskn: There are many advantages of storing files in a database over a filesystem.  I'm sure there are threadsquestions on here that address them.
+is boost allowed ? :)
+I've never encountered a tail that required the n.
+you have to use get, but you can use TempData to avoid recalculating.  As I recommend in my answer.
+Got it.  In my use of this, the nasty case should be extremely rare.  So I think this is the best solution.  Thanks!
+Sage advice. Investigate first!
+Yeah, this is definitely the way to go. I used wsf files all the time in the past to include script libraries.
+Even if you don't have developers, you can a) donate to the project, b) advertise or simply mention the project on blogsnews pages etc c) be active on the project's forum (helping other users, sharing info) d) improving project's documentation... There are many ways to contribute!
+IsNull works ok here.  Coalesce exhibits this issue.  But you can also solve it with a cast... 
+It's a shame management won't let me use a different portable language for running this set of evil, obsolete subprocesses, then. :)
+Great!  It would be in the spirit of Stack Overflow if you posted your code and showed us all how you did it.
+You're welcome ;)
+This tool is pure awesome. Thanks.. I think I see the file that is missing... I see a lot of QueryOpen calls failing for a certain unmanaged dll with return status as NAMENOTFOUND. (The fact that I'm wading around in someone else's code is not doing me any good either)
+One feature you neglected is security.  With Linq, you have to expose the tables directly to the application.  With stored procedures you can limit access to those procs and enforce your business requirements.
+Hi Thanks.  Interesting work, but I'm afraid it doesn't apply to the immediate problem at hand, which is a question more about user interface design.
+Great minds think alike.
+I woyuld recommend that you actually insert the new data, not the previous, so the history table has all of the data. Although it stores redyundent data, it eliminates the special cases required to deal with searching in both tables when historical data is required.
+NXC: however many zeroes in a gazillion.
+Worked great, much thanks.
+Thanks paul - The thing is, i store the format of the property in the db(whether its a mask or regex string). The gui controls and the bo validation will need to validate agains this format. If controls could use regex expressions, that would work fine...
+Sorry, I couldn't find the others.
+We did some experimenting with different formats and gathering their performance results.  Ultimately we decided to stick with Attributes.  Thanks for your input!
+By backward delete word, do you mean the backspace key? I'm not aware of any recent Apple keyboard that has a delete key.
+strager Did... I ran this on my G3 as well as my SGI (which is sort of bidirectional, but runs IRIX in big-endian).
+Majelbstoat:  Whoops--sorry I didn't read your answer closely enough.
+Well, you would only test on the virtual machine, you'd code and build the .deb on your main machine (or another virtual machine, I suppose)
+I don't know the answer to this but it's one that bugs me as well.
+great, good to hear :)
+It would be unlikely make much difference in this situation.  The Windows error only complains about that handful of characters.  Thanks for pointing out the GetInvalidFileNameChars though, I'd not come across that before.  I'll keep it in mind.
+No, not really. Just using Java currently.
+Ech, the last one should read O(1) of course.
+Thanks Joel, for some reason Firefox won't remember to spell check the Title input and I'd just assumed it had.
+Do you mean pixels?
+stderr is usually unbuffered (although it may be line buffered).
+I realy believe, that adding empty delegate to EVERY event is right way, how to develop applications.
++1 from another idiot
+You're not the only one.
+Re: Unless the model is returning a URL as a piece of data. That's exactly what is happening here... the Model owns this piece of data, which is either a link to an on-site or off-site URL. In some cases the URL is generated from Rails Routing. In other cases, the URL is user-supplied data.
+Phil, do you have book recommendation which cover both web development and ASP.Net MVC for new programmers?
++1 for ReadOnlyCollection
+In any case -- as a website -- the only real information you can guarantee is only sent to your site is something cookie-based
+Note: i don't want to make comparisons out of it, just want to know if that is the equivalent.
++1. But you must remember that it can be a good thing that artist are not engineers. It it good sometimes to have a beautifull design, yet less usable. You will feel better using it, no matter how harder to use it is. It's how the human brain works : balance between what he imagines and likes to do.
+Thanks for the very informative response
+AShelly: I'm afraid if you code using nix only API's, then you have no choice but to either re-write existing code to be portable, or to provide your own implementation of the missing functionality. If you used boost::programoptions to begin with it will work on many platforms without change.
+Daniel: Usually we process Child1.objects.all() and Child2.objects.all(); there's almost no call for the union of both children subtypes.
+I would guess this isn't correct, since you still use up many more than two booleans on your stack.
+Keep in mind that extracting one bit from a multi-byte number makes you run into endianess issues.
+You sure can in .NET (technically, a double). You can specify the number of decimal places you want to round to.
+Chances are using Axis would get around this, yes.  Or it might add some new complexities... I haven't used Axis in a while, so I couldn't say.
+It is better, but has the downside where code that used to always succeed now could throw an exception.
+I could do it as data is gathered, but I do want to have the right answer for the whole 50 gig file.
+Option 1 did the trick for me ;) Thanks very much indeed.
+Surely the inner function will be different for each method? Also if you used something like prototype you could do the whole lot on one line, e.g. new Ajax.Updater(layer, url);
+isspace('0') is not TRUE. Check your algorithm actually strips the back space.
+Can you tell us more about why you are interrupting each others work? What do you mean by competing role interests? It might be helpful to give an example of such a situation, and why you find it to be troublesome.
+Given that on my Eee PC (hardly a powerhouse) his test runs in only ~2500 ms, my guess is he's either running a debug version or running under the debugger. However they're doing slightly different things anyway. Note inlining etc.
+By using the lambda, you get to format the item in the collection how ever you want.
+Slight worry in that stackcontainer.h: IMPORTANT: Take care to ensure that stackbuffer is aligned since it is used to mimic an array of T. Be careful while declaring any unaligned types (like bool) before stackbuffer. Eek! Order of automatics on the stack is not defined IIRC.
+I agree: litb, you should add your vector solution to your main answer, as it is (exception-) safer than the raw newdelete solution.
+well except for the typo. :)
+It seems you have an error trap, that is On error goto ... Please post the code for the error trap. This behaviour is not default.
+there is one for debian which you can get from here.
+RB, you are right. I just tried it. It worked. Thank you.
+Well finding our what had to be done was. The typing is always the easy part. I guess my lack of experience with C++ added to the frustration a bit.
+I've already whitelisted this new IP, but if the hosting company introduces another IP (as they are very likely to do) the problem will occurr again. I need to know why cfhttp is choosing this new IP over the old ones...
+It still wouldn't work with a Jet back end -- that's my objection! e.g. you can't write even a simple upsert (http:en.wikipedia.orgwikiUpsert): you have to instead write an INSERT proc and an UPDATE proc and trust client code to either pick the right one or run (and failover) both.
+True, if I ever leave the brackets out, I keep one line, like others have mentioned. I've been bitten too many times but multi line bracketless statements. Even if you know to look out for it, it can still occasionally get you.
+haha ok ok - fair enough. Be aware of its lack of IE support though...
+P.S. I meant I disagree with the first comment :D
+Oh yeah.  I feel stupid now.
+Thanks for the thoughtful answer... That's great.
+To follow up i like the idea of creating a public SynchronizationContext SyncContext  get; set; 
+As far as changing the app structure as you suggested, it's not exactly my app; and that ship has sailed.
+I don't get it. Is this your program? Or someone else's?
+Will Dean: just top of the head notions based on stuff I haven't done in a while - I've been stuck so far from code like this that I'm operating on memory of opening large files with iostream, and having it suck up memory.
+Run, and don't stop to look behind!!!
+I know you want a javascript-free solution but I can't help but wonder why can't you just remove the element from the DOM tree with javascript?
+Another value (I just read it on the MSDN site) is if your class throws lots of events, you can force it to use a hash tabledictionary as a container, rather than declaring a field for each event.   http:msdn.microsoft.comen-uslibrary8627sbea(VS.71).aspx
+Okay, but I don't want a Dict or a List, I want an Iterator. How do i coerce it into being an Iterator?
+Yeah, luckily IDE's do provide accommodations for us Vim addicts.
+I ran into this a couple weeks ago. Using:
+some: i'm new to javascript. i could implement this behavior in python, where i know how to overload getitem et.al., but I have no idea how the innards of javascript work. you seem pretty well-acquainted, if you think this is trivial - please post a reply!
+Have you tired to put the url in quotes?
+I hate this one :) I lost a day of work once tracking down one of these cases... anyways learned my lesson and haven't fallen again fortunately
+ Because there is a control with the name  confirm  that has the value  No, Go Back  ? ;)
+Scott: I'd say that a interface is a contract. Not in the technical sense (i.e. the compiler won't enforce the contract other than the existance of all methods mentioned in the interface). But a interface needs a description of each method to be complete and this description represents the contract
+A regex of the form: !!PART(w+(?:,??w+))!! seems to capture only the comma seperated list. I could then split the single group (if needed).
+This works but performance will degrade when the row count rises.
+Thank you. You confirmed what I was believing i.e. that probably a hack using ordinary string-parsing may work
+Thanks. I'll check this out - I have a million and one questions about it but I'll read the FAQs first :-P
+Also their BBB report http:www.bbbsoutheastflorida.orgBBBWebFormsBusinessCompanyReportPageExpository.aspx?CompanyID=30003042 A very high rating. A company with this rating would not have a significant number of complaints or other considerations that could pose a problem to consumers. -BBB
+I think I need to play with VS TS panels, I normally use NUnit but somehow after final .NET Framework updates NUnit GUI doesn't work, So i stuck with stupid MS test Suite and Gallio.
+This is due to the inaccuracies of floating-point numbers and operations on computers. Specifically, 0.1 does not have a precise representation and with + you keep adding the error. If you use -1.0+90.1 the error is much smaller. (See http:en.wikipedia.orgwikiFloatingpointAccuracyproblems)
+A quick download of 10 fonts showed me 7 had copyright, 1 had a freeware message and 2 didn't say. I don't think I would trust this free site.
+Correct me if I'm wrong, but doesn't this universally disable HTML checking? Quite some side-effect. ;-) Still, interesting technique.
+Also note that the iPhone OS doesn't support garbage collection.
+Yes I have the 2.2 SDK installed, but the Stanford example runs fine even when output is set to iPhone
+Very interesting. I admit I have not really gotten away from the old OCM style of thinking. Good food for thought.
+a) it's homework; b) the prof clearly isn't expecting a full implementation of RFC 2822; c) shortest is clearly stated in the problem statement
+When i use this query in vba i get a end of statement error in code at second line
+liggett78, if you try to acquire an exclusive lock (open it exclusively), it'll fail even if it's already open with shared lock.
+it's not overkill it's future proofing - I advise you to go look at some projects on sourceforge for comparison
+That's true. I can't use LINQ, though. ;)
+I'm not using throw to control flow at all. I'm just isolating the code that can throw an exception in the try to make it clearer what part of the code actually throws an exception. The added advantage is that the error messages I can provide when I rethrow with a new exception are very accurate.
+Diomidis, So put whatever you need to do with a in the loop.
+You don't understand, I'm not preventing the user from resizing the form. Whats happening is when the click the restore button, it will hide the form and open a new one with less controls on it. When they click maximize on the smaller form, it will return to the original form.
+That's not correct.  The term correlation name is used whether or not you have a correlated subquery.
+thanks for the answer!
+for example: DateTime.Now.ToString(d)
+because your machine has Visual Studio etc., I bet. I will definitely post on here when I have a solution. Thank you all for your time.
+That would work Paul. Don't even need a user defined function.
+We were looking at active sessions and requests.
+If you want to operate on big tables of state you probably don't want to be using functional programming in the first place. If you absolutely need to, there's IORef and the state monad to perform calculations which maintain a state.
+This actually seems correct.  From the problem stated, if you add D13, and 13 is in the PI list, then D should be returned.
+I noted jQuery just as an example. There are many different Javascript frameworks out there
+Sorry 6lv - I've moved the golden checkmark...
+Well, for trees, it's not exactly reversed. The zipper is focused on some node of the tree and consists of the children of that node and the context of that node (the tree with a hole instead of the node). See http:www.haskell.orghaskellwikiZipper
+exactly what i was looking for. thanks for the very clear answer! i had 'figured' all of these, but hadn't fleshed it out so exactly.
+Greg - Could be Server 2008 (my preferred desktop OS), or windows 7.
+I agree, this is the only way I can see this working as using the new keyword doesn't actually return anything. Is this not the case with delphi?
+Neat question. +1
+Well honestly it get annoying to maintain right now there is a file in the default include class that contains 40+ includes to get all the functions and it's getting a bit old if they were in the core I also would not have to remember to include the include file.
+He said: Tip: Disable session state when not in use., it's rare that sessions arent used in an authenticated area.
+I don't think that there is a very clean interim from include to CMS. Like I said, I understand that Drupal has a learning curve, but once understood, and with the modularization, it's extremely strong for using as a base for all all website production.
+Umm, how about connecting a Geiger counter to the computer? That's true random, isn't it?
+Hence But make sure management code for this is faster than memory manager! - OK if it is something that can be cleared using FillChar, or using simple assignment (use an Initialise(params) method rather than Create(Params). Otherwise probably not worth it.
+yes but can't you reuse it rather than computing it every time?
+Or even better, if (major, minor) <= (2, 5)
+See my answer again for the answer to your followup question.
+Sounds like you're ready then.  I'm curious how you'll correlate the status requests with a task, but thats not too hard.  Another question is how to scavenge the hashtable (given the client may DC and not be able to tell you when they no longer care about status updates).  A timer should work.
+What was Bruno's javascript solution?
+Thanks Robert, the reason I posted this was because things looked fishy.  I'm gonna scrap this code.  I should just go with the KISS theory and not try to over architect this.
+It seems like you're implementing some kind of collection. Maybe you could study the other collection classes source code to get an idea how to attain your goal?
+No problem at all. Glad to be of help. Js errors can sometimes be so simple, but infuriating.
+Thanks for your input, but I can't do that, modifying the resource is not an option. I need to find a way to deal with the JSON. Like I said I have a feeling that my current method via AJAX is the only clean route here.
+least squares can be multivariate.  gil strang's intro to applied mathematics has a very nice, readable discussion.
+I'd recommend this.  Gil Strang is a brilliant teacher and writer.
+Implementation of JAX-WS for Java, like Axis or XFire somewhat https:metro.dev.java.net.
+essentially something else. Your code would not take the function pippo as a parameter from which to write the new options file. Essentially I could as well have the function Pippo in the code itself, since I would have to change the function writeoptions in each case. Is it more clear now?
+Maybe I need to clarify - the event system isn't flaky, but the close event that is supposed to be broadcast whenever the combobox is closed does not dispatch in every situation.
+( I have used referrers in IE, in bare http: and had them work, so I'm not exactly making this up .. )
++1 for extensive answer
+although I guess that a vulnerability does not have to be a bug, it could be a concious decision not to handle a case - for example based on an analysis of the costimpactlikelyhood of the vulnerability
+Agree with Andrew Cox: that does sound like a possible cause.
+It's a Simulation because the reference syntax does not make C++ a reference-based language, but does give many of the same features.
+Cool - do you know how that might be done in TextMate?
+Luke: An old style object is created with TMyObject = object instead of TMyObject = class or even TMyObject = class(TObject). Old style objects have been deprecated for a long time, and are only there for backwards compatibility.
+thanks, but that won't work - UserDataSource is already a name of my class.
+For the OP: When using a one-way hash such as MD5 or SHA12, you can't decrypt it. That is, you won't be able to recover the original plaintext password from the hash string. To test the password when the user logs in, apply the same hash to the inputted password and compare the two hashes.
+For unit test 1 it would be more efficient to handle the complement of the base set.
+How does other changes factor into this? Is this a rule or a guideline somewhere? I can see some obvious issues with other changes, like foo(float i)  ... , then foo(10), then add foo(int i).
+I will if someone can't point me to something better that is already written.
+I read the disertation paper, and found it very helpful. The problem with the approach was that I did not have any patterns for the Albanian language, although I found some tools that could generate those patterns.
+Daniel: yeah, busy cursors only indicate activity
+Ey, that's interesting. Maybe IndexOf handles some special cases.
+Generally I would agree with this, but I'm not so dogmatic that I would insist on generating a completely different view just to change addremove a particular element based on the role of the user.
+You're welcome.  Good luck with your project.
+have you actually benchmarked this?
+I said web browsers (the desktop app), not web apps...
+Presumably because it does something bad which triggers a DEP violation if enabled... ;)
+the wrap div is taking up 100 of the available height but then there's another div (size) which consumes some height as well, i.e. more than 100 total, so your footer is going to be off position - are we missing some CSS?
+Code golf as design consideration. Priceless :)
+a value to be addes is fix during the proccess of being appended to the list. its role in mylist might be fix or vari for further manipulations.
+And at least one of the upvotes comes from one of the support team !
+No, you can t use an int. Phone numbers may begin with zero, and can contain semantically meaningful non-digits such as  or .
+No, I'm saying that there are numerous instances where the design is obviously flawed, then when you think they get it right, they still get it wrong.  For example, my post to MSDN forums here:  http:social.msdn.microsoft.comforumsen-USwpfthreadf677b026-0719-47d7-a0b7-a0874df2ba17
+Thats pretty much fine.
+Can you post up the rest of your compiler errors?
+Nice try, but when you make the post CW, all the responses are CW as well.
+I've edited my original question.  I have been setting that option when the service is installed.  Thanks for the suggestion.  I will probably explore both options.  I just wish it was possible to do what I'm asking.  It would make my life so much easier.
+... uh, whats a pez dispenser?
+Yes, what James Williams said. All currencies can be correctly represented as integers.
+Re testing, you can always use Random while testing and change the implementation to use RNGCryptoServiceProvider in production, can't you?
+steveth45 so are you going to +1 me back to zero?
+Then maybe you should just set up an SSH tunnel into your office computer. That's probably what I would do.
+This can be written as a knapsack problem, but it has such a simple structure that there are much easier ways to solve it.
+Assuming IEEE-754 for the floating point case is portable enough for my situation. Thanks for taking the time to follow up.
+See my updated answer.
+Good call on the threads!  (Though it depends on the implementation.)  WRT fragmentation, I needed more than 300 chars to respond.  See: http:stackoverflow.comquestions429995how-do-c-and-c-store-large-objects-on-the-stack430323
+wtf do you mean by a form?
+The while loop will exit when the reader runs out of rows. Read() returns false when there are no more rows to read. It looks like his active variable is simply tracking whether any rows satisfy the condition.
+Yeah, you are right. Did not think of it back then. Let me close it myself.
+This could be what I was looking for! I am trying it now
+Doesn't Int32 inherit from ValueType which inherits from Object?  If so, despite the behavior, an int is an object.
+Interesting, I never thought about Snapshots before. Thanks!
+A staging table is a table that you dump your data into.  Often, it doesn't have an index so that writing is faster.  Dump into a staging table, manipulate data, and write from staging to your production tables using a stored procedure (wrap it in a transaction to protect from corruption).
+There isn't a whole lot of information to go on here.
+App domain recycles would cause a disruption in any existing session objects, right?
+However, the solution fits the question
+It's a nitpick, but I believe that setting the thread priority only sets the priority of the thread within the JVM - it does not set the priority of the OS-level thread.  If you're worried about hogging resources outside the JVM, you still need to set the process priority in the OS.
+if you have 5 static imports in a 500 line class, it is very hard to tell where methods come from.
+I don't think you're making it clear that this is the list of files to AVOID.
+At least on x86, if the pointer is aligned correctly, the write operation is atomic.
+relative paths will work as well
+Does this mean the inner comment is no longer a proper comment?
+Agree with Tom Anderson. I don't see why it's a bad idea as long as you test for end conditions, i.e. know when to stop. 
+I was surprised at how messy this area is (honestly, I didn't even know there is such thing as special URI Encoding ... I learned something).
+no but it can help.  In IE you could enable script debugging and attach the script debugger to your IE.
+With regards to consistency, I thought so to for awhile, but the problem stems from inconsistent designs generally. For instance, at last count, we had something like 32 different ways of displaying a user (yikes!). Some with large pictures, some with small pictures, some with no pictures, etc.
+I would give you +10 if I could for providing both of the resources which I wanted to give :-)
+Is iterating over all of the documents the only way to go?
++1 Where the items belong to a logical class they should be referenced as such. This is exactly the right solution (where bdukes gives the actual answer).
+Is  each line padded to a fixed length?
+You can import Java libraries and use them from within a Python script, so yes, Jython might be useful.
+Great link. Thanks!
+Blue: +1 for using myriad properly. Far too many people say a myriad which is like saying the hoi polloi :(
+useless use of cat detected, wc happily takes files directly
+The difference between 1G and 2G is about as big as difference between analog and digital computer. I think 2G (1991) deserves the status of new invention.
+Alexander, Thanks for pointing that out.  I forgot Except had that behavior
+thank you, Your answer really helped me a lot, I think the word mentioned every time with DoS attacks because some times these attacks may paralyze the server.
+you are going to need those flags because you need to keep track of which fields are set in which order.
+Inheritance is way overrated. Unless you design your class for subclassing, you better avoid it.
+Really cool, you expanded my horizon there. I see a cached scope or similar. Probably also nice for calculated derived data, which is what it seems like you're doing.
+Serial ports that actually conform to the RS232 standard will output 12V, not 5V.  They'll also go to -12V when they're in the low state.  That said, many manufacturers take shortcuts and use 5V as you state.  If it does follow the standard, there are converter chips such as the MAX232.
+As far as I can tell from my brief flick through, Python in a Nutshell doesn't mention use without re.compile(), which made me curious.
+His first example is a static local variable (in a non-member function that's declared at global scope).
+Bravo, upvoting since you agree with me :-) although in two minds about it since you may get more votes than me :-( . Oh well, c'est la vie.
+Unless I'm missing something, an adblocking proxy would be basically the same as what I'm using now. I'm just trying to figure out a way to collapse the IFRAME area, but it does make sense that it's not possible.
+I got around to testing this code (albeit without the dataset stuff - just to test getting all files in a dir and it's subdirs) and it doesn't work properly.    It messes up the paths...
+I'm not sure what the etiquette is for the answer here. This comment led me to the solution, and does identify the cause. However, for future users I posted a complete answer below. To be fair, I marked that as the answer, but gave an up vote to his answer as it did lead to the solution.
+I think it's a personal choice. You can always write your own data access layer like we did before the popularity of ORMs and have full control, but the ORMs usually provide the framework for an acceptable DAL (even with their faults) to save a lot of time & work.
++1 because this seems to be the answer that Vicky acknowledges solved the issue.
+How about really crazy joins between tables? Because it's partly a legacy database, there will be also the need for some handrolled SQL statements.
+http:search.cpan.orgperldoc?Data::Dumper
+do I need to use var myInterval=... or can I just call the code on the right side of the = and it will work?
+I'm a little confused. It almost sounds like you already have the name in the table and you just want to UPDATE the confirmed field for a paticular name. No?
+Are you reading from text or image in your pdf?
+The only thing that I dislike about this approach is that variables prefixed with a single underscore tend to be associated with private members of a class.  But I suppose that the general approach is decent.
+I am the only one who finds it silly that you have to jump through all these hoops to testpreview CSS and images during development with Django?  Sure, you don't want to do this in production and use a real web server, but for development you need to see stylesimages to give a good preview.
+Can this be done without the web.config edit?
+Deleted files will be a problem, but I agree.  This will preserve the history best.
+not sure I'd pack them but its a good idea (packers can cause issues) and its better to use min + gzip. If you start to gzip a packed file it ends up bigger much like a zip of a zip. Anyway I am now useing YUI as part of my TeamCity build process. You were on the right track.
+That's what the presenters said at the MSDN Developer's Conference in Minneapolis a couple weeks ago.
+lld is the Standard conversion specifier for long long, Windows is the only one I am aware of that doesn't support this (but they don't support a lot of standards).  Also, this is specific to the standard c library being used, not the compiler.
+This is valid use of the ternary operator, but a less-than-stellar-example, because the conditional-expression itself is boolean.  Testing it to resolve to truefalse is kinda redundant.  This would be best written as:  Boolean isValueBig = (value > 100);
+Ah, i was very confused what you wanted. I'm guessing this relates to some of your other questions. Can you post a question with some more details on what you are trying to achieve overall with this temp table and i'll see if i can make something a bit more useful.
+better to use text.Length, but +1 anyway ;-p
+You really need to get Firefox and Firebug
+Heh, yeah, that's C++ isn't it? Amazing that it took five months for anyone to call me on it.
+Pretty acurate of the current solution:)
+It would be far easier to do this with Firebug Lite and use console.log
+Thanks that sorted it all apart from a pound symbol which is probably a character set issue somewhere.
+saua: absurd or not, still a question and a real life problem ( unfortunately :(  )  See this: http:stackoverflow.comquestions318503
+import is the great way to go, easy and very little code to write by yoourself
+Ill take every -1 I can get on this, I think its a perfect option and important information when talking about messages between applications on same computer.
+Interesting, but this installs to C:Documents and Settingsuser nameTemplates. Word does not appear to notice templates which are put there. Not sure what this folder is for.
+This is not enough - the class may be sent as well as the serialized form of its instance.
+I agree with PAX, but believe then it better suits at UserVoice. not here.
+Can you post your code. I use alot of perf counters just fine on 2k8. Can you repro your problem on another OS like 2k3
+I would think it's more likely to be that the DLLs are already loaded into memory.
+We'll se. We'll see.
+Windows fan boy? You lost me.
+Yeah, I just saw that. You CAN store the viewstate in a session, but it's not the prettiest thing in the world. See my edited answer.
+This is surely a joke.
+Some of that post is fine. Other parts are dangerous. Regarding calling Dispose as an optimisation is harmful, IMO. Read the comments.
+Maybe they didn't like the AdeventureWorks DB?
+Solution folders aren't real filesystem folders, though. I've clarified my question.
+chris: Yes, that's what Jon is saying in the first comment, and why I added a note look at the comments. What's the best practice here, should I go in and fix the post proper instead of referring to the comments?
+Well, it's only modifying a single file. It also means that it's much easier to get an idea of what your overall menu structure is just by looking at the file rather than looking for the attribute in every form.
+Notice that the href property of the link button renders as javascript: so the fallback doesn't really work.
+A side note: not all function must halt to be useful. For example, itertools.count(). BTW, it could be implemented recursively.
+yeah that seems to be the only example out there, but it doesnt take into account the VaryByParams, so if i expire that page i think there'd still be data in the cache for the same page with different query strings.
+solutions which concatenate the input lists then use a language-provided sort function are not in-keeping with the spirit of golf Disagreed.  Seconded.
++1  restructuring code before implementing a new feature is a very sane practice to do
+It's not terse syntax that can make it difficult to read, it's the natural language like syntax that does that.
+doh! Done. Thanks!
+Yes, and the read-only property also causes a visual change to the control - it's just a different visual change.
+As well as the output of said code so we can see what's invalid about the nesting.
+There is no reasoning, just what happened where browsers started to converge towards consistent behavior.  Check out the book mentioned in my response.
+What then is the syntax for a group?
+gave the credit, but it didnt actually toggle images.
+Why not? I don't see a problem with throwing ArgumentException or ArgumentNullException.
+you don't need the double casting anymore
+I was guessing that somewhere else in a program using this code, someone might want to do a simple function lookup with a regex.  Also I like the way that dictionary literals look more than I like the look of lists of tuples.
+I think you misunderstood me . Triptych . I remember I was using a python version less than 3.0 , and I didn't specifically said that my class inherits from Object , and the call to super worked . Maybe it's default behaviour from 2.6 ? Just saying :)
+yea, i ran it too, it's not reproducible.
+Also, I REALLY dislike the attitude that you know the domain of my problem better than I do.  I didn't come here for a religious debate about GC.  I asked a very specific question.  I'd appreciate if someone with higher rep could get rid of all this OT noise.
+You are write a 10020 mesh cells (100 nodes in each directions) is hard to imagine in practice.
+I'm not 100 sure, but the synapse author suggest to download it from the svn, look at the first link svn repository to see his reply
+thanks for this comment, i had discovered this plugin. it's very useful for development and general Firefox curiosities.
+What I'm suggesting still allow storage of arbitrary key names.  key1, key2, etc. would be values in a column, not columns in and of themselves.
+my first line, result = 0 (which should ahve been 1, thanks for correcting) was spaced while the rest was tabbed, darn, didn't know python was like that
+I accidentally hit the post button when I was bringing the focus back to firefox, when I was copying the next snippet of code over. Sorry!  Edited to reflect the whole snippet.
+A problem with ObserverObservable is that I am already subclassing, and so I can't extend Observable.
+Having done so, the (renamed) app.config is in my output folder right next to the assembly... which is what it has been doing.  My app is still trying to read the MSTest.exe.config rather than MyAssembly.dll.config.  If I omit the noisolation switch, it reads teh correct file.
+Since C code must assume that any method can throw any exception, the compiler could simply emit byte code which indicates that function F() throws any checked exceptions thrown by methods called by F() (hmmm...I remember doing a lot of essentially this same thing by hand back in the day).
+To the person who voted this down, can you care to explain please?
+True, but the Windows + SQL Express option is much more affordable (i.e. without authentication).
+As long as you can match the prefix correctly, you can use sed on binary files.  I've written sed scripts that change oracle dump files to frig tablespace names.  These files are a stream format with no pointers, so changes in length didn't matter.
+What part isn't working?  Looks like you'd want quotes around your img src attribute e.g. src=filename but other than that it looks okay.
+I was already formulating a plan of action to do this, thanks Ates! I may have some commits for you latter.
+If you need to ask the question, then don't mess with it!
+Joe: aside from the first point, that about sums it up.  A lot of the later languages took C and said, 'hey, we can do better.'
+It doesn't seem logical to allow references to types that your assembly cannot strongly reference.
+the text got wrangled. It's :e ++enc=utf-8
+Checking it out now.
+thanks heaps :) i didn't know u could join the two tables in an STIntersects!
+thank you, that makes total sense.
+I know that this is not the best way to use these functions, but the question still stands.
+Oops. Added the select. Too much bouncing between vb.net and c.
+Thanks. What about ICallbackEventHandler interface? Any experience with it?
+Do you plan on having the entire jQuery library embedded in your bookmarklet or will you add it to the page with a dynamic script tag?
+We are using XML Serialization with WCF.
+Well, in my opinion the problem here fits in the purpose of REST web services... I don't know anything about asp.net but you should look forward to REST tutorials and see the security alternatives you have from HTTP authentication to full WS-Security implementation
+How could I type-safe this to ensure that ony enums are used instead of any type?
+Unfortunately, this won't work if I'm working somewhere without immediate network access.
+Why start with C++ or Java? He's already named two OO languages (and simpler ones than C++ or Java to boot), so why recommend two more?
+Moreover, all C strings are pointers. That's the definition of a C string: a pointer to some characters.
+lol I was gonna downvote before a I realized this was a homework question, +1
+doh!  was just typing my response... :P
+Hopefully there's another way to declare an array in Python which doesn't require that you type each element
+I use NH's SessionFactory to create the session I'm not sure how I could have it use a custom session class other than downloading the source code and modifying it. However if I just wanted to do that I'd just make it when Dispose() is called on the session that IsOpen returns false.
+CG & Paul http:www.techyouruniverse.comsoftwarephp-performance-tip-require-versus-requireonce.  - Read the comments for this because there are some partial fixes to the performance issue with increase the stat cache for file lookups.
+Guys, I was convinced that this was a bug in PHP. But as you guys may already be assuming, it was my fault, being stupid in two entirely different ways. My example was distilled down from something that had a typo, so what you're seeing actually works. My apologies. 26 hours and no sleep=stupid.
+There are many more difference than just reserved words.
+DSO, maybe. My assumptions about the way routes works was correct. Routes set up first take precedence, confirmed by Brannon. But I'm getting this weird 404 error. Maybe other users will run into this at the same time that they have questions about Routing precedence.
+When you say it generates a word document, how does it do that?
+This is for a custom VB control from DotNetBar...
+strange. I checked the community wiki option.
+Thanks! Your responses were very helpfull
+Next to that, v->begin() should become v.begin()...
+I saw the smiley but still thought the sentiment was relevant (maybe for those who didn't see it :-)
+Why not just use Dynamic SQL, like he's trying?
+Constantin, depending on the heap management, you probably wouldn't need to page-in heap memory to free it.  You would just adjust or mark in some allocated-free data structure that that memory is now free.
+Add some more compiler flags you use. It seems that you link with the wrong files or objects generated have some different flags.
+fsanches: Completely wrong. The JVM does not use malloc, and it doesn't keep free-lists. The JVM always allocates from the top of the heap. 120,000 allocations all in a row (with no intervening allocations) will always be adjacent in heap memory. But, more importantly, why does that matter?
+Every time I use this I feel like upvoting your answer. .Net Memory profiler is just exactly what I need in a profiler.
+toolkit: yes I do.  Thanks.
+It is sometimes buggy and slow to startup (seems most Java desktop apps are). Which is why I've since switched to the Database Explorer plugin in Eclipse.
+I have those two on my desk and will start on them when I finish your book, Jon :)
+Is this actively maintained? The website doesn't have any release dates, and docs for version 2 aren't available yet.
+yeah, that will be my fallback, but it's going to be a very small field -- one or two words. I like the idea of using a div because it will be easier to make my widget auto-size itself that way. I'd like for it to expand to fit its contents.
+A gaussian distribution of numbers or data. It looks like bump or bell curve if plotted.
+When learning so many new APIs, code completion is very important.
+Wedge
+The file would only be truncated when the operation on the line is complete. I will write this data to a backup file as well ... but you didn't really answer the question.
+I miss how you used threads to make the code faster, since python bytecode on threads won't execute simultaneously because of the GIL.
+Yes Python, but the concept is the same regardless.
+Maybe add something about lock-free structures? They don't warrant a new reply.
+That's the point of static type declarations   to say, I expect this type here, so warn me if I have something else.
+Bhusan, they're unreadable because they're binary protocol characters - my Firefox renders them as boxes with the hex inside (01,0f,02,03,04). Vinze, the splitting seems obvious, it's on the 01 (STX) protocol character although I'd use substrings rather than split itself.
+Thanks. I did not know 2.0 was included in SP2.
+I have added the code below to get the exact thing you are looking for.
+Not just should not, anything in that folder is blocked from being served by ASP.NET
+Do you want subsequent calls to be skipped, or queued?
+That's suspicious. For sure you should be able to set the font color. Have you checked for typos, particularly in the ID name and css selector? You might try to get the css to work inline first, just to make it easier to track down the problem.
+Do you have a test case for this? This is one I've never seen except if you have Build with runtime packages enabled at which point the behavior you describe is reasonable.
+Hmm, do you have a unique image url for each image? Your comment about it seems to remember old height and width makes me suspicious...
+Thanks! I saw something like this in a google result, but does it work on windows?
+Sorry, the code I posted was Silverlight2, where Window doesnt exist and you have to use a UserControl for top-level UI. In WPF you're absolutely right - a UserControl would expose a dependency property.
+Unlike the general opinion, vim's portable even in the normal version the one from www.vim.org. Just put in your .vimrc to set no backup and stuff, and off you go. Works great, leaves no traces. I use it all the time in that manner (on a stick).
+The boxed type itself is actually a reference type, mind you. Any value type has a sort of shadowy reference type version for boxing. It's a bit complicated. The member of a class case is much less arguable IMO :)
+same server, same instance
+Peter, that's an EXCELLENT point. It doesn't really apply to my situation (and probably never will), but it's a good thing to keep in mind, it might become a problem in certain situations
+Thank you for pointing to this bug
+Let me add one more potential scenario:
++1. Once you're hooked into the page's JavaScript you can then do anything you'd normally do in JavaScript, including grabinspect the HTML in the page.
+Yea that's another good possibility if the workload fits this.
+I think this is good.
+No, that doesn't seem to work...
+Nothing is intuitive everything is learned.  Intuitive is a word thrown around by business people to make programmers sweat.
+But you only had to label them as you wrote them.  Somehow this was not correct but Paolo's was?  Don't they both require a class called inner on only some of the tables?
+It may not be his header file  structure...
+Is com.examples.ExampleBean2 the singleton?
+Hi Josh, I thought of another issue. For IIS 7.0 there is only one machine, the network capability is very limited. Is there any built-in solution from IIS 7.0 video solution to cluster a couple of servers to do load balancing?
+What exactly is the error you get?
++1 Setting a pointer to NULL after deleting it rarely makes any sense.
+sry ... it's mssql 2008
+'k.  This may be the perfect learning project, since it is straightforward, but not easy.
+Hmm... I was sure it worked on some version. It may only be on some BSD version.
+We have discussed in other answers how the reality is different regarding how much access can handle
+The picture box itself or just the contained image?
+I'm also running Windows 7 (64 bit) with Visual Studio 2008. Amazingly, I haven't had any problems.
+When will I invoke release license? to allow another user to log in.
+Incidentally it would be the 28th for both february and march.
+thanks will look into this :)
+I posted it as a community wiki in the hope that it could be improved on, which a blog can't offer. I'm fairly new here and listen to the podcast as well, so I thought this was ok. I'll learn.
+I'm not planning on downvoting.  It's as if you said you thought typing worked just fine with two fingers.  More to be pitied than censured. ;-)
+Could you elaborate what do you mean by 'hide foldersfiles'?
+Hi ELijah ,that's all right ,i can authenticate with so well now...Thanks so much.
+One could also go back to Vannevar Bush and Memex.  Vannevar's work doesn't negate Engelbart's.  I doubt anything can be truly said to be without precedent.
+That's a little surprising - plenty of sites which use jquery and adsense. Are you in a position to give us the code or a URL?
+akaihola, it seems to be the original question. sheats is asking for a way to run a separate process (outside the webserver process). A communication mechanism was not part of the question.
+Thanks, that's perfect!
+I think this one should be the accepted answer, despite the fact you did something different.
+What I was actually working on was a plugin for another application.  It turns out the other application has it's own method of setting the language, and thus the answers below did not work for me.  However I will mark Gulzar's solution as correct because it was the correct answer for the question.
+Hmm ok, I understood this as if it didnt matter how records there were, but how many you want to fetch:
+One last point: You should definately limit the scope of your style rules. My point is that you shouldn't rely on the element-type for this scoping - the hassle outweighs the benefits. You should use a wrapping id instead. -Signing off ;)
+Chris: On the other hand, an upvote now doesn't make any difference to my rep, so no harm done :)
+Nope. I'm on MBP with 4GB RAM. As for bittorent. Thank you for that, that make sense.
+Two test methods with the same name leads to the first method not being run. You could put a flunk in the first test, and tests would still pass. One side-effect of cut and paste programming.
+Re-tagged to add linux
+How does the query look from the user's perspective? Are they allowed to type wildcards like  or do they only enter straight text?
+alex agreed. Asker starts question with I have to produce. Secret sauce of success: use someone else's work for the foundation and spend your time on the unique puzzles. then knock off early and get a beer.
+thanks for the tip, never tripped on that now
+(java.net.URI is preferred over URL.)
+kartik - Screen shot would help
+Would he benefit from lacking the features git have?
+It's quite a big package and I don't know if I have enough resources to download it..
+A TabControl without tabs, isn't that just a Panel?
+In Windows, Service means something very specific. Do you really mean a service like the ones shown by services.msc ?
+sam you've gone outside the scope of the question. we don't know anything about how or why the asker is in the situation he's in.
+Saying that Rails is somehow 'less flexible' shows a lack of understanding of the Ruby ecosystem.
+But it's a feature! Actually, the automatic security trimming in the SharePoint API comes in handy very often, but too many people develop and test in an environment where they have god privileges and wonder why things break for anonymouslower privleged accounts in production.
+nah that's too ugly ;)
+Nice visual clue. Care to divulge which software was used to create it?
+FILENOTFOUND (http:thedailywtf.com)
+crescentfresh : Thanks for pointing out the issue.
+Profiled using System.currentTimeMillis() and a 65Mb file.  Reading 27446 records.  
+Stas: I haven't used this functionality, but here's what I expect. An instance of IImpl is builtinstantiated by the engine. Now, you can instruct Spring to perform its magic by looking at the class annotations and I think there might be a way to tell Spring to initialize IImpl using the appcontext
+Okay, I'll go this way, creating a class with ClassificationID and Level (not inheriting from anything) and see what I come up with. Thanks!
+Um, .NET 2 has been going for 5 years now...
+Links are different than messages.  If the original text of a message changes, you don't necessarily want the same translated text to appear because the meaning of the message might be different.  It's better to examine the message at that point to see if retranslation is necessary.
+this should,but the documentation says minimum operating system is windows vista, and i am targetting xp and up....
+Van Gale: Auto-load might be nice.  I don't have a lot of confidence in it, however.  Your experience may be more positive than mine.
+EBGreen the question is about search boxes on the Web in general
+I would give you +100 if i could :) Thanks
+Are you having trouble getting this value from the DB?
+Maddy sudo visudo
+ShuggyCoUk Well im actually doing a university course and filling the (unfortunate) blanks my professor leaves us with thats not covered by the litterature with questions.
+The 'Done' button on keyboard input is invisible in interface builder. Can I add an action to the button to dismiss the keyboard?
+Cheers for that.
+No, I don't think you can.
+SCSI device sdb: 584843264 512-byte hdwr sectors (299440 MB)
+Ideally, it wouldn't be windows-limited, and could be relied on to work 10-15 years from now.
+I think I can get around this anyway.  I'm planning to license the communication module as GPLv3 + Linking Exception.  The provided client and server will both be GPLv3.  Anyone else who wants to write a compatible server or client can use the communication module in whatever license they want.
+Sounds more like a problem with an explorer plugin on the machine, rather than your code.
+doh, generic method of course! I hate late night coding! cheers
+DJ: Hmm.  Yeah, I think you're right.  'i18n' and 'downward funargs' and 'lvalue' do seem jargony in a way that Data Access Layer and Object Relational Mapping don't.
+Seems like the same person asking using two different accounts!
+jon, Thanks for pointing the other question out that out. I searched, but didn't find that question.
+Please post a short but complete program that demonstrates this problem. Something that can be pasted directly into a program.cs file in Visual Studio, compiled, and run.
+vg1890: private is over-used.  This does not conceal any implementation detail that could ever change and invalidate some client.
+If, as you say, there is no win64 version of memcached, surely that will effectively preclude its use as you won't be able to use most of the RAM unless using multiple instances, which may needlessly complicate the app.
+Lack of discipline is not a reason to disregard a technology; it's not the database's fault! We follow the exact same source controlcode reviewdeployment procedures for our databases as for any of our other code.
+mysqlquery(SELECT COUNT() AS count FROM News); would be a lot cleaner also.
+You can statically link the CRT files, though. It's a linker option. It makes your executable a bit bigger, but then it's truly a standalone executable.
+Please, do check the answer by greyfade, as it is the correct one. When you define the static attributes in the header you are not reserving memory for it, just declaring the variable (similar to an extern declaration). You must declare the variables in one compilation unit.
+additional, the extern stuff avoids using deprecated stuff (static being deprecated in C++) and allows them to be passed as template arguments (can't pass static variables to templates as parameters. only those having extern linkage). but they're still mangled effectively TU local. neat! :)
+Jared: Yep, this will always be hard. :)
+Shouldn't CPython really be Cython? Have I got it wrong?
+Yes, you're right. Just tried on MS VS 2008 - it's possible to generate an import library for an executable with all declspec symbols and to link it with dll. So, it's seems to be a limitation of my old Borland C++ 6.0 compiler. Thank you.
+It may be possible to fix the problem by updating the graphics drivers.
+cool....the reversal of the SeqNo part was my mistake. That was causing the problem all along.
+http:stackoverflow.comquestions168169public-variables-vs-private-variables-with-accessors
+Thanks for the answers, all were good so I went with the guy with the least rep!
+Thanks, how about the last part of my question???
+bigbrother82: There are multiple instances of the class, but only one copy of the started variable shared between them.
+Well I was thinking more if you were using the XmlReader to parse in the first place. What objects are you using to parse and validate the xml? Is it XmlDocument?
+A DBA has no freedom to make changes to the data model without forcing you to change your compiled code. Why would you advocate this?  No-one should have freedom to make changes, that's the point of configuration management. Changes should go through dev, test, etc before deployment regardless.
+VansFannel, System.Action (no-generics) was added in .Net 3.5
+will do, thanks. going with Jame's solution.
+Hmmm, so this means that I have to specify a new routing rule for each new controller action that requires a different set of parameters? This would result a large amount of routing rules for an enterprise application. Isn't there a more dynamic approach than that?
+Although Application.DoEvent() has nothing to do with threading.
+Matt Does s.Count(char.IsUpper) give the same timing as s.Count(c => char.IsUpper(c)) ?
+I have a GUI App, the data is stored in hierarchical ordered classes. When an Error occurs i want to raise an event which contains the error message and code. Now i want the parent data class and the GUI react to this event, but the data class should have no knowledge of the GUI and vice versa.
+Great explanation, Mike.
+You can access that event via: ((SessionStateModule)application.Modules[Session]).Start
+has the permission been changed on the underlying list?  if the user doesn't have permission to create a new listitem might they have still kicked off the workflow which is then checking for a value that doesn't exist?  Can you login with a different account and test with various permissions?
+grep is also unnecessary
+No worries - I hope I was helpful!
+That is a good suggestion - one that I think a lot of us developers miss because we like to build things.  :)  I will have to do research on this, but I think the application is specific enough that even one off the shelf would force me to use the api to the point it would not be worth it.
+I was thinking that all the Mac Intel processors were 64bit?  Or maybe that's true, but not all the intel OSX versions are?
+Although, no var in C ;)
+Thanks for coming back to this question and your explanation!
+Why install all of Cygwin if you don't need it for anything else?
+If I'm coming from anything, I'm coming from C, although I'm far more proficient in C than I am in either, I just found the article when I was searching for information on destructors in C.
+Well, no; since the argument is declared unsigned int, the function doesn't care about the enum, and since enums in C are ints, the call is simply casting an int to a uint.  no problem there.
+This answer was related to polymorphism.
+imagine you declare an instance variable like readonly property int foo; (property would be new keyword).  That would have the compiler spit out a getMethod (no set) and since it has the property keyword it would turn all .foo into a call to .getFoo().
+Indeed, not looking for a silver bullet :-)
+Have you tried it in several different webbrowsers? My guess is that this is something on the client side.
+works perfect! thank you!!!
+TStamper: The link that you sent is about reading data in the Azure cloud. I'm talking about building a MediaElement cloud similar to what is on the mojaveexperiment.com site. Thanks.
+Could you please clarify your question to explain whether you are using encryption or hashing functions? I think you mean the latter, but the difference is very significant.
+Forgot to mention. I did check out Janino. As I've said, I need 5.0 features in order to interoperate with existing code.
+Thanks for the tip. +1 for epatel
+That's right, Kip!
+Vegar: Doesn't matter whether the Application or the main form owns the data modules. And the binding is already there, since both Application object and main form are as top-level in the project as can be. That doesn't convince me at all. [Continued]
+It's not an answer, as it won't help you. But alas, I'm not the one with the question. LLBLGen Pro doesn't support async calls because it creates an awkward way of doing data-access and at the same time the developer can do it himherself by creating a worker thread. The problem remains: callbacks
+every 1 hour is probably a good rule of thumb - different strokes for different folks, I'm sure, but I take the view that if you are bothing to keep a TLog, and back it up at all, you might as well back up frequently to give better recovery chance - I think that 10 minutes is a good trade-off
+Macro names like that belong in Windows API ;)
+Jeff - Well put.
+I think the best you have in that case is to measure the output of the team, rather than the individual.
+Right, that's why the Transactional annotations belong in the service layer, not in the persistence tier.  Transactions are about units of work in use cases, which are represented by services.
+Best solution that currently comes to my mind, is to create MyByteBuffer (with same interface), and all classes in project to use that one, and to use ByteBuffer's array() to construct it and vice-versa.
+Threads would obviously speed it up. I stated that threads are not necessary in this particular case, since asynchronous IO, using select(), and other methods would achieve a similar thing. At the end I did state that I would use a second thread for processing - utilising multiple cores.
+updated the question above with the code given by the professor, and the code I've written. Thanks for that, i didn't even consider. He did tell me I had the general outline ok, but again he was pushing me off the session pretty quick, so only looked over briefly.
+Well, maybe I'm being dense here.. but the Clear method is on the SQL property, which is of type TWideStrings.  How can I override the TWideStrings.Clear method on a descendant of TADOQuery?  Perhaps that should have been my real question....
+good point. by best i mean most efficient
+The environment variable didn't work for me, but setting the registry entry and rebooting did.
+Please, don't litter parentheses when writing lisp code.  See the last paragraph at http:gigamonkeys.combooksyntax-and-semantics.html, Formatting Lisp Code, for a guide.
+And that, sir, is why you've got a couple more points than me. :)
+Shit. (And why does windows.h need to define this anyway?)
+The totalValue property is not used by anyone else.  Famous last words, I know, but in this case it is true enough.
+I mean the model is still same hierachical node access model...
+The fileSobrantes is because I had something like this c:tmpfiles and when I did the refactoring I forgot to delete the . Thanks
+And Mick, you are not weird.  ;-)
+Google collections adds immutable Collections.
+Andrey Fedorov: in most cases, the tryexcept is actually faster.
+Alter the clientuser = UserName portion to reflect what actual condition you want added to your query.
+Thanks indeed. I change the delegate to 'self' and it works. Maybe there was a connection error last time.
+Thanks for the reference. However, the 
+Stefan, unfortunately I need this on linux.
+No no, pricing should be based on value, not cost.
+Andy: get away with not knowing what `restrict` is
+The runtime for ListBox.FindSTring() is largely irrelevent - UI text boxes are designed to hold a small number of strings, thus linear search is acceptable.  Nearly any algorithm is fast for a small N.  If N is very large, you shouldn't be using ListBox as your datastore.
+I have a similar problem with my menu items.  Everything under Data is repeated at least twice and sometimes 3 times.
+Nice code. What does it do right? What does it do wrong? Doesn't it answer the question you asked? If not, why not?
+int main(void) is also proper
+Isn't the javascript file only downloaded on the first pageview? Every subsequent pageview would use a cached version.
+What's your method of keeping an always current list of valid file names?  manually updated hasharray of all possibilities that you check against?  if not brochure is in directoryHash?
+But the same thing can be said about old unix systems regarding about a million things.
+Thanks! Couple of tricks in there I'll need to look up...
+You shouldn't - it's very important :) But I guess this won't happen again ;)
+Are there any alternatives in .Net used by more than 10 people?
+I reread my question and decided it was probably a little unclear, so I've edited it. Thank you for retracting the LMGTFY link.
+Are you kidding? -1 for this unrelated answer.
+In my actual code i have 2 properties (Name + NameInclStart). I now have a working example, but unfortunately my actual code does not work (with the exact same logic) :S. Anyway the reason I set it up like this was that the items themselves where responsible for displaying themselves correctly.
+i am using start b batchfile.bat
+I disagree about undefined behaviour. malloc() is guaranteed to return continuous block of memory so you can safely access memory beyond the struct using either pointer arithmetics of array index - according to the standard they are the same. So it is defined behaviour.
+I'm curious about a what single table solution might reduce to when done as XHTML strict.
+Ok, it does not, the original question has been altered...
+agreed, my first thought when solving a problem is to google for anything else similar; unfortunately, googles not perfect, but i can usually find something if it exists (granted, if i didn't find it i have no idea if it does exists, but, well, yeah, paradox)
+One time, after a weekend chess tournament against masters and experts who were way too strong for me, I actually got really sick for a week. I realized from there that I had too much abstraction in my life, so I stopped playing chess and started learning kung fu!
+One-liners are not necessarily faster.  Don't fetishize code golf.  You have to measure speed; not lines of code.
+That's a bit discouraging :(  
+I don't know if getattr is guaranteed to be atomic in CPython. The GIL might make it so, but it's probably not atomic in Jython or IronPython.
+Hey, thanks, I will try this. Regarding your first question, yes, the folder variable already holds the last folder slash so the URL should be OK. Thks.
+Is having multiple configuration formats for all the products you use in a single solution really that much better? A standard (as any compromise) is, by definition, something everyone is a bit disappointed in.
+I agree that it is the most flexible, but is it worth the trade-off in ORM complexity?
+Deepak feel free to click the Check to accept the answer if it solves your problem or answers your question.
+The solution offered there was acknowledged to be incredibly slow, although it does answer the second half of my question.
+a downvote without comment?
+This will also allow you to use things like if (Request.IsAuthenticated) to check if the user is logged in, rather than relying on session variables, etc: http:bit.lyyJY9M
+Worth noting a property is a wrapper around one or two (getName, setName) functions. So property inlining is a minimal extension over function inlining.
+Thanks for your additional questions.  I edited my question to include the following:  Yes, the process we are trying to start from the webservice was created by a fellow team member [cue: your eyes roll... now]
+The thing is, this message doesn't always trigger.  Is using 302 redirection somehow more secure than using meta refreshes? Probably not, which is why the newer browsers don't show the message.
+You're right, I updated the code sample with more information
+when the user cancels the zooming operation then....
+What collection are you testing these on? Since only you seem to get exceptions on the second one, your collection might not even support Remove...
+Can you show how you prove that all Selected properties are still false? Is it because of what you seen in the UI output or through examination of the objects directly in the debugger.  Its difficult to see how you could be getting the result you describe.
+You paint a bleek picture, it's certainly not as easy as swing ;) Maybe looking at another system call might be a better place to start to see how Lisp does it, then move into something more graphical (if the desire is still there) afterwards. Thanks for the advice.
+This isn't free, is it?
+I bet my C program can beat your ASM code.
+== is not a conditional operator in the sense that it does not affect control flow, unlike if, while, and shortcircuiting conditionals (, &&). It does not cause transfer of control. Of course it can be replaced with XOR, ORs and shifts.
+did u guys try use python instead of java http:pyjs.org
+What if I resize the array inside the loop?
+Well, I came to the conculsion of using an abstract because I was spending alot of time redefining duplicate methods.  I mean, if we're realistic, what's the difference between a pile and a deck?  well, a pile is face up.  That's about it.
+The CLR property is unnecessary in my case (I don't use IsModified from code), but it's there nevertheless (with only a public setter). Both designtime and runtime work fine with just the dependencyproperty registration.
+Did you accidentially include .Net asssemblies in your MSI package?
+...then I can modify the message according to my needs and then forward the MailMessage on using System.Net.Mail.SmtpClient.
+Its not evil per se. It an abuse of the preprocessor to make it do things it wasn't meant to do.
+The source code is actually for a quite old version.  The IFS Kit at http:www.microsoft.comwhdcdevtoolsifskitdefault.mspx provides updated source code (one of the examples it provides is the same as used by FileMon and the underlying ReadDirectoryChanges Win32 call).
+Scott - Is the ability to disable the toolbars and right click menu IE specific then?  I've seen LOB apps that completely lock down the navigation, but (again sadly) they also require the user have IE.
+Probably a report assignment on why goto is bad?
+But 1 <> 1 is sure to not return any rows, whatever the other conditions are.
+Your code performed fine.
+lol...yeah that could be worded less harsh.. Im not a Perl lover either and I took it offensive
+I'm not arguing or supporting John's answer, so a comment wasn't appropriate. I'm making an additional point that json offers something AMF does not, which may be desireable in some cases.
+You may want to look into turning on displayerrors in your php.ini (on your development machine) - needs to be done that way to display parse errors.  Also, the PHP command line interface can syntax check (ie calls it lint) - I have that integrated into my text editorIDE.
+what kind of data is cached & where?  How does SQL Server replication break your application and what kind of replication have you tried?
+This question is a little subjective...
+I have the last version of CodeSmart. It has some useful code analysis features, but I use MZTools 99 of the time and CodeSmart 1.
+Can you give one or two other example values?  Or more...
+Couldn't make it work, it only downloads the login page and it stops. 
+Definitely no multiple inheritance involved - the inheritance is exactly as described in the code samples. Also, I'd love to hear more about what's wrong with passing 'this' around?
+Thank you for your answers, they were very insightful. Thanks for taking the time to make all those links too. The joelonsoftware article is just what I need and the htmlhelp link is now a permanent bookmark. big +1
+Yes, you'll have to do that. You could avoid postbacks by also doing the selection and adding to the list with javascript and sending the whole data list to server.
++1 for Visitor pattern.
+That implementation of fluent validation is pretty slick huh.
+Both are at least one abstraction level lower. Not what I would call Threading Frameworks.
+Pretty much the approach we use.
+I tried seperating the creation and fill (also suggested by Mladen), but I got the same query plan. But that link is very interesting.
+Alternatively, you could just access the stored procedures directly.
+Looks like this would work, but it's a bit like using a sword to spread butter. This program will have to run on other people's computers so altering system-wide properties isn't an option :(
+Also, that should have said ISO 639-1, not -2.  Whoops.
+Your question lacks the error that's produced and the code you are using, thumbs down.
+the OP may also want to investigate the '' command, which jumps to the opening or closing braceparenbracket that is paired with whatever is under the cursor.
+Jweede, thanks for your response.  I'll answer your questions to the best of my ability:
+Jack, personally I'd just do it with ODBC and PostgreSQL or MySQL because I've done a lot of that in Perl, but singingfish's suggestion of Tie::File might be easier.  Just tie it to a NDBM file.
+I know that none of them have good performance; I'm looking for which has the least terrible performance.  And, although I've used Flash for a ton of other projects, I specifically want to do this in JS.
+Thanks, that worked. I only grepped inside usrinclude...
+In Turkish upper and lower case are as usual, it's just that the mapping is different from every other locale. Specifically whether i has an umlaut switches when switching case. The German eszet transforms to two characters when made upper case.
+I added an update to my question
+sure, it's ok. But there is no point since you can only rely on the public interface of std::vector anyway. So you may as well just operate on that without the hassle of inheritance.
+yes, learning WiX is like trying to figure out the obscure incantations that someone decided 'made sense' to perform a simple action.  Kind of like UNIX.
+The cities and suchlike are stored in a database, it's the map itself that's the problem.
+It must never be a problem in single-threaded code. The compiler can rearrange it (it's usually a software not a hardware problem), but this must not be visible to a single thread.
+If I had editing powers I would put single quotes around dining room. Otherwise it's a syntax error. Also, I would put a space after each comma, otherwise it's inconsistent and unreadable.
+Of course - I mean it is statically typed so as to be readonly. You might as well say There's no point making fields private - they can use reflection to get at them anyway.
+i tried both ways none of them worked..
+CE certainaly can run in a web site.  It's probably not a good idea to use it in that scenario, though.
+Unfortunately I'm stuck using the 2.0 framework in this existing project, it did cross my mind. Thanks!
+Just I was wondering. I use a MessageBox function hundreds of times in one project.
+Hi Josh, actually the site may use openid in the future, but remember me functionality still needs to remember who you claim to be according to our database of users.
+As a general note, the length of this little argument over the minutia of the GPL is a good illustration of the kind of mess you step into if you try to find a way around it. Do not tread here without good legal advice.
+Recursively, it's find . -name .php -exec recode UTF-8..latin1 ;
+What are you trying to push back? Is it expensive to copy? Does it have an expensive copy constructor? Post more details.
+Unfortunately this doesn't work for me. I get compile errors as the compiler is then assuming that the source file is in Shift-JIS and so interprets the strings differently.
+jalf, could you guide me to explain how to find how much CPU cycles needed for instruction like movxchg? I looked in documents recommended mentioned by others from Intel, but feel confusing to find what exactly each columns mean in tables. Thanks.
+That would work too. It all depends on where in the DOM your buttonlink is, which is why I gave so many examples and such a long explanation.
+Ohhh okays i see so your defining the start and end tag and erasing all of it basically! Thats awesome exactly what i needed thanks!
+In most real world cases this piece will be in a Singleton and the ISession reused,closed on Session end. I see your point though.
+Which Delphi version are you using?
+I don't know what it did differently, but there must have been one less constraint added as it worked.
+Dave,thanks! Please paste the link here,not in my old thread.Did you use my C++ blowfish encryption,not some other?
+I made an edit to provide a little info as to why.
+The mininum full price for an EC2 instance is 10c  hour, but you can halve that with Amazon's new reserved pricing.  Still more than cvsdude or some of the traditional hosting services, but worth it for us to get full control over the server.
+this wound up being a setting under the app pool, ill append it to this tomorrow. something like: use user 
+Glad it helped :)
+nice one - that is great way to do it!
+keep in mind that == is different than equals(Object)
+plinq may be a suitable alternative: http:msdn.microsoft.comen-usmagazinecc163329.aspx
+woops, now it makes a sense -.-
+Hmm....well, I don't know why not but if that's the case then my suggestion isn't very helpful.
+This has nothing whatsoever to do with bash AFAIK.  Moreover, perhaps you should mention at least what HA solution you're referring to; most of them manage all this transparently and there should be no need for you to try and figure out:  it will be provided.
+Thanks Pete for nice explanation. the newly created string is a copy of the argument string. So where is the argument string stored.
+I've updated the question with the relevant PHP.
++1, spent 10 minutes looking for that reference. There are so many C++ questions on SO which simply require a pointer to Herb's writing.
+I don't see, why you included the C class. I think the question would be the same (and a bit shorter) if you removed it ...
+Takes seconds to download and install...
+I've just downloaded the sample app, will look at it.
+Trust me, it works, I tried it ;)
+a very small prism
+I know but it seems redundant.  Your creating 'days11', selecting the element that matches 'days11', and seeing if it contains '11'.  That would only return true when 'i == 11'.
+Thanks for pointing that out. I guess I was too quick then I was typing it in here. I have now edited my code.
+nuriaion - in this case you need to make the updates & checks atomic (using a mutex or something) so all hell doesn't break loose if the check happens to occur between setting the value and setting the 'mirror' of the value.
+I have a friend I'm talking with at the moment who uses g++ and linux, works fine for him as well...yes, yes! I know! Linux is better, but I can't game as heavily on linux, so I'm stuck with windows.
+See updated post.
+BZZZZT. Java might beat C++ in many aspects (portability, or ease-of-coding-your-first-GUI), but certainly not clarity of syntax.
+Mike: Add www.localhost entry to your hosts file. This will let you test your www. logic :-)
+Ahh, that'd do it. :) Glad that you figured it out in the end.
+AaronSieb - when writing web-apps, you must always assume the data is oldrottenhazardous, not only in this case
+I think I get your dependencies example. You're filtering one array based on another. But the tricky part is the require keyword. Now, does that mean you are adding require yaml, require haml to your code file?
+If you use an array of Objects, this code will not initialize the array.  It has nothing to do with the variable here being primitive.
+but i need that imgsrt out side that load function,can you give me any help?
+Thanks for the questions - I've edited my question with some more details
+That last sentence is wrong, there are extension methods. You just cannot tell him apart from static methods.
++1 - great answer, thanks! I was fiddling around trying to find out how to handle generics!
+I expect the premise of the question to be in the question, not require a reasonable person to whom the question is targeted (a C developer) to have to do his own research to answer it. Acting on that, the question was answered.
+So I have to find each cell that the user selects?
+text in double quotes gets parsed by php - text in single quotes does not, and is therefore faster
+How does the name Map make it obvious that it's describing an interface?  Sure if you know that in addition to the Map class there also exists a HashMap class, but that requires outside knowledge.  Without knowing the context it is conceivable that it could represent a map as in mapquest.
+if lambda function in php are to be like in python (i.e. anonymous functions) then this DOES NOT answer the question. He wants to create a new construct (like the for loop), not a function.
+lol - very true unsliced. I've been trying to pawn off crystal work at my job...I think people are starting to avoid me.
+Point taken, but in a weakly typed language you'd probably just get erroneous results the other way, without knowing it.  Which do you prefer accidental correctness or intermittent, undetectable errors?  Another reason to do TDD, I guess.
+I got no results until I changed the ' to a  in the expression and replace.  Then it works, but kills nn
+If you're down-voting then please add a comment as to why.
+if you use exceptions for normal situations, how do you locate unusual (ie exceptional situations ? --> as in the example, 
+post some actual C++ code that illustrates the problem
+Andy had a similar suggestion.
+And C collection initializers help with the last one as well...
+Perfect-u-mundo!  That is exactly what my Google skills were failing me at finding!
+Is the next version of emacs going to come with the kitchen sink also?
+hover is not a real JavaScript event, and can't be unbound like that.
+beforefilter can also take :except parameters if you want an action to NOT have the authentication.
+MSalters: As a side issue, you could have phrased your comment in a less hostile manner without sacrificing any information content. But you chose not to -- why?
+typecasting it to a PChar should not create any problems.
+The C-interface would still be available, and you actually need to pointer to port to use that.  So it wouldn't really be private.
+I definitely take issue with the It isn't worth it mindset. If you don't think through who owns an object and is responsible for it's lifespan, you'll get very crappy code related to object CRUD, particularly cleanup, with Null pointers flying around as object hierarchies are left in bad states.
+Sorry for bothering you again,but I did another edit,in case you find the time.Anyhow,I suppose this is the right time to also ask if notifying people(the way I notify you)via comments about the edits I made to my thread is accepted behavior here, or is that considered pesting?I guess this is also
+I just grepped my source tree, MSGDONTWAIT is not used.
+This would work too, but I prefer the solution from Maurice. Thanks...
+Which IIS version is installed in the server, if IIS 7 - ASP.NET works on it in Classic or Integrated mode?
+Call the procedure, take the resultset, parse the result
+Jon Skeet,I admire the book you wrote(C in Depth).Will you write another one when C v4 comes out?
+I think + 1 should be done on second update.
+ya now i m getting the answer
+Don't know what pure means here, but `const Currency& Balance() const` (in C++ idiom) does not lock in my implementation: a naive implementation it just returns a data member, but this is not required and can be changed at a later date. And display is certainly not the job of the modeling layer.
+Well, a column called 'name' in the 'companies' table would be fairly self explanatory...
+Usually 32-bit pixels is either 24-bit color + 8bits of alpha, or 24-bit color +8 bits of wasted space.
+I think I remember CreateNoWindow not working when I used it at my last job.
+Yep, it loads and when I click the save button it dosen't throw any exceptions or anything. I'm using SQL Server Express Edition and C 2008 Express Edition. Does either of these matter? It's also stored on the localhost, as I don't have a server lying around :P
+Or find where the buffer size is defined, and lower it, be aware there is a cost for that. I am not sure you can control the buffer size for the different output streams separately.
+git seems to be considered relatively new. If it's any consolation, I'm on a Mac and the Xcode development environment doesn't have any support for git either (as it does for svn).
+Nice and concise - thanks!
+Hell yeah, and you can always link back into C++ with Boost.Python ;)
+Neil, not gonna post a separate answer because it's not an answer to OP's question. An enum value won't ever be 6 bits long but it might be 8bit, 16bit, etc, depending on whether you have e.g. >256 values in it (and depending on which size the compiler finds optimal).
+I wonder if it is smart enough to not pull in the contacts again.. I will have to inspect the query in a little while.
+sorry I've got confused by rows and columns, but I've updated the description a little bit. Well, it's not really painful. It's hard to start, but it's fun doing it.
+Good point - thanks for clarifying this.
+That's what the 'i' at the end is for - case insensitive.
+which profiler would you recommend?
+chaos I agree with you, but in the same time if you begin to think about Usability late, you will pull your hair off :)
+Having a protected method, how can I call it in PowerShell? Type cast does not work '(writer -as [IDisposable]).Dispose()'. Should I use .Net Reflection API??
+We've both learned something then! I had no idea that WPF wouldn't bind to public fields like that. I'll have to read up on that!
+Yes, I think you can copy text to the clipboard, but you need to use the OS's paste facility to retrieve it.
+prints nothing, there is one entry for foo, which is a typeglob that will resolve to scalar or array depending on context.  Hmm, I guess I should go look at how PadWalker is figuring that out.
+Keep in mind that this is a SERVER script. Now, I need to pass this id to the TREEVIEW on the parent page. In your example, valuetobepassed needs to come from the SERVER aspx page. Hope this was clear and thanks for your help.
+This does not work on my test data.
+Cedrik well it is not standard ascii, ascii is american standard code for information interchange after all :(. If you also include values > 128 in your test it makes every file a text file (as every file is composed of bythes ... between 0 and 255).
++1 because it's standard pythonista idiom
+thanx for helping and sorry for not replying sooner
+Appropiate enough?
+If you plan to use C++ regularly, I strongly recommend you familiarize yourself with the standard template library.  It makes working with collections of data much easier.
+You were upgrading on the wrong cycle! 5 and 7 were the versions to get.
+In sample code above, X is the shared Exception variable... Its just a variable declared at class level so it is shared among all methods in class...  And As soon as the first exception is thrown, don't you kinda want to stop ?
+Yes, I have set the mode to Conditional as noted in my question. I don't experience a postback, rather there's a flicker.
+I posted some info about the table fields that have to do with this. Anything else on them or the rest of the database is irrelevant so I didn't post it to keep the problem simple.
+For python 2, content = urllib.urlopen('http:www.google.com').read() and content = urllib2.urlopen('http:www.google.com).read() are equivalent, until you need cookies or auth, in which case urllib2 is much, much, vastly, better
+No, you can do a full index scan to resolve this query; you look through every entry in the index and count how many are distinct. But that ignores many of the benefits of the index's structure, and is not going to have much better performance than a plain sequential scan.
+I tried it out with both PNG-8 and PNG-24 images, and it does preserve the transparency. Could you post the image that you are trying to resize?
++1, but I would also suggest throwing the error back to the caller in the error handler. Otherwise the caller will carry on in ignorance that the routine hasn't worked and might cause worse problems. Event handlers obviously shouldn't throw or they'll crash the app.
+In my case you can only have 1 case open at at time so checking if the last item is a closure will suffice in this instance.  I should of noted this in the problem description.
+Does this mean that different interpreters can run concurrently in different threads?  I'm still unclear on whether or not different interpreters in the same process share the same GIL.
+Nice alternative!
+Title changed. Thanks for the suggestion.
+This is mandatory when you work with clients such as public sector for example, in such cases you have to estimate based on scope given in RFP. Detailed requirements come later in the gathering phase.
+I like your short answer best.  :-)
+I have updated the question with a reference to the official nomenclature.
+Dana: Which one? The struct dump method does makes some assumptions about endianness...The bit up top allows you to fix that.
+cleans up drool from mouth... of course it could.
+Yes I can do that, but what if I want to apply some operations to the elements in the loop until the condition is satisfied?
+Thanks for the response.  This would work, but I feel like it would create more of a maintenance problem than repeating the code as I would need a separate control in a separate file for each page.
+Try something like ('theDialog').load('someOtherFile.html');  Then when you click the link, it will have the contents of the remote file.  There are various ways of loading the file, but this is the most straight forward.
+This happens even without an exit statement in vcvars32.bat. Calling a batch file without 'call' runs the batch file and exits when it gets to the end of the 2nd batch file. (See also Raymond Chen's recent blog article on this subject: http:blogs.msdn.comoldnewthingarchive200904169551818.aspx)
+Documentation should definitely be a major consideration when choosing a framework or an extensible CMS. That is the one area where I feel CakePHP is somewhat lacking.
+Looking at the page, this states VS Standard or higher. It won't work with Express.
+Think I made it work, btw..
+Mitch: of course not. concepts like sharding are exact opposite of redundancy. Using DB clusters is principally about load balancing.
+Sorry Gili, that's not going to work with javax.comm. You might be able to hack the rxtx project to implement your own selectable channel... but unless you are trying to integrate with a package that already works with any SelectableChannel, that's probably more work than necessary to get non-blocking serial IO.
+Last time I looked at guice it lacked the convention over configuration aspect that you can get by mixing annotations, xml and roles, which is also the reason I'm not using spring javaconfig. I really prefer the mixed paradigm. Replacing xml with code that does the same thing does not cut it for me, maybe it's just me being close minded, but I cannot see how code-based configuration would add value for me. But I don't know if you can achieve a convention based setup in guice.
+I agree that this is a bad idea, but you do get a resize event when the screen orientation changes. In my own application I allow the user to set their orientation quickly from the menu and i use the resize event to change the available menu items.
+ok i tried this:
+I agree too but not if your application is designed for a specific purpose. Anyways I think the SystemSettings.ScreenOrientation that Stevo3000 mentioned is a good choice but is there anyways to find out when the rotation is happened like an event or something?
+Obviously not, duh!
+that's great! that gave me some good practical examples, and referenced simple GUI development exactly as needed. thanks
+No need for you to feel stupid. Your request however is a little beyond what would constitute a typical response for this site. I would hope though that anyone with information on this topic will give you some pointers. Good luck.
+mghie: ah, thanks for the clarification!
+Thanks, but as mentioned in the question this won't work because I'm not calling SomeClass directly. I want to change the instance of SomeClass used by an external library- I never call it directly from my code.
+The simple solution is often the best. You could use for instead of foreach. But both are correct.
+The database and the code are separate systems. Compromising the database doesn't necessarily mean a compromised code base.
+I suppose I have built my own data access layer which works fine. I just wonder about conventions and best practices.
+Guess I didn't see the dupes in my quick search.  Thanks :)
+If you have access to Visual Studio it would make life easier.
+You're going to assign that to an int?
+def apicall(self, method, resource, kwargs):
+Which is why we need to generate a delegate type dynamically. Any pointers to this would be helpful. Thx for the help.
+I second Paolo's statement - haven't heard of divmod before. I'll have to remember it.
+I would advise against using a tag name as a class or id, just for the sake of clarity.
+So - does it apply also to C? because if it did it would explain everything. It also seems to make sense. Maybe the table in K&R is dated?
+was my solution what you needed?
+That's currently the arrangement and despite some refactoring of classes and code to make it more truly object-oriented, that's most likely how things will remain. Despite incorporating appropriate tags in the business classes and new methods like the order class one to return a collection of order lines, there will still be many fetch methods in the order DAO as well using connection pooling to access the DB; but the gets and sets will remain in the order business class.
+Yes. But they can be slow sometimes while handling large amounts of data.
+Worst comment ever.
+When using IE7 and no doctype specified, IE assumes it has to use an IE6 compatible renderer.
+just recalled boost.system being one to get rid of.. memory fails me.
+Your tags almost look like GUID's. :)
+David: why then do you favour incremening over random?
+guns: this is one of the best examples yet. Please put it in a real answer so it can be upvoted and maybe accepted.
+I would close - but it's a new poster
+Both `return this` and `return new` are examples with different applications: jQuery `('eleId').show()` returns `this` because otherwise it would create a copy of eleId. Linq `myCollection.Where(x=>x.IsValid)` returns a new object because otherwise it would have changed myCollection, which could be immutable.
+Look up AFINET for the IP sockets to communicate between different hosts.
+That's an excellent point.  Agreed.
+-1 for not a real question
+nice dude :) i like! i was trying to do this .. but i couldn't get the .Select(..) part .. nice :) I'll try it out at home, later :)
+Don't forget about Phil Haack's Blog: http:haacked.com
+Good question, sorry I should have explained.  It's polymorphic so taggableid refers to any model which can have tags.  In this case it could be called pageid since only my pages have tags, but they made it polymorphic so any model can have tags.
+and, rolling one's first app is the best way to learn.
+I don't intend to actually use it. It was just a how does this work question. I'll add a note to the original question.
+For example, for my robots.txt flex parser which is built with scons it's as simple as:
+And I may not have the chance to use events when the targetted portlet is not written by me
+Then yes, you should put a canonical link on that page with www.yourdomain.comid12345 as the base url.
+unfortunately there's no memory leak - for built in types the table new and delete practicaly map to malloc and free calls (there's no difference if you use table delete or not as the desctructors don't need to be called either way) - I say unfortunately as I'd prefere this kind of hacks not to work at all :)
+Short and sweet.  I personally feel that C is slowly building support on the server, but the lack of cross platform is a big pitfall.  Mono replicates most of .Net, but not everything or the same.
+Please post some example data and command copied and pasted from the actual files and commands you use to repro the problem.
+I knew I saw something like that earlier. Perfect, thanks.
+About to go flying, but i'll post back tonight with my solution !
+So how do I take binary data and turn it into an array of bytes?
+My real challenge is to stop the service from jumping around? Are there threads that I don't know?
+Thanks. I really like charlieSort (x:[]) = [x], much cleaner than what I was doing. Also, interesting that you are doing what seems like a depth-first approach: I think you are sorting the tail before you sort the head. This makes sense and was something I never thought of. Helps me, because now I realize with more clarity that the whole problem can be simplified to this: figure out how to sort the first 2 entries; then, use that over and over till the whole list is sorted. Cool.
+Marco: this approach doesn't work, there's no place to remember whether you went left or right last time you visited the node. Try to code it up (I did).
+Atif, are you sure dispose did not throw an exception ?
+Would be severly different nowadays. Drive letters are associated with the user session; the desktop is associated with a WinStation.
+That's enough. Thanks.
+which compiler is this?
+I've seen a lot of mention of Firefox debuggers here. Firefox does have good tools, but unfortunately doesn't help when your problem is IE specific. Is there any sane way to debug javascript running in IE?
+BTW, what's wrong with a protected constructor. It compiles fine.
+It was an error in the Perl script that generated the timestamp.  Problem solved!
++1 for the cool command.
+You don't need visual studio to compile that, the commandline tools are actually free. just google .net sdk download for the link (the direct link seems to change around but google always seems to work).
++1 for mentioning the human factor repercussions
+Howdy Shey,
+I don't own the server and can't make changes to it at that level.
+curiously enough, GCC seems to not remove any removed elements from the range [returnediterator, last) so i'm not sure how one should interpret the wording? Any idea?
+What do you mean by 'Javascript is available everywhere' ? If I interface my Java application to a CouchDb instance, I have XML parsers natively available, but no Javascript parser.
+Thanks for the tip about listening for the submit event rather than using the enter key.
+Thanks Andy. Appreciate your help. 
+maybe I'm missing something, but how is declaring a variable declaring a type?
+Can you elaborate a little? Some relevant code would be nice.
+I sadly have no answer for you, though - I can only offer an upvote. +1.
+We do that here on Stack Overflow - as we denormalize a lot of data for query performance, we have a few background tasks that will ensure the data's validity.
+Trollish question gets trollish answer.
+Understand.  It think the general answer is to refactor and rethink the relationship to avoid the diamond. :)
+Exactly Blorgbeard, any kind of housekeeping that need to be done ONLY if things go wrong, and then you move on with the Exception bubbling up
+Thanks! I thought I had tried using Object and it didn't work, but now I see that it does.
+apc also provides shared keyvalue memory access. faster, if you have just one server, problematic if there are more.
+jrandomhacker: Pure abstract classes and what we can do with them are well known in C++. The OP should have better asked a precise question about the exact problem he's getting. We're not solving a mystery here today; lots of people have used pure abstract classes in C++ before.
+Do they have to be executed in a certain order?
+I don't even have a web.config
+That fixed it. Thank you.
+dada I could, but do I want to? PS: I am using Ruby on Rails for this one.
+what version of the SDK?
+What do you mean with hashmap? Sounds like memory based. I understood that (very large) files means that it is not possible to load everything into memory
+What kind of difficulty are you having? It should be straight forward to have a timer wake up periodically and check the time of day and look at your application 'cron' table to see if anything should be done. No?
+No, what I have outlined applies even when you have a proper doctype and valid code. Without it you are a lot worse off.
+You can't, unfortunately. Best you can do is vote them both up, and pick the one which helped you most as the accepted answer.
+You're fast! :)
+Then you should probably include a FF3 install file on the CD. Otherwise, like Brian says, you're out of luck.
+You're right - the Done marker is probably the best way to go to avoid race issues.  I'll update the code.
+I couldn't find any rule. I finally setup a task to reset IIS ans SQLServer each night at 2 and that seems to do the trick... for now, but I assume that when the load will increase that may reappear. I'll probably contact Microsoft PSS then ...
+Well, yes and no. :-)
+although looking into the latest draft, they reverted that again :( the rvalue refs have become lvalue refs again.
+SO won't let me delete my comment, but I was mistaken. The link is actually http:ftp.newartisans.compubgit.from.bottom.up.pdf
+Basically, if you're bootstrapping an application yourself, you want to have a single class that you might get using getBean() in main, and through the dependencies you've configured, Spring builds your whole object graph with dependency injection. The whole point is for none of your classes to know or care how they get their dependencies, and if you're calling getBean(), they definitely do care!
+Operating system?
+http:msdn.microsoft.comen-uslibraryms972100.aspx - Looks like there's a solid precedent for this, server-side at least. I'm not using ASP, but the difference between .html and .inc should be obvious to other coders who come from the ASP world.
+homework by any chance?
+With BeginInvoke window that starts the process dissapears right after the nmap process ends, and still I have no output in my window at all.
+Although it's possible to draw the list view text yourself (see the ListView.OwnerDraw property), I don't think it's possible to control the height of items: you're limited to a single line.
+oracle has many tools for the UI for all platforms. It is just that the command line affords you so much power to fit your specific needs, rather than a UI that is confined.  If you learn shell scripting or Perl, you will find many administration things can easily be done.  good luck.
+the check also the if function
+I start it with the runemacs.exe wrapper, which, if I understand correctly, just launch the emacs binary without a command line prompt on Windows. If you are about to suggest the -geometry option, that is not useful to me since I have too many places that start emacs independently with other options and changing all of them to include -geometry option is not practical...
++1 JavaFX is superb
+devrandom gets some of its input from user interaction (mousekeyboard) and from disk-access speed, both naturally affect phenomena.  Without these inputs, devrandom outputs slowly (waiting for real random data)!
+And this will work regardless of whether you are hitting the database from your application, or from somewhere else.
+That depends on the encryption mechanism, some simply won't decrypt because they already have checksums inside (for example most block based ciphers). However generally what happens if you include a message hash anyway, SHA256 for example, calculated after the encryption has happened.
+right, he said it can't in his question, lol threw me off
+Um, I don't have a List<T>.Cast<Tother>() method.
+this falls into the great answer category
+How did you resolve this issue? I seem to be getting a similar one
+This shows what the error means, and how to allow more connections. It does not, however, explain why you get a max connections error when all connections are closed before reconnecting.
+Yeah, I know that I can see my code in SharePoint Designer - I'm just not sure where that code is actually saved. It appears to be in AllItems.aspx, but when you run any of the tools mentioned to pull out schema.xml and the views, that code is nowhere to be found.
+Any referenceslinks on google working on implementing it?
+it looks like a LOT of code duplication. That would be the first thing I would look into refactoring out.
+I know this is an old answercomment, but there are some libs that can add bit more convenience on top of stax (and isolate some lower level details), for example StaxMate [http:staxmate.codehaus.orgTutorial]. This still allows for incremental parsingwriting, but reduces amount of code to write.
+Thank you Mun and Tom H. Appreciated.
+So, the query should actually by:
+It isn't moving the division; it is replacing two sub-queries in the SELECT list with a simpler set of expressions that helps.  The original query calculates both 'MAXODO' and the expression over time (roughly, average distance travelled per day) as two separate sub-queries.  I've replaced them by a single (non-sub-)query.
+Except for the 199 license fee that seems great.  I'll have to see if I can spare the cash for it.
+Would be cool if there were three questions, instead of one omnibus What's cool in SVN?.
++1, but if the OP doesn't need the full range for all of the individual data elements he should use the technique outlined in http:stackoverflow.comquestions282019 and fold the boolean into one bit of one of the other data elements, saving another byte in the process. On modern processors less memory consumption at the cost of more cpucycles is nearly every time a performance win as well.
+Could it be a problem at the server's side? Try to upload something with other means, so that you are certain about it.
+you're kidding, right?
+You might want to be more specific in your question then. Not quite sure what problem you are looking to solve. Remember that a pattern is not always the solution. If you think you have spaghetti code then refactoring it using basic OO principles to start with.
+This answer just made my day.  We've been wrestling with the etag question because neither the devs nor the IT manager (who was demanding etags be added) could fully explain the use-cases.  Thanks!
+I think you mean
+Ok.. I'll bite. Apart from retrying, how can you recover from an SQLException?
+http:www.google.comsearch?q=assembly+tutorial&ie=UTF-8&oe=UTF-8
+How many records do you have in your table? I wanted to post an optimized version but don't know whether to bother :)
+It's not a big concern because I'm taking other security measures too which should be pretty darn hard to get around as is. Plus, I'm not storing any confidential information on my website anyway... in fact, I'm not storing much more than a userid.
+mhenry1384, I think that Lars is saying that it would be helpful for developers to help re-educate their system administrators who think that a working set of 80-120 mb is too large. In many cases, this could be both practical and constructive.
+Make that jcollum's comment.
+I'm not aware of any comparisons that are likely to be that helpful. At a high level both products can claim to have the features you want, but it's the details that make a difference - basically how well the model used by the platform for a particular feature fits how your organization works. It's not possible to cover that sort of thing in a generic document because the platform is so big and flexible and every organization uses it in a slightly different way.
+I added a picture to my Question. I shows what I am trying to achieve. I backTAB, for instance, for the command cd.
+This code works with the example but wouldn't work with the vOrder sequence [3 0 1 2]. For i == 0 , 3 and 2 are swapped, then nothing is changed for subsequent i values.
+As Stefan noted above there is no direct relationship between date and primary key so just selecting by primary key is not going to work. I might have a solution where I also need to filter by category which invalidates the primary key solution.
+Will this handle the case of fruitsofkind([:apple, 'banana'])?
+Adam, actually I don't have imports for the cast type, and if I import it Netbeans says it is unused. However the error specifically can't cast to com.generic.MyType. I'll probably post the question with some real details later today if I can't make any progress, I'll give you a link here.
+(see my comments in the question's comments)
+Hey Ryan, cool focus, I will be playing with it the next days. I guess I can skip the 'cache' part, right ? And the .html(data) ?
+Thank you, vectors were clearly the correct solution here.
+Mitch, this is obviously homework (probably one of the only two places I would ever use bubble sort).
+Nicely said and to the point!
+Could you explain this one a little more?  The way I'm understanding it is that setting the 12th bit and 123 bit would be the equivalent of 2^12 + 2^123 which isn't the number you came up with (calc says it's > 10^37, which is larger than even bigint) so obviously I'm understanding it wrong.
+Compile (gcc) the offending file again with a -E argument.  That will output what the code looks like after the preprocessor runs its pass and all macros will be expanded.
+Thanks John thats a good suggestion - sometimes simple is best!
+Without a background image, at http:www.faqs.orgdocsartu is easier to read.
+Oh, and 1.1GB later, if I keep scrolling up and down, memory keeps going up rapidly.
+For starters it's VB, not a C-based language, but the idea of specifying both can be done with regular expression global replace. But, then I get over 500 error where the namespace is imported twice :)
+Hmm, I was going to ask you whether I should make the 'slug' optional but looks like you read my mind. Thanks! :)
+I'm not an expert myself but I think = pure, used in that context, shouldn't break anything.
+I've tried using eval before, however I made a mistake and didn't use parenthesis ( + ). Thanks!
+and from the documentation of asList: Returns a fixed-size list backed by the specified array.
+I don't see your better method using php Chad.  You could use curl, or a whois - many options but if you don't know about arin or whois the information I provided is helpful.
+btw why don't ppl try to create one at facebook wiki?
+The compilation was taking 2min, now it's 1min50sec .... not very convincing. But indeed, it's faster.
+Oh by the way, I'm NOT referencing the assembly from the GAC anymore. I gave up :-)
+Are you sure that the sensetivity is not set in the OS?
+change your sp to just select 1;, then parse it, then change it back.  that'll work.
++1. There's no law against apps depending on each other.
+I've installed it but the interface is not so nice. And it seems that all the configuration is through files or you have to install an addon. Do you use such an addon ? Do you have any suggestions about the interface ? Skins maybe ?
+It would still be easier transitioning to PHP-Lite (bad name) than to a completely different language like Python (whose syntax I personally dislike, btw).
+Thanks.  That did the trick.
+... and yes, it is certainly 2000 vintage html. ;-)
+How is this Programming related? Voted to close until question is edited with relevant info.
+The first will match more than 21 commas (because it's not anchored) and if you anchor it the string will have to end with comma
+do you know there are four letter TLDs like info and name? I think you missed that, because you got that 2,3 in your regular expression.
+This fails with const static variables.
+Thanks, I'm not accepting your answer since it doesn't work right now, but I upvoted it, and I look forward to see it working
+Ah I see. What if you had an internal script launched to poll the right server and store those results in a central place and have a handler on the front-end?
+Thanks very help full!
+Dumb question, but have you checked to see if MySQL 5 importedupgraded your tables to version 5?
+Wow.  That means of converting PEM to JKS is substantially easier than what I did!  Thanks! :)
+Why do you want to change? UTF-16 would need 16 bit for each character while UTF-8 would only need 16 bit from U+0080 on. So every ASCII characters will be encoded like ASCII.
+I've done this, but there is too much kruft, Also more importantly I need help accessing the actual class (once its correct)-- I want to keep this bare bones simple
+If the intention was to pass SPDRPHARDWAREID instead of SPDRPDEVICEDESC, then this is certainly true because that property is a 'REGMULTISZ'.
+Thanks -- one issue that this answer doesn't handle is respawning the thin server ifwhen it dies.  A person would have to login and manually start it at that point, which we can already do.  As far as I know only inittab allows for automatic respawning.  If anyone knows a way to tell init to respawn init.d scripts, that would also solve my problem.
+be careful if blah == 0
+I use NetBeans, but where's the designer? I can drag&drop components in the source, so the source is automagically created and I can use the preview, but I don't find a way to draw like i.e. I can do for SVG in Inkscape.
+may be you missed what the question asked in the first place...
+The memset() operations are not really necessary.
+I didn't say that it was wrong, but it would certainly be more useful to see the full stack trace, typically.  Thanks for pointing that out.  I had neglected to put that in my comment.
+One of the posts in that article says they would switch the stack base, but not update the stack limit. Or not switch the exception handler list. Or forget to swap the FP state.  Assuming fibers look after those things for me, can I do longjmps between fibers?  If I wanted to look after them myself, how complex are they, and where can I find out about them?  Thx.
+Agreed. Like is most concise.
+Then check the call to sourceWS.Columns(j).GetData(i, 1). Also try setting a break point at Do While, step through the code while watching the value of the variables. Can you refrain from the Variant type?
+Welcome to the world of systems programming. ;)
+micro: Its in c.
+I hope this is just an example, because in the real world, there would be no reason to just not return an entire Person.
+I guess you are right. More work to be done, not so easy, as I thought :)
+Am I correct in thinking that you only are interested in paths having minimum edge count across all paths?  I.e. if there exists a path with weights (2, 2, 2), you're not interested in the path (5, 6, 7, 8), right?
+oh no, n=1000 will overflow integer... n=50
+Is it possible to create local files on Anrdoid without the root access then? if yes, then does it mean that you can even write a problem that compile those local files?
+How are you managing to run multiple tomcat server on the same ports as each other at the same time?
+Strange, any ideas to check further?
+Should be community wiki...
+OregonGhost: Indeed. And, more specifically, 08 isn't a valid number in octal, hence the error message. By comparison, that's equivalent to counting in hex and going from 0x0F to 0x0G, i.e. you can't do that ;-)
+I changed ObjectType=x:Type local:Enums to  ObjectType=x:Type sys:Enum, still the same problem..
+S.Lott: http:xkcd.com353
+My opinion is that it removes the plus signs and quotes, making it more readable, specially when there are more than just 3 lines. Not as good as String.format though.
+There isn't an exact equivalent.  What information are you trying to pull and what type of database is it?
+Thanks. In addition what I would have liked here is to not allocate the entire byte array with string.getBytes(UTF-16LE)--perhaps by wrapping the stream as an InputStream, which was the point of my earlier question: http:stackoverflow.comquestions837703how-can-i-get-a-java-io-inputstream-from-a-java-lang-string
+Alnitak: its easy to set mindepth and maxdepth for the search.
+John:
+Also, compare perl -wE'say require base' to perl -wE'say require parent'
+Seriously, why did you vote this down? It's a perfect explanation. +1
+Michael - perhaps the OP is not a native English speaker?
+Thanks Magnar. I have edited the answer.
+By the way, it might be better to set the ShowInEditForm and ShowInNewForm properties -- I recall sometimes ReadOnlyFields could not be edited from the List Settings page!
+111900 isn't DateTime.MinValue -- it's probably associated with the minimum possible DateTime in his database software.
++1 I really like this idea - unfortunately, it does not fit into our use case (which is a little off the norm)
+Glad you got it working
+I configured a private maven repository, only used by this job, so it actually is located within the workspace.
+Static is bad form in VB.NET even more than it was in classic VB.  Static variables should be avoided whenever and wherever possible.
+Although I hate to use Javascript for this kind of thing this is suitable because the project is already using JQuery.
+try using arc4random(). I've used it and it gives pretty varied values
+Check this answer:http:stackoverflow.comquestions307514custom-intellisense-for-server-controls
+Whereas I don't think it's a good idea to give someone exactly what they ask for if I know it's going to lose data (without even saying that it'll happen). Clearly that goes against the OP's bigger goal.
+Thanks for the explanation and effort. I'll mark your answer as accepted tomorow if nobody else can provide a solution in the mean while. The kiss will have to wait :-)
+Yes! -The Developers
+If you post this on Serverfault I imagine you'd get quite a few more No Access responses.
+I'll pick up that book, thanks.
+That would probably work too. The accepted answer for the following  SO question provides a way to automatically run validation rules for a page. I think you could modify it to call UpdateSource() on all BindingExpression objects instead. http:stackoverflow.comquestions127477detecting-wpf-validation-errors
+I matched the tags in the code example. Now it is more readable. Any ideas?
+Only functions and extended stored procedures can be executed from within a function.
+Cory: In the for loop each line of <STDIN> is split into the default variable  if you don't give perl anything to match against with a regular expression it assume that you want to perform the match on the default variable . This is part of why perl is so eleganthated by people who don't use it. Its simplicity adds complication.

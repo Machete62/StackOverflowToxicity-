@@ -1,0 +1,181 @@
+then try what it's cross platform parent, ocaml.
+The SAX parser would be more efficient - the DOM parser creates DOM objects; wasteful operations in this instance.
+Can I get a mxmlc SWC file somewhere or do I have to compile it myself? I am able to compile actionscript fine using the mxmlc ant tag but the same script doesn't work for mxml files. I've trying to use the java jar file in my target but with no success. Thanks!
+And there was evening and morning and there were iterative and recursive solutions, and all was well with the world.
+Singletons can have state; you can call setters to change the output for a Logger, for example.  They provide a convenient way to access objects without passing pointers all over the place.  Sometimes this convenience increases coupling, sometimes it makes things simpler.  Depends on the context.
+I needed time stamps because I need to know when the data is collected and to see when there are gaps in the data being produced.
+Of course bad spaghetti code needs to be commented.  Even if the spaghetti code had comments it probably wouldn't help. But if you write clear, concise code, you shouldn't need as many comments.
+Joseph, thanks for adding that info. I found that PDF in google, but didn't have time to open and read it all.
+Draconian Normalization - wow, I'm swooning over that one.
+Can anyone cite an example of a way the owner window can recieve the Focus() while a Message Box is open?
+that will depend on what is wanted, if he wants Filename then yes you are correct however I assumed FILENAME was wanted in which case I am correct.
+I was hoping there was a nicer way of doing this but I guess this is the only way, cheers!
+but does not take rendering time into account, nor simulates parallel requests
+This is what I ended up using, much simpler than BackgrounDRb especially with the screencast.
+i use 86400 so often that it's as obvious to me now as it is that there's 60 seconds in a minute :). If I am doing a lot of time functions, then yes, I'll often declare it a constant.
+LOL,  I wish it was :)
+I'd have a very bad feeling about any software where this made a difference.
+Because temporaries can't bind to non-const references. For instance, `string& str = string(hello);` is not valid. As such, the overload for `char ` (and many other overloads) isn't chosen.
+I can definitely do that. I mentioned CreateProcess because it's my best alternative, but what you say would work.
+Yes I really want to avoid using plain vanilla windows.It is for a front end for a librarian's  build scrip. The librarian really doesn't want to install python and wxpython on her windows. I have thought about win32::gui in perl or even tcltck or perltk but I thought I would give python a shot.
+Thank you! I feel so silly, spent 3 hours figuring out the CAST AS CHAR part and I don't even need the whole GROUPCONCAT. Good lesson learned, won't ever happen to me again.
+1. Ok, 2. Good point, 3. Wasn't asking for that. 4. It would take more than an hour. See my second edit to the post.
+That's only for C 1.0. C 2.0 requires a substantially stronger parser to handle generics, but ANTLR should be able to handle it. Good luck with C 3.0 and LINQ!  :)
+He's working with an XML web service though, not asking how to persist his objects to a data source.
+hmmm... you're right.  I missed that detail.
+I'm an Opera user myself, and I have come across some sites (e.g. Amazon) which hate me.  Gmail used to be unsupported (but (almost) fully working) in Opera, but luckily back then I had the option to view the advanced version anyway (with cookies, yay!).
+Primary keys are required to be unique, but are not required to be constant.  Hence foreign keys declared with ON UPDATE CASCADE.  But making an assumption that primary keys are constant helps to simplify many applications.  This is one benefit of surrogate keys.
+Wouter, It is like that, but the parameter is not used inside any method, that why my question.
+I stand corrected.  :)
+See also: http:stackoverflow.comquestions95492how-do-i-convert-a-date
+Tell me what varchar(max) means and I'll give you the Oracle equivalent. I doubt it is CLOB.
+Wow, i didn't realize i need an apple id to get to that page.
+Your analysis is flawed because you are not comparing apples to apples.  You may want to read http:svnbook.red-bean.comen1.5svn.serverconfig.choosing.html
+Yes, I was about to comment the same thing... Thanks anyway
+I should have mentioned that that snippet works for WCF rather than vanilla webservices...
+Note:  This does not work on tree cell text, since it is not really part of a DOM element
+ok i removed it and i'm still getting syntax errors...it's never ending...
+What compiler, linker and platform (development and target) are you using?
+Diodus, Ok sorry, I must have read over the OP stating that (since he does)) because there also is something in the OP about content types.
+... but MusiGenesis, of course the off event is separate, because your MIDI keyboard has to send out the on event before you release the note, which might not be for quite some time. But I agree the MIDI standard is hardly what we would create now given the chance to start over.
+Exact duplicate of http:stackoverflow.comquestions354837whats-up-with-logging-in-java
+nikow: this has nothing to do with numpy. Just regular Python.
+Evan Teran, But that is REALLY easy to test.  return !(denominator & 1);
+being explicit is good ...
+was it Phil Haack or Steven Walthers ?
+seeing that gap disappear is quite a relief. and an even BIGGER relief to see the gap on my actual site disappear. i'm very curious as to any other solutions though so for now i'll leave the question unanswered
+Thanks Greg. I'll look into that.
+It happens on all pages. on every app. Blank pages even (I believe)... I'll double check that when I get back
+I've accepted your answer instead, because it is objectively better (although Adam's did what I needed as well). However, I want to emphasize that questions should not be voted down (or up) based on the answers attached to them. Please vote based on the merits of the question.
+Hyperterminal does not cause an IOCTLSERIALCLRDTR to be issued.  Not sure how to suppress it in the .net framework.
+Could you please elaborate more, what are you trying to do?
+The problem is in fact related to exceptions, but the thing is, I caught the thrown exception using a try...catch block, but lines of code are still ignored.
+Code re: Lambda (I've never even looked at LINQ.)
+You could SELECT CONSTRAINTTYPE FROM INFORMATIONSCHEMA.TABLECONSTRAINTS WHERE TABLENAME = 'foo' or something like that?
+I've got high hopes for the new Palm Pre when it comes out.
+But that's the point-- Cecil and Reflector and IlDasm are all from the same class of decompilers, and obfuscation is intended to hinder that approach.  Obfuscation vendors pride themselves on breaking decompilers.
+Yes, that's pretty much it. That last part of my question wasn't very clear. I just wanted a count, so I modified yours just a little bit:
+I am using a games engine provided to me by my instructor which handles the player's physics. For my other sprites, like the enemy, I am using a setFloating and setGhostly method. It would be very long to post my entire code here. Is there any specific part you'd like to see to help you get an idea?
+Every file has many columns.
+sorry to down vote your answer John but someone up voted it and it is not the correct answer. Please, no one else vote for this answer...I need to create the attachment using the constructors that take a Stream not a string.
+I agree with David. It is one of the core competences of the leaders to find programmers which have the desired  needed skills.
+This is not a practical solution. It has no application outside of closed communities. The registration process will only hinder the votes which makes this approach counter-productive.
+Bill, protectionSpace does need releasing if used in production code as I used +alloc.
+It's the same version & the server is running. In FlameRobin, I named the displayname & hostname localhost. Leaving the hostname blank seemed to still work fine. The database file is local. I tried wo 'localhost' & just the path, it worked fine on working machines. not so on already nonfunct. ones
+most likely an issue with your cache I'd say, when you changed the code it reloaded the page in the cache and it worked
+Whether and how to use POCOs is the subject of much debate... But in general, yes, POCOs are usually used in the domain model just above the DAL (Repository maybe?). There's also many different opinions about how a POCO should be allowed to lazy-load children and still be considered a POCO.
+each function that represents each array content is implemented the same format structure, Read data from file then write data back to result file then move to next case scenario.
+'k.  This may be the perfect learning project, since it is straightforward, but not easy.
+I had a quick run for the first 100,000 numbers and the results looks good and very fast. I hope to have more time tomorrow to test it with a larger set of numbers.
+cdleary: I said that because, as a user of Mac OS X, all OS X users are by default still using 5.8.8, unless they went out of their way to upgrade it.
+The sqlsequencereset commmand generates the SQL needed to reset the primary key counter, so on windows, instead of piping the output to psql, I would copy+paste it into whatever admin app you use. For example, if pgAdminIII is installed, paste into execute arbitrary SQL queries.
+Yeah I don't like ClearType either, but is definitely required for certain fonts, at least at the smaller sizes (8 or 9 pt).
+Wow, someone actually downvoted that answer. I happen to think basic language references are extremely relevant to the question; if the OP can't understand them, he's welcome to post questions about the specifics.
+Ah, you are right. I'm still a long ways from being fluent in Objective-C.
+Ok.  I think it's weird that we expect so little of entry level programmers.
+the fqa is written in a style that isn't quite serious. it's just downmodding the c++ language with weird reasoning and blatant words. better recommend the FAQ light instead!
+duplicate, been asked may times.
+For that scenario, perhaps the type of wrapping that Astoria does is the way to go...
+why is this downvoted? somebody upset it's not a jQuery solution?
+Even if your IDE does that, I think it makes considerably more sense to have a single method that defines how a property is set rather than have the same thing scattered throughout. Isn't that what DRY is about?
+Option Explicit
+i am merely basing my answer on the example provided in the question.
+It depends, do you need all fields to contain a value ?
+You're right, I caught that when I read some of the other examples.  Fixed now.
+So what were your results of the evaluation, did you end up going with telerik?
+A typeglob is the way to do this.  I would put it in a BEGIN block, though.  (Actually, I think the problem is braindead, and would never compile things conditionally like this.  But with that aside...)
+k i got it...thanks!
+He wants a function he can load from a module or library, not writing the function himself.
+perfect, worked like a charm.
+Bobby: You can't leak memory in C. At least in the traditional sense, and as long as you don't get unsafe. You can leak other resources, though.
+well, check my answer
+As a complete guess, as a marker for expressions with side-effect as in Haskell http:www.zvon.orgotherhaskellOutputsyntaxdoQexpressionsreference.html
+The 1px image creates an additional request, slowing down your page. Using   is a better solution IMO.
+Recursion isn't the only feature of functional languages.  They also have ways of dealing with functions other than just compilation, perhaps for example allowing runtime combination of functions to get a new function.
+Thomas: Got a link for that? I wasn't aware of VS doing any form of caching of headers. It does seem like an obvious optimization though. (unless you meant precompiled headers. I was thinking something more general should be possible)
+Thanks to everyone. You were very helpful as always :)
+Yes, I agree with you about using getset. It makes the code more OO.
+How is this different, or better, than the default Calendar.equals(Calender) method?
++1 VirtualBlackFox. I'll probably just flash the background of the input control and use a tooltip.
+I agree, C should have a 1-function JSON reader.
+that's what the tileToPixel method is for
+Boden: if you care about strong passwords (and you should) then enforce rules that specify sufficient characters and length needed to make a strong password. If you think it'll make things more usable, then trim. They're not mutually exclusive, so long as you are consistent.
+It is true that one can interpret the question differently. if it where a number. You think that the OP means a number that increases with time like a sequence. Could be.
+It's a non-trivial task to make the text difficult to machine-read, though, so it might be a good idea to go with an existing library or service. The others' suggestion of Recaptcha is a reasonable one.
+tvanfosson: I agree, but the root of the question was about whether drop downs specifically were ok or not...I think I would probably implement something like you suggested.
+It would take me far less time to write a double for loop as was suggested above.
+Pointers can, too.  That means you can sometimes compile something that would make sense in a different language, but it won't run right.
+It uses shortcircuiting conditionals (&& and ) which are equivalent to if (as demonstrated in the program itself.) See my answer for one without shortcircuiting conditionals.
+'twas the best I could do given the available information...
+D'oh... was I thinking in the wrong direction. Do I feel stupid now...
+it's a p4 2GHz and the java version is OpenJDK  (build 1.6.00-b11)
+For info, while clever and FP, I'm not sure it is good advice... the number of intermediate strings mean that `StringBuilder` would be more pragmatic.
+I meant Neil's :)
+I guess I should have clarified... I can get the values of those rolls, but I have to show each of the rolls separately and then a total for the three rolls. So if I add up the rolls as you have done I can get a total, but not a value for each roll.
+OK, but you may want to add 1 more line before return: foos[0][0][0] = new Foo();
+That won't help, that discards all items if one don't have votes. Its expected that some items never will get votes.
+thanks for the comments, I'm trying to make them work seems i'm very close. I'll post more detailed code if i continue to have trouble. THnaks
+Post a comment with which event you need and I'll modify the answer so it has all the info.
+Yes, but only to those who haven't read the doco :-)
+I'm indeed looking for a way to implement a one-to-many relationship.  It can very well be used for an Observer pattern, but not necessarily.
++1 for a good answer, despite the 'better' answer.
+Unless the setting of the angle is taking a large amount of the CPU time I think isn't worth the effort. My current computer can do 450 millons modulus operations for small angles using 2 threads. Using Bit operations was 2.5-3 times faster. In 1 millon operations it saves only 1.5 millisecond.
+Ya, I need to look at Yslow and also on how Ajex could affect the performance
+turn around is still slow, but should be much quicker than the 30 seconds you are dealing with.
+I also heard about Stackless Python. Is it relevant? Is it better than subprocessmultiprocess?
+As soon as I read even just the first part of your answer, I could see that it was right. Now I feel stupid for not seeing this as it is pretty obvious to see once someone explains it. Either way thank you, you have saved me lots of time and frustration.
+Doctor, doctor! It hurts when I touch my wrist. Well, the solution is simple. Stop doing that!
+Nevermind, good now
+I've updated my answer.
+Imagine what an index will do :)
+I'm afraid rows and columns are monotonically increasing just means rows are monotonically increasing, columns are monotonically increasing, but not (rowM,colN) < (rowM+1,col1) :(
+Also, look around for software that can clean up the white board photos. I've seen some that will take glary, off center white board photos and clean them up quite nicely, can't name names tho. A personal sheet scanner and pen and paper are perhaps a more intimate alternative.
+Don't use no paper no more...
+If SESSION['msg'] stores sensitive information, outputting to an unencrypted page is a security risk, and HTTPS should be used.
+heh! that's what I get for actually writing in Mngt Studio instead of off the top of my head :)
+For us, only builds from the 'build machine' are tested, or used in production, so the developers don't have must be 'all clean' type issues, and the build server does that. Also means no one developer is needed to make a full build.
+HLGEM how would you implement this requirement then taking into account concurrency issues?
+Well, the parameter tells the cmdlet to return strings instead of FileInfo objects. Remove-Item is smart enough to find out what to remove when getting a FileInfo but with strings it can only assume a pathname ... and since those are relative to the path you specified ... it can only guess. The -Name parameter is probably only there for display purposes; using objects is much easier in a pipeline, though.
+Be careful with Proffessional programmers should do the job themselves and write code that specifically satisfies their clients needs, and only take in ready made parts of the .Net Framework when that is in fact exactly what they need.
+I apologize. All the data does in fact reside on the SQL Server. There are no Access local tables.
+Say you're calling an function that returns an integer and in almost all cases, any return value is valid. In this particular case however, the return value must be 1 for whatever reason, and the function you're calling is external or generic enough that it cannot determine that reason. Then the assertion needs to be in the calling function. (cont.)
+I think he doesn't want to cast. He wants a container that holds an encrypted value.
+This was like a little bit of heaven. You really saved my life that day :) a little dramatic but I just wanted you to know how much I appreciated it
+SOB that was formatted in the preview! sorry
+That one was a typo, sorry for that.
++1: Nice! I actually never noticed that before. I guess I never had to use it.
+Please give me more information how to do it,thanks!
+Tyson - technically true, but presentation belongs in the CSS and content belongs in the HTML.
+You'll know because your delegate gets called. The code will run on the same thread that it did before, except that it will be interleaved with high priority UI code resulting from your changes to the canvas.
+NSInteger is not a class. It is an alias for an integer of size appropriate to your environment (32-bit vs 64-bit). The following can be found in NSObjCRuntime.h on line 106:
+What do you want to validate?
+After checking out the latest openid4java and building a new jar it works.
+font-size: 0; works too
+I think this will keep the pages that hold this piece of code in memory, but the heap will still be swapped. Since way more memory is used by the heap, the problem is probably on its part. I could walk the heap instead of incrementing the counter, but that would not have a minimal effect...
+Thanks for your reply
+Not to get too personal, but I noticed you live in Israel. How is it out there as far as living. Is it as bad as our Media portrays it? I want to go out there soon because I love the culture and the people.
+LOL at the downvoter!
+Ah, I have heard about the code in a DLL being loaded into memory once and then used by several processes.  When they are mapped into the process they would defiantly count against the process's virtual memory usage.
+How do I log in to ServerFault?
+That is correct. It will always represent the center of the view no matter what you do.
+Could you describe how users of the automatically generated documentation work with it? Do they use it productively? Do they use it at all? Or do they rather dig in the source code?
+Learn something new everyday. Fixed.
+Actually, on the contrary - I'd simplify it a lot... I find UpdatePanel etc very confusing when doing anything non-trivial. I would simply get rid of that and use ASP.NET MVC instead, treating each panel as a different page. If this isn't an option... tricky.
+Why do you want to change? UTF-16 would need 16 bit for each character while UTF-8 would only need 16 bit from U+0080 on. So every ASCII characters will be encoded like ASCII.
+Have you compared the actual execution plan of the query as you increase LVLNUM? If your theory is correct then the plan would change replacing good access paths (seeks) with bad access paths (scan). If my theory is correct then the plan would stay the same but the weight of execution would increase exponentially from repeated executions at higher LVLNUM (you'll see elements with ever increasing 'number of executions' in the plan).
+regex has less code to write, and is more powerful
+Care to develop why this is the case?
+Update: Purpose of combining regex is to reduce if conditions to single. Because this regex are going to match against large number of strings.
+So you have working code right now, but want to move some of it to another file using a header file?
+You can do pretty much anything with the subprocess module.  The old version works fine, but it's very UNIX-looking.  Subprocess is a little more clearly mapped to Windows.
+It doesn't change the title anymore even if the text is removed when clicking on it as before  Does it work for you ?
++1 for the pagerank passing. It can be in .htaccess, or in the apache conf file.
+This is not valid. the 'tag' in your where clause is of type string and not entitytag.
+yep, that all looks right.
+I've answered my own question - no, setuptools won't install unless it finds the specific version of Python it has been built for. I'll need some other method.
+Perhaps rewrite question and title to discuss distributed version control compared to centralized version control.
+Out of curiosity, wow are you going to render the RDL as a report?
+How is that exact duplicate? I dont ask why generate it at all, but why generate long serialVersionUID.
+I use textmate. It's has some git support, I haven't check though if it can do it.
+See perldoc perlvar. Look for ARGV.
+By command, it looks like you mean another program on the user's machine? Can you confirm this is the usage you mean?
